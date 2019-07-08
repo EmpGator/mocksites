@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link href="/static/hs/style.css" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    <a href="/hs" ><img src="/static/hs/top.png" alt=""></a>
+    {% block content %}
+    {% endblock %}
+    <img src="/static/hs/bottom2.png" alt="">
+{%  endblock %}

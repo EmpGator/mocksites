@@ -1,0 +1,47 @@
+{% extends "kl/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>Nyt tinkimään asuntokaupoilla – Hypo: "Suomesta saa maailman halvimpia asuntolainoja"</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            Asuntokauppa käy taas ennätysvilkkaana. Suomalaiset kotitaloudet nostivat toukokuussa uusia asuntolainoja
+            1,9 miljardin euron edestä, Suomen Pankki kertoo. Summa on 130 miljoonaa euroa suurempi kuin vastaavana
+            aikana vuosi sitten.
+        </p>
+        {% if paywall.show %}
+            <p>Uusia lainoja nostetaan ripeintä tahtia sitten kesäkuun 2012. Kuluttajaluottamuksen lasku ei siis
+                ainakaan vielä näy asuntomarkkinoilla.</p>
+            <p><i><i>Kiinteistömaailman</i> </i>toimitusjohtaja <strong>Erkki Heikkinen</strong> sanoo, että ketjulla on
+                ollut erittäin vilkas touko- ja kesäkuu.</p>
+            <p>”Kuljemme markkinan mukana, eli kun meillä on kaupoissa noususuunta, muillakin toimijoilla on.”</p>
+            <p>Heikkisen mukaan vaisu alkuvuosi on luonut asuntomarkkinoille patoutunutta kysyntää. Nyt asuntoja
+                ostetaan erityisesti omaan käyttöön, joten kaksioiden ja kolmioiden osuus kaupoista on kasvussa.</p>
+            <p>Kiinteistömaailma käyttää koneoppimiseen pohjautuvaa ennustetyökalua, joka povaa hyvää heinä- ja
+                elokuuta.</p><p>”Odotan, että tulemme tekemään kauppaa varsin hyvällä tahdilla”, Heikkinen sanoo.</p>
+            <blockquote>”­Suomessa saa euroalueen ja jopa maailman edullisimpia asuntolainoja.”</blockquote>
+            <blockquote>Ari Pauna, toimitusjohtaja, Hypo</blockquote>
+            <p>Asuntorahoitukseen erikoistuneen <i><i>Hypon</i> </i>toimitusjohtaja <strong>Ari Pauna</strong> ei
+                ihmettele Suomen Pankin lukuja. Hypo sai alkuvuonna selvästi ­enemmän asuntolainahakemuksia kuin viime
+                vuonna vastaavaan aikaan.</p>
+            <p>Oman kodin ostamiseen tehtyjen asuntolainahakemusten määrä on 2,5-kertaistunut vuodesta 2015, jolloin
+                talouskasvu alkoi.</p>
+            <p>”On legendaa, että suomalaiset haluaisivat jatkossa asua vain vuokralla. Asia on päinvastoin:
+                omistusasuminen kiinnostaa kaupungeissa kovasti, ja jengi on karistamassa vuokramarkkinoiden pölyt
+                jaloistaan. Varsinkin ne, jotka pystyvät.”</p>
+            <p>Uusien asuntolainojen vuosikorko laski toukokuussa 0,78 prosenttiin. Pauna huomauttaa, että suurissa
+                kaupungeissa marginaalit ovat vielä alhaisemmat.</p>
+            <p>”Suomessa saa euroalueen ja jopa maailman edullisimpia asuntolainoja.”</p>
+            <p>Asuntolainat ovat pankeille sisäänheittotuotteita, joiden avulla asiakassuhde muodostetaan.</p>
+            <p>”Jos etsit omaa kotia, ja omarahoitusosuus on kunnossa, sinusta käydään kovaa kisaa. Eli tinkimään vaan
+                ihan kaikesta, lainamarginaalista, asuntojen hinnasta, finanssipalveluista ja ostovälityspalkkioista”,
+                Pauna kannustaa.</p>
+
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

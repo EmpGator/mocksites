@@ -1,0 +1,65 @@
+{% extends "ts/base.html" %}
+
+{% block content %}
+
+    <article>
+        <h1 id="titleHolder">Zimbabwessa on pula kaikesta – nyt loppuivat passit ja rekisterikilvet</h1>
+        <div id="content">
+            <div>
+                <font>There is a shortage of everything in Zimbabwe - now there are passports and license plates</font>
+                <font>AARON UFUMELI</font>
+                <img src="https://www.ts.fi/static/content/pic_5_4629726_k4375606_651.jpg"
+                     alt="Zimbabwen hallitus on kielt&amp;#228;nyt ulkomaisen valuutan k&amp;#228;yt&amp;#246;n maan sis&amp;#228;isess&amp;#228; maksuliikenteess&amp;#228;, jotta raha ei liikkuisi mustassa p&amp;#246;rssiss&amp;#228;."
+                     width="651" height="434"><font>The government of Zimbabwe has banned the use of foreign currency in
+                domestic payments to keep money out of the black market.</font>
+                <div dir="ltr">
+                    <a href="https://www.ts.fi/uutiset/maailma/" dir="ltr"><font dir="ltr"><font dir="ltr">World </font></font></a>
+
+
+                    <font dir="ltr"><span dir="ltr"><font dir="ltr">Lännen Media</font></span></font>
+
+
+                    <time datetime="2019-07-03 14:21+03:00" title="3.7.2019 14:21" dir="ltr"><font dir="ltr"><font
+                            dir="ltr">14:21</font></font></time>
+
+                    <span dir="ltr"><font dir="ltr"><font dir="ltr">1</font></font></span>
+                </div>
+                <font>Daniel Wallenius, Reuters </font><font dir="ltr"><font dir="ltr">The economic crisis has plagued
+                Zimbabwe in southern Africa since 2008. </font><font dir="ltr">Hyperinflation collapsed at that time and
+                the complete meltdown of the country's economy and value of money led to a shortage of foreign
+                currency.</font></font><font dir="ltr"><font dir="ltr">When there is no money, there is no
+                import. </font><font dir="ltr">In addition to dollars, Zimbabwe has experienced a shortage of food and
+                fuel in recent years and suffered 15-hour power cuts.</font></font>
+                <p dir="ltr" {% if not paywall.show %} class="paytext" {% endif %} ><font dir="ltr"><font dir="ltr">President </font></font><span
+                        dir="ltr"><font dir="ltr"><font dir="ltr">Robert Mugabe, who</font></font></span><font
+                        dir="ltr"><font dir="ltr"> ruled the country for a long time, </font><font dir="ltr">was
+                    overthrown in 2017. His successor Emmerson Mnangagwa was expected to turn the country's economy, but
+                    otherwise. </font><font dir="ltr">There is still no food and fuel left, now we also have passports
+                    and license plates.</font></font></p>
+                {% if paywall.show %}
+                    <font dir="ltr"><font dir="ltr">On Wednesday morning, hundreds of people queued up a new passport in
+                        Harare's capital, but had to turn away. </font><font dir="ltr">Passports are not currently
+                        available because the special paper and ink they need are imported goods that you can't afford
+                        at the moment.</font></font><p dir="ltr"><span dir="ltr"><font dir="ltr"><font dir="ltr">One of the queues</font></font></span><font
+                        dir="ltr"><font dir="ltr"> is </font></font><span dir="ltr"><font dir="ltr"><font dir="ltr">Bothwell Mhashu</font></font></span><font
+                        dir="ltr"><font dir="ltr"> , who says he has applied for a passport in June 2018. It was
+                    supposed to come in three months.</font></font></p>
+                    <font dir="ltr"><font dir="ltr">- They just said my passport was not ready. </font><font dir="ltr">I
+                        have to ask again in August. </font><font dir="ltr">This is not fair, Mhashu says.</font></font>
+                    <font dir="ltr"><font dir="ltr">Authorities are planning to print passports at the local central
+                        bank, as there are more than 50,000 applications in the queue. </font><font dir="ltr">This
+                        happens if the right tools are brought to the ground.</font></font>
+                    <font>Not even express passes are granted, except for some senior officials.</font>
+                    <font>In addition, registration plates are out of the country, as the registration authority expects
+                        from the Central Bank of Zimbabwe a foreign currency to pay to the German supplier.</font>
+                    <font dir="ltr"><font dir="ltr">- We don't know when we get the shields. </font><font dir="ltr">Maybe
+                        in September, said an official who did not want his name to the public.</font></font></div>
+                    </div>
+                {% elif paywall.pay %}
+                    {% include "pay.html" %}
+                {% else %}
+                    {% include "block.html" %}
+                {% endif %}
+
+    </article>
+{% endblock %}

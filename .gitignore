@@ -1,0 +1,4 @@
+__pycache__/ # Specify filepatterns you want git to ignore.
+*.py[cod]
+venv
+

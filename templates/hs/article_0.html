@@ -1,0 +1,63 @@
+{% extends "hs/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>Helsingin edustalla on saari, jossa aika on pysähtynyt vuoteen 1952: ”Emme seuraa trendejä”</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>Aivan kuin aika olisi pysähtynyt Pyysaaressa, Helsingin
+            edustalla kelluvalla Helsingin kaupungin omistamalla
+            pienellä saarella Laajasalon ja Kulosaaren välissä. Tuntuu kuin saaressa olisi aina olympiavuosi 1952.<br>
+            Omaleimaista tunnelmaa saarelle luo 1900-luvun alun huvilassa toimiva ravintola Pyysaari, joka tunnetaan
+            myös
+            nimellä Palma de Pyy.<br>
+            Ravintola aloitti toimintansa vuonna 1952, kun
+            Helsinkiin saapui kisavieraita olympialaisiin ja joukko anniskelulupia myönnettiin lisää.</p>
+        {% if paywall.show %}
+            <img src="https://hs.mediadelivery.fi/img/658/ecf908dc5d8747b29608799760e23559.jpg.webp">
+            <figcaption itemprop="caption">
+                Pyysaari on pieni saari Laajasalon ja Kulosaaren välisen Tullisaaren salmessa. Saaren omistaa Helsingin
+                kaupunki. Pyysaari kuuluu Laajasalon kaupunginosaan.
+                <span class="credit">(KUVA: <span class="picture-copyrightholder" itemprop="copyrightHolder">Mika Ranta / HS</span>)</span>
+            </figcaption>
+            <p>Myös ravintolan suosikkiannokset kertoivat ajasta: ravintolassa tarjottiin makkaraa ja läskisoosia.
+                Myöhemmin voissa paistetuista perunoista tuli talon tavaramerkki. Myös silakkapihvit vietiin
+                käsistä.</p>
+            <p>Edelleenkin ravintolan menu on varsin perinteinen: Kesäisin auki olevassa ravintolassa on useita
+                klassikkoja. Menussa on muun muassa sillivoileipiä, metsästäjänleike, paistettuja nakkeja ja
+                kasvismuhennosta.</p>
+            <p>”Menu on pidetty perinteisenä tarkoituksella. Toki siinä on ollut vaihtuvuutta vuosien kuluessa”, Sirkiä
+                kertoo.</p>
+            <p><span>Talvikuukausina</span> hiljaiseloa viettävä saari herää eloon vappuna, jolloin ravintola avaa
+                ovensa.</p>
+            <p>Enää Pyysaari ei ole ’piilopaikka’, niin kuin ennen. Asiakkaista saapuu paljon muun muassa Laajasalosta
+                ja Kruunuvuorenrannasta, onhan saari on yhdistetty kävelysillalla Tullisaaren ulkoilupuistoon
+                Laajasalossa.</p><p>”Onhan tässä jotain nostalgista, joka vetoaa ihmisiin”, Sirkiä sanoo.</p>
+            <p>Monet yksityiskohdat puhuvat tunnelman puolesta. Palma de Pyyssä on edelleen käytössä Arabian Meri-sarjan
+                lautasia ja Kesti-kahvikuppeja, jotka hankittiin ravintolaan 1970-luvulla.</p>
+            <p>Myös ravintolan nostalginen ulkoasu tulee jatkossakin pysymään samankaltaisena: Vuonna 1999
+                ravintolarakennus suojeltiin kulttuurihistoriallisesti arvokkaana rakennuksena. Sen ulkoasua ei saa
+                muuttaa. Suojelumääräys ei koske sisätiloja.</p>
+            <p>Lisäksi pihapiiriin kuuluu lisärakennus, joka valmistui 1970-luvulla. Nykyisin rakennuksessa sijaitsee
+                ravintolan keittiö.</p>
+            <p><span>Pyysaaren </span>pysähtynyt tunnelma on ollut uhattuna useammankin kerran sen historian aikana.</p>
+            <p>Sotavuosina kilpailutoiminta ja ravintolanpito keskeytyivät täysin. Helmikuussa 1944 Helsingin
+                suurpommituksissa saaren rantaan putosi lentopommi. Se teki tuhoa lähinnä ulkona, mutta muun muassa
+                saaren telakka-alue säästyi tuhoilta.</p>
+            <p>Lopulta Pyysaari selvisi sotavuosista melko pienin vaurioin.</p>
+            <p>Sittemminkin paikalla on ollut sattumuksia: Vuonna 2013 Pyysaari oli palaa maan tasalle, kun
+                ravintolarakennukseen murtautunut henkilö sytytti talon sisällä nuotion.</p>
+            <p>Talo selvisi pienillä vahingoilla. Tulipalo sai kuitenkin aikaan sen, että seura kokosi <em>Palma de Pyy,
+                veneilevän duunarin keidas</em> -historiikin vuonna 2014.</p>
+            <p><span>Nykyisin </span>Pyysaari on tunnettu myös taidenäyttelyistään. Parhaillaan saaressa on meneillään
+                venäläisen akateemikon Mjud Metshevin(1929–2018)
+                muistonäyttely. Hän tuli tunnetuksi muun muassa Kalevalan kuvittajana.</p><p> Pyysaaren ravintolan
+            aukioloajat säävarauksella: arkena 16–00.30, lauantaina
+            12–22.30, sunnuntaina 12–21 Facebook-sivulta voi tarkistaa mahdolliset poikkeavat aukioloajat sekä
+            tapahtumat. Ravintola on avoinna vapusta syyskuun lopulle, säästä riippuen.
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

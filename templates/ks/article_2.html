@@ -1,0 +1,32 @@
+{% extends "ks/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>Hurja noteeraus: Sähköauto pisti turvavarustelun ennätykset uusiksi törmäystestissä</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            Euro NCAP:n tuoreimmissa törmäystesteissä edettiin viime aikojen myönteisellä polulla. Kaikki kuusi
+                testattua automallia menestyivät hyvin. Kokonaisarvosanaksi tuli automallien perusversioillekin
+                vähintään neljä tähteä.
+        </p>
+        {% if paywall.show %}
+
+            <p>Tämän testierän puhutuimmaksi autoksi nousi Tesla Model 3. Sähköautovalmistajan perheautomalli keräsi
+                viisi tähteä, mutta etenkin Model 3:n aktiivinen turvavarustelu teki testaajiin vaikutuksen. Peräti 94
+                prosentin saalis turvavarustelusta on omaa luokkaansa, muut testatut mallit jäivät kauas Teslasta.</p>
+            <p>Lähellekään vastaavaa lukemaa ei aktiivisesta turvavarustelusta ole nykymuotoisissa NCAP-testeissä
+                annettu yhdellekään automallille. Lähimmäs Teslaa on päässyt 85 prosentillaan Audi Q3.</p>
+            <p>Aikuismatkustajien suojasta Tesla Model 3 sai 96 prosentin, lapsimatkustajien suojasta 86 prosentin ja
+                jalankulkijoiden suojasta 74 prosentin pisteytyksen.</p>
+            <p>Testatuista autoista Mercedes-Benzin GLE ja B-sarja sekä Škoda Scala keräsivät perusmalleillaan viisi
+                tähteä. DS 3 Crossback ja Kia Ceed poimivat neljä tähteä, mutta varustellummilla versioillaan nekin
+                ylsivät viiden tähden kerhoon.</p>
+
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

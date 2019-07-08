@@ -1,0 +1,32 @@
+{% extends "ks/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>K-marketin nimissä yritetään huijata asiakkaita – "Tämä on ihan höpöhöpöjuttua"</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            Kesko varoittaa K-ruokakauppojen nimissä lähetettyjä tekstiviestejä ja sähköposteja, joissa kalastellaan
+            asiakkaiden tietoja. Viestissä luvataan rahaa tai mahdollisuutta voittaa ruokaa tai lahjakortteja.
+        </p>
+        {% if paywall.show %}
+
+            <p>Korpilahtelainen K-market Herkkukeidas julkaisi varoituksen asiasta Facebook-sivullaan maanantaina.</p>
+            <p>"Oheisen tyyppistä lähestymistä K-Marketin nimissä K-plussan kautta ei tapahdu. Pankkikortin/-tilin
+                numeroa ei koskaan kysellä puhelimen välityksellä", kauppa varoittaa.</p>
+            <p>"Tämä on siis ihan höpöhöpöjuttua, älkää avatko tai täyttäkö pyydettyjä tietoja."</p>
+            <p><a href="https://www.k-ruoka.fi/artikkelit/k-kaupassa/varoitus-huijauskilpailusta" target="_blank"
+                  title="https://www.k-ruoka.fi/artikkelit/k-kaupassa/varoitus-huijauskilpailusta">Kesko sanoo
+                sivuillaan</a>, ettei ruokakauppojensa kilpailut, arvonnat tai palkintojen lunastukset ole koskaan
+                maksullisia eikä niitä toteuteta puhelimitse. Tietoja ei myöskään pyydetän "oudon näköisten linkkien
+                kautta".</p>
+            <p>Kesko muistuttaa, että sähköpostilla lähetettävät asiakaskirjeet lähetetään aina osoitteestan
+                noreply.k-plus@kesko.fi.</p>
+
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

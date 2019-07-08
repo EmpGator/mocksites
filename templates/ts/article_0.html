@@ -1,0 +1,56 @@
+{% extends "ts/base.html" %}
+{% block content %}
+<div class="tsv3-c-common-article__container">
+<div class="tsv3-c-common-article__container__top">
+    <header class="tsv3-c-common-article__textitem tsv3-c-common-article__textitem--otsikko">
+        <h1 class="otsikko">Poliisilla työntäyteinen juhannus Turun seudulla</h1>
+    </header>
+    <div class="tsv3-c-common-article__container__top__attachment">
+        <div class="tsv3-c-common-article__attachment tsv3-c-common-article__attachment--inline tsv3-c-common-article__attachment--image" data-attachment="k3425658">
+            <div class="tsv3-c-common-article__attachment__photographer">Lennart Holmberg</div>
+            <a class="tsv3-c-common-article__attachment__link" href="https://www.ts.fi/static/content/pic_5_4619575_k3425658_1200.jpg" data-contentpop="True" data-contentpop-id="k3425658" data-contentpop-title="" data-contentpop-photographer="Lennart Holmberg" data-contentpop-type="image" target="_blank">
+                <img class="tsv3-c-common-article__attachment__link__previewimage" src="https://www.ts.fi/static/content/pic_5_4619575_k3425658_651.jpg" alt="">
+            </a>
+            <div class="tsv3-c-common-article__attachment__caption"></div>
+        </div>
+    </div>
+</div>
+<div class="tsv3-c-common-article__container__middle tsv3-c-common-article__container__middle--cols tsv3-c-common-article__container__middle--meta">
+    <div class="tsv3-c-common-article__container__middle__left">
+        <div class="tsv3-c-common-article__meta">
+            <div class="tsv3-c-common-article__meta__row1">
+                <a href="/uutiset/paikalliset/">Paikalliset</a>
+                <span class="tsv3-c-common-article__meta__separator">|</span>
+                <span class="tsv3-c-common-article__meta__publisher">Turun Sanomat</span>
+                <span class="tsv3-c-common-article__meta__separator">|</span>
+                <time datetime="2019-06-23 15:40+03:00" title="23.6.2019 15:40">23.6.2019 15:40</time>
+                <span class="tsv3-c-common-article__meta__separator">|</span>
+                <span class="js-tsv3-c-common-article__meta__messagecount tsv3-c-common-article__meta__messagecount">0</span>
+            </div>
+        </div>
+    </div>
+    <div class="tsv3-c-common-article__container__middle__right">
+    </div>
+</div>
+<div class="tsv3-c-common-article__container__middle tsv3-c-common-article__container__middle--cols">
+    <div class="tsv3-c-common-article__container__middle__left">
+        <div class="tsv3-c-common-article__textitem tsv3-c-common-article__textitem--teksti">
+            <p {% if paywall.show %} class="teksti" {% else %} class="paytext" {% endif %}>Poliisin juhannusviikonloppu oli työntäyteinen Turun seudulla. Poliisin mukaan tutkittavaksi tuli useita törkeitä ja tavanomaisia rattijuopumuksia sekä yksi vesiliikennejuopumus.</p>
+            {% if paywall.show %}
+            <p class="teksti">Turun alueella kirjattiin lisäksi useita rikosilmoituksia pahoinpitelyistä, joissa joko osa tai kaikki osalliset olivat päihteiden vaikutuksen alaisena.</p>
+            <p class="teksti">Poliisia työllistivät myös erilaiset vahingonteot, ja kuljettajien raskas kaasujalka.</p>
+            <div class="tsv3-c-common-article__contentad" style="display: none;">
+                <</div> <p class="teksti">Kaarinan Piikkiössä sytytettiin tyhjillään olevan omakotitalon ulkoseinä palamaan. Poliisi on kirjannut asiasta rikosilmoituksen tuhotyöstä ja asiassa on käynnissä esitutkinta.</p>
+                    <p class="teksti"> </p>
+                    <p class="teksti">Lue myös:</p>
+                    <p class="teksti"><a href="https://www.ts.fi/uutiset/paikalliset/4619063/Autiotalon+ulkorakenteet+paloivat+Piikkiossa" target="_blank" rel="noopener">Autiotalon ulkorakenteet paloivat Piikkiössä</a></p>
+                    {% elif paywall.pay %}
+                    {% include "pay.html" %}
+                    {% else %}
+                    {% include "block.html" %}
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

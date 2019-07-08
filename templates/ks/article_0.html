@@ -1,0 +1,44 @@
+{% extends "ks/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>Jokelan vankilan apulaisjohtajaa vastaan jätettiin syyte nostamatta – junaili salassa Jari Aarnion ja
+            tynnyrijutussa tuomitun vangin asioita</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            Jokelan vankilan virasta pidätetty apulaisjohtaja ei saa syytettä, selviää valtionsyyttäjä Mikko Männikön
+            tiistaina tekemästä syyttämättäjättämispäätöksestä. Asiasta uutisoi aiemmin tänään <a
+                href="https://www.hs.fi/kotimaa/art-2000006161361.html">Helsingin Sanomat</a>. Apulaisjohtaja
+            Jarmo Salmisen epäiltiin muun muassa luovuttaneen lukuisista rikoksista tuomitulle Helsingin
+            huumepoliisin entiselle päällikölle Jari Aarniolle tietoja, joita hän ei olisi saanut tälle luovuttaa.
+        </p>
+        {% if paywall.show %}
+            <p>Salmista epäiltiin vastaavista rikoksista jo aiemminkin.</p>
+            <p>Aarnion kymmenen vuoden vankeuteen esimerkiksi törkeistä huumausainerikoksista tuominnut Helsingin
+                hovioikeus vapautti Salmisen viime viikolla samankaltaisista rikosepäilyistä. Salminen antoi Aarniolle
+                tietoja vankien puhelinyhteyksistä, kun Aarnio toimi vielä Helsingin huumepoliisin päällikkönä.
+                Hovioikeus katsoi, että tietojen antamiselle oli tuolloin laillinen peruste.</p>
+            <p>Uusissa rikosepäilyissä oli kyse tietojen antamisesta vuonna 2016, eli sen jälkeen kun Aarnio ei enää
+                ollut virassa ja häntä epäiltiin esimerkiksi huumerikoksista.</p>
+            <p>Tiistaisen syyttämättäjättämispäätöksen mukaan Salminen oli vuonna 2016 muun muassa vaikuttanut Aarnion
+                tietolähteenä aiemmin toimineen vangin lomajärjestelyihin, jotta Aarnio ja vanki saattoivat tavata. Hän
+                myös välitti tietoa esimerkiksi vangin lomajärjestelyistä Aarniolle. </p>
+            <p>Vanki oli mies, joka tuomittiin jo vuonna 2012 tynnyrijutussa yli 12 vuoden ja kahden kuukauden
+                vankeuteen. Aarnion yhteys huumetynnyrijuttuun ei vielä tuomion antamisen aikaan ollut selvillä.</p>
+            <h2>"Haitallista viranomaistoiminnan luottamukselle"</h2>
+            <p>Syyttäjä katsoo päätöksessään, että Salmisen toiminta oli haitallista viranomaistoiminnan yleiselle
+                luottamukselle.</p>
+            <p>–  Ei ole asianmukaista viranhoitoa, kun Salminen vankeinhoidon virkamiehenä on vastoin
+                virkavelvollisuuksiaan ryhtynyt salassa junailemaan kyseisen vangin ja Aarnion yhteisiä asioita
+                olosuhteissa, joissa Aarnio oli syytettynä huumausainerikoksista, jotka vielä ovat kytkeytyneet kyseisen
+                vangin rikoksiin, syyttäjä toteaa.</p>
+            <p>Koska konkreettista vahinkoa ei kuitenkaan teosta aiheutunut ja asiaton menettely oli vähäistä, syyttäjä
+                katsoi että rikosepäily ei täyttynyt.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <a href="{{ url_for('logout') }}">Logout</a>
+<ul>
+    <li><a href="{{ url_for('front', site='ts') }}">Turun Sanomat</a></li>
+    <li><a href="{{ url_for('front', site='hs') }}">Hesari</a></li>
+    <li><a href="{{ url_for('front', site='kl') }}">Kauppalehti</a></li>
+    <li><a href="{{ url_for('front', site='ks') }}">Keskisuomalainen</a></li>
+    <li><a href="{{ url_for('front', site='ss') }}">Savon sanomat</a></li>
+</ul>
+</body>
+</html>

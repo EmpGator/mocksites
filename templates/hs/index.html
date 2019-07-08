@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Helsingin sanomat</title>
+{% endblock %}
+
+{% block body %}
+<img src="{{ url_for('static', filename='hs/main.png') }}" alt="" usemap="#map" />
+<map name="map" id="map">
+    <area alt="" title="" href="/hs/article/0" shape="rect" coords="11,277,628,759" />
+    <area alt="" title="" href="/hs/article/1" shape="rect" coords="30,770,214,1027" />
+    <area alt="" title="" href="/hs/article/3" shape="rect" coords="228,772,412,1027" />
+    <area alt="" title="" href="/hs/article/4" shape="rect" coords="425,774,614,1029" />
+    <area alt="" title="" href="/hs/article/1" shape="rect" coords="952,356,669,434" />
+    <area alt="" title="" href="/hs/article/0" shape="rect" coords="666,443,949,501" />
+    <area alt="" title="" href="/hs/article/2" shape="rect" coords="664,506,948,542" />
+    <area alt="" title="" href="/hs/article/3" shape="rect" coords="665,545,944,581" />
+    <area alt="" title="" href="/hs/article/4" shape="rect" coords="667,584,941,618" />
+    <area alt="" title="" href="/hs/article/5" shape="rect" coords="665,626,940,700" />
+    <area alt="" title="" href="/hs/article/6" shape="rect" coords="668,708,943,765" />
+    <area alt="" title="" href="/hs/article/7" shape="rect" coords="667,771,951,847" />
+    <area alt="" title="" href="/hs/article/8" shape="rect" coords="666,855,942,928" />
+    <area alt="" title="" href="/hs/article/9" shape="rect" coords="665,932,941,1007" />
+</map>
+<img src="{{ url_for('static', filename='hs/bottom2.png') }}" alt="">
+{% endblock %}

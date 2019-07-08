@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link href="{{ url_for('static', filename='ss/style.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    <a href="/ss" ><img src="{{ url_for('static', filename='ss/top.png') }}" alt=""></a>
+    {% block content %}
+    {% endblock %}
+    <img src="{{ url_for('static', filename='ss/bottom.png') }}" alt="">
+{%  endblock %}

@@ -1,0 +1,46 @@
+{% extends "kl/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>Vakuutusyhtiö varoittaa: Kesäyö voi olla kohtalokas kaupunkiin jätetylle autolle – varsinkin saksalaiset
+            vaarassa</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            ”Kesä saa tunnetusti suomalaiset liikkeelle, ja lämmön ja kuohujuomien yhteisvaikutus näyttää joskus
+            hämärtävän harkintakyvyn”, toteaa <i>Ifin</i> ajoneuvovakuutusten tuotepäällikkö <strong>Peter
+            Roselius</strong> tiedotteessa.<br>
+            Kesän lisäksi ilkivaltatilastoissa korostuvat viikonloput ja erityisesti lauantait. Alkoholilla on usein
+            osuutta asiaan, sillä ilkivaltaa tapahtuu tyypillisesti baarien ja muiden illanviettopaikkojen
+            läheisyydessä. Sama tekijä voi usein naarmuttaa useita autoja samalla kadunpätkällä.
+        </p>
+        {% if paywall.show %}
+
+            <p>Ifin vahinkotilastojen mukaan eri automerkkien todennäköisyys päätyä ilkivallan kohteeksi vaihtelee.</p>
+            <p>Eniten ilkivaltaa tehdään BMW:ille, Audeille ja Mercedes-Benzeille, kun ilkivallan määrä suhteutetaan
+                autojen määrään. Keskimääräistä enemmän ilkivaltaa tehdään myös Hondille, Seateille, Volvoille ja
+                Mitsubisheille.</p><p>Parhaiten turvassa ilkivallalta ovat Fiatit, Renaultit, Toyotat ja Fordit.</p>
+            <p>Ifin tilastoja voi tutkailla vakuutusyhtiön verkkosivujen <a
+                    href="https://www.if.fi/henkiloasiakkaat/vakuutukset/autovakuutus/autovahinkotilasto/ilkivaltamittari">Ilkivaltamittarista</a>,
+                josta pääsee katsomaan, millainen on oman auton riski joutua ilkivallan kohteeksi. Lisäksi
+                ilkivaltatapaukset on jaoteltu auton iän sekä kuljettajan asuinpaikan mukaan.</p>
+            <p>Suhteellisesti eniten ilkivaltatapauksia on viime vuosina sattunut pääkaupunkiseudulla eli Helsingissä,
+                Vantaalla ja Espoossa. Vuosina 2012–2018 Helsingissä tilastoitiin noin 10 ilkivaltatapausta 1 000 autoa
+                kohden, mikä on miltei kaksinkertainen määrä Tampereeseen verrattuna.</p>
+            <p>Tapausten esiintymistiheys ei kuitenkaan suoraan noudattele kaupunkien kokoa. Myös Oulussa, Rovaniemellä,
+                Vaasassa ja Turussa ilkivaltaa esiintyi suhteellisesti useammin kuin Tampereella.</p>
+            <p>Ilkivallaksi tilastoidaan kaikki ne tapaukset, joissa autoa on tahallaan vahingoitettu muulla tavalla
+                kuin toisella ajoneuvolla.</p>
+            <p>Keskimääräinen ilkivaltavahingosta koituva kustannus on 946 euroa. Tyypillisesti kyse on kadun varteen
+                pysäköidyn auton potkimisesta, maalipinnan naarmuttamisesta tai peilien vääntelystä.</p>
+            <p>”Usein tekijät eivät miellä, kuinka kalliin vahingon pieneltäkin tuntuvat vauriot voivat aiheuttaa.
+                Esimerkiksi uusien automallien tuulilaseihin on asennettu erilaisia ympäristöä havainnoivia antureita ja
+                kameroita, joiden uusiminen ja kalibrointi on erittäin kallista. 4 000 euronkaan tuulilasivahinko ei ole
+                enää harvinainen”, Roselius kertoo.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

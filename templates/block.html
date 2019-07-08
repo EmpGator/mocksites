@@ -1,0 +1,35 @@
+<div class="container center">
+    <a href="" id="button" class="btn btn-large teal modal-trigger">Finn+ Login </a>
+    <a href="http://localhost:5000/signup" class="btn btn-large teal modal-trigger">Finn+ Signup </a>
+</div>
+
+<script type="text/javascript">
+
+    function receiveMessage(event) {
+        if (event.origin == 'http://localhost:5000') {
+            if (event.data == 'ready') {
+                event.source.close();
+                location.reload()
+            }
+            else {
+                console.log(event.data)
+            }
+        }
+    }
+
+    function newPopup() {
+        var url = 'http://localhost:5000/signin';
+        popupWindow = window.open(
+            url, 'popUpWindow', 'height=600,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+    }
+
+    function main() {
+        var button = document.getElementById('button');
+        console.log(button);
+        window.addEventListener("message", receiveMessage, false);
+        button.addEventListener('click', newPopup)
+    }
+
+    main();
+
+</script>

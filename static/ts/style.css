@@ -1,0 +1,21 @@
+html {
+    font-family: Arial,Sans-Serif;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #3b3b3b;
+}
+
+body {
+    font-feature-settings: "liga","kern";
+}
+
+.tsv3-c-common-article__container {
+    display: block;
+    width: 671px;
+    margin-left: 180px;
+    align-self: center;
+}
+
+article {
+    width: 671px;
+}

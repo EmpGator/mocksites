@@ -1,0 +1,13 @@
+h1 {
+    font-size: 30px;
+}
+
+article {
+    max-width: 600px;
+    margin-left: 175px;
+}
+
+article img {
+    width: 100%;
+    max-width: 600px;
+}

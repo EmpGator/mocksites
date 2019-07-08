@@ -1,0 +1,10 @@
+article {
+    width: 615px;
+    margin-left: 300px;
+}
+
+article img {
+    max-width: 600px;
+    height: auto;
+    width: auto;
+}

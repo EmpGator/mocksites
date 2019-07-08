@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link href="{{ url_for('static', filename='ss/style.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+<img src="{{ url_for('static', filename='ss/top.png') }}">
+<img src="{{ url_for('static', filename='ss/main.png') }}" alt="" usemap="#Map" />
+<map name="Map" id="Map">
+    <area alt="" title="" href="/ss/article/0" shape="rect" coords="51,14,325,112" />
+    <area alt="" title="" href="/ss/article/1" shape="rect" coords="50,127,320,214" />
+    <area alt="" title="" href="/ss/article/2" shape="rect" coords="51,223,326,316" />
+    <area alt="" title="" href="/ss/article/3" shape="rect" coords="352,39,939,575" />
+    <area alt="" title="" href="/ss/article/4" shape="rect" coords="349,595,932,1068" />
+    <area alt="" title="" href="/ss/article/0" shape="rect" coords="951,248,1234,323" />
+    <area alt="" title="" href="/ss/article/1" shape="rect" coords="955,329,1232,389" />
+    <area alt="" title="" href="/ss/article/2" shape="rect" coords="957,391,1231,453" />
+    <area alt="" title="" href="/ss/article/3" shape="rect" coords="959,458,1226,510" />
+    <area alt="" title="" href="/ss/article/4" shape="rect" coords="963,519,1224,560" />
+    <area alt="" title="" href="/ss/article/5" shape="rect" coords="966,569,1226,615" />
+    <area alt="" title="" href="/ss/article/6" shape="rect" coords="960,623,1228,677" />
+
+</map>
+{%  endblock %}

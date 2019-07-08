@@ -1,0 +1,56 @@
+{% extends "kl/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>No Alcohol, No Coffee for 27 Months</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            Exactly today (Dec. 26th 2016) I haven’t had a single drop of alcohol or coffee in 27 months. If you're
+                reading this later, you can do the math yourself.
+            <p>A couple of my friends on Facebook &amp; Twitter asked me to write about my experience, so here it is, in
+                a nutshell.</p>
+            <p><span>With over a year of no alcohol &amp; coffee, I did notice some side effects.</span> <span>Here is what I learned.</span>
+        </p>
+        {% if paywall.show %}
+
+            </p><h2><span>I save $1000 every month</span></h2>
+            <p><span>After 2 months I noticed that I had $1000 more on my bank account. Yes, that’s a lot, but do the math and you notice it’s not that much.</span>
+            </p>
+            <p><span>I live in New York. In order to spend $1000 on alcohol I only have to spend $33 everyday. Assume that I have 2–3 cocktails every other day (which are $10 each without tip), including some wine bottles every month for at home I can easily spend $1000.</span>
+            </p><p><span>Some might think that this is heavy alcoholism, but trust me when I say that having 1–2 drinks everyday in New York is more than normal.</span>
+        </p><p><span>Also, going out drinking means that the occasional dinner &amp; snacks are more frequent. You don’t just drink, you get hungry and buy some food. And before you noticed it, you spend $1000.</span>
+        </p><h2><span>Less gossip</span></h2>
+            <p><span>If there is one thing I noticed quite early, then it’s the lack of social interaction my new diet brought with it. Here is what happened:</span>
+            </p>
+            <ul>
+                <li><span><span><span>You don’t really go out anymore. It’s exhausting to explain again and again why you don’t drink and NO also one drink is not okay.<br>
+When a group of people asks me to join them for drinks, I mostly default to answer with NO because I just don’t want to deal with gossip as a sober person.</span></span></span>
+                </li>
+                <li><span><span><span>If I do go for drinks, I last max. 1 hour because this is how long my attention span as a sober person lasts in a group of drunk people.</span></span></span>
+                </li>
+                <li><span>While I was never a party animal anyways, completely stopping with alcohol made me go out even less. It’s amazing to see the culture of drinking slowly fading away from your life. It made me realize how many friendships are actually based mostly on your drinking habits.</span>
+                </li>
+            </ul>
+            <p><span>“Let’s go for a drink” is so engraved in our lives, because who says “Hey, let’s just meet up as sober people and talk about stuff” — Why the fuck would you do that? “Let’s get a drink” needs no explanation. It’s a thing, everyone knows what happens next.</span>
+            </p><h2><span>My sleep quality increased</span></h2>
+            <p><span>Removing alcohol from my diet increased my sleep quality drastically. And I’m not talking about “falling asleep” but the actual sleep quality.</span>
+            </p>
+            <p><span>You sure do fall asleep easier with 1–2 glasses of beer or wine, but the actual sleep quality might suffer. I sleep better, and I wake up with more energy. Before I always ruined my mornings, even if I only had two beers at night I could feel it in the morning. (if you’re in your early twenties, ignore this, it doesn’t affect you yet)</span>
+            </p><h2><span>No coffee, less panic, less stress</span></h2>
+            <p><span>This might be something more personal and not related to everyone. But removing coffee from my diet helped me become more relaxed. Coffee always made me stressed out. It increased my chance of having anxiety and also fucked up my digestion. Removing coffee/caffeine from my diet not only made me more relaxed, I also poop like a king.</span>
+            </p>
+            <p><span>Besides that, I love the smell and taste of coffee. An occasional decaf will do the trick. In the summer I now drink ice tea, in the winter regular tea.<br>
+I found out that “Going for a coffee” turned out to be more of a social activity than the actual craving for coffee. Keep the social habit, replace coffee with something else.</span>
+            </p>
+            <p><span>Overall, I’m very happy about my decision and have no desire to start drinking again. I’m also not telling you to do the same, if you’re happy with how things are going, don’t change anything.</span>
+            </p><p><span>I changed my habits out of curiosity and I like how it turned out.</span></p>
+            <p><span>PS: Before someone asks. I do not smoke cigarettes. I also don’t smoke weed. I also don’t take any drugs whatsoever. (I have Internet, that’s addiction enough for me)</span>
+            </p><p><span>Yours truly,<br></span><span>Tobias</span></p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

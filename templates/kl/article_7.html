@@ -1,0 +1,149 @@
+{% extends "kl/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>You Need to Practice Being Your Future Self - Harvard Business Review</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            <div data-index="0">
+                <p><img id="image_1"
+                        src="https://pocket-image-cache.com/direct?resize=w2000&amp;url=https%3A%2F%2Fhbr.org%2Fresources%2Fimages%2Farticle_assets%2F2016%2F03%2Fmar16-28-158709140.jpg"
+                        moz-reader-center="true">
+                </p>
+            </div>
+
+            I was coaching Sanjay,* a leader in a technology firm who felt stuck and frustrated. He wasn’t where he
+            wanted to be at this point in his career.
+
+            He had come to our coaching session, as usual, prepared to discuss the challenges he was currently facing.
+            This time, it was his plan for conducting compensation conversations with each of his employees. After a few
+            minutes of listening to him talk through his plans, I interrupted him.
+        </p>
+        {% if paywall.show %}
+
+            <p>
+
+                “Sanjay, you’ve had these kinds of conversations before, right?” I asked.
+
+            </p><p>
+
+            “Yes,” he said.
+
+        </p><p>
+
+            “And, for the most part, you know how to do them, right?”
+
+        </p><p>
+
+            “Yes,” he said again.
+
+        </p><p>
+
+            “Great. Let’s talk about something else.”
+
+        </p><p>
+
+            “But this is what’s on my mind right now,” he protested. “It’s helpful to think it through with you.”
+
+        </p><p>
+
+            “I’m glad it’s helpful, Sanjay,” I said. “But you don’t want me to be merely <em>helpful</em>. You want me
+            to be <em>transformational</em>. And focusing on what’s top of mind for you right now is not going to get us
+            there.”
+
+        </p><p>
+
+            You see, the reason Sanjay is stuck — and the reason many of us feel that way — is that we focus on what’s
+            present for us at any particular moment.
+
+        </p><p>
+
+            On the other hand, what most of us want most is to move forward. And, by definition, paying attention to the
+            present keeps us where we are. So, sure, I can help Sanjay be a better “present” Sanjay. But I will have a
+            much greater impact if I help him become a successful “future” Sanjay.
+
+        </p><p>
+
+            It’s a familiar story: You’re busy all day, working non-stop, multitasking in a misguided attempt to knock a
+            few extra things off your to-do list, and as the day comes to a close, you still haven’t gotten your most
+            important work done.
+
+        </p><p>
+
+            Being busy is not the same as being productive. It’s the difference between running on a treadmill and
+            running to a destination. They’re both running, but being busy is running in place.
+
+        </p><p>
+
+            If you want to be productive, the first question you need to ask yourself is: Who do I want to be? Another
+            question is: Where do I want to go? Chances are that the answers to these questions represent growth in some
+            direction. And while you can’t spend <em>all</em> your time pursuing those objectives, you definitely won’t
+            get there if you don’t spend <em>any</em> of your time pursuing them.
+
+        </p><p>
+
+            If you want to be a writer, you have to spend time writing. If you want to be a sales manager, you can’t
+            just sell — you have to develop your management skill. If you want to start a new company, or launch a new
+            product, or lead a new group, you have to spend time planning and building your skills and experience.
+
+        </p><p>
+
+            Here’s the key: You need to spend time on the future even when there are more important things to do in the
+            present and even when there is no immediately apparent return to your efforts. In other words — and this is
+            the hard part — if you want to be productive, you need to spend time doing things that feel ridiculously
+            <em>unproductive</em>.
+
+        </p><p>
+
+            I want to expand my writing abilities, so I have started waking up at 5:30 in the morning to write fiction.
+            Unfortunately — and I am not being humble here — I am a terrible fiction writer. So my writing time feels
+            painfully unproductive. I can’t sell it. I can’t use it. I can’t share it. Honestly, I can hardly bear to
+            read it out loud. I have such a long list of things that actually need to get done, it is almost impossible
+            to justify losing sleep in order to do something so unrelated to my present challenges. I know this is how
+            my clients feel when I ask them to put aside their immediate concerns and focus on more distant challenges.
+
+        </p><p>
+
+            A question I hear a lot is: What about all the things I actually need to get done? Don’t I need to get
+            through my cluttered email box, my pressing conversations, my project plans in order to create space to
+            focus on my future self?
+
+        </p><p>
+
+            Nope.
+
+        </p><p>
+
+            That’s a trick your busy self plays on you to keep you away from the scary stuff you’re not yet good at and
+            that isn’t yet productive. Sometimes you need to be irresponsible with your current challenges in order to
+            make real progress on your future self. You have to let the present just sit there, untended. It’s not going
+            away and will never end. That’s the nature of the present.
+
+        </p><p>
+
+            You may not end up with an empty email inbox. You may not have the perfect compensation conversations. You
+            may not please everyone. But, as your coach, I’m willing to bet that you will do those things well enough.
+
+        </p><p>
+
+            It’s the other stuff I worry about. The wildly important stuff that never gets done because there’s not time
+            or it’s not urgent or it’s too hard or risky or terrifying. That’s the stuff I want to help you work on.
+
+        </p><p>
+
+            Even though Sanjay is delighted at the idea of focusing on his future self, he resists it because it doesn’t
+            feel as good as solving his current challenges. He isn’t as skilled at it yet. That’s why it’s his future.
+
+        </p><p>
+
+            And that is exactly why he needs to focus on it.
+
+        </p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

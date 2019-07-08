@@ -1,0 +1,69 @@
+{% extends "ss/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>Vanhuspalvelulain uudistus jaetaan kahteen osaan – ensin säädetään sitova hoitajamitoitus</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            Perhe- ja peruspalveluministeri Krista Kiuru (sd.) kertoo, että vanhuspalvelulakia päivitetään kahdessa
+            osassa. <br> Ensimmäiseksi hallitus aikoo säätää kiireellisesti sitovan vähimmäismitoituksen (0,7)
+            ympärivuorokautiseen hoivaan. Mitoituksen toteutuksessa otetaan huomioon hoitoisuus eli se, miten paljon
+            hoitoa vanhukset tarvitsevat.
+        </p>
+        {% if paywall.show %}
+
+
+            <p>Lisäksi hallitus selvittää hoivan tukipalvelujen tarpeen. Kiuru arvioi, että selvitystyölle on annettava
+                joitain viikkoja aikaa.</p>
+            <p>Henkilöstökysymysten ratkaisun jälkeen vanhuspalvelulakia päivitetään laajemmin. Kiurun mukaan toinen
+                vaihe lähtee liikkeelle joulun jälkeen.</p>
+            <p>Kiuru arvioi, että uudistuksen toteuttamiseksi vanhuspalveluihin tarvitaan 4  000 uutta hoitajaa. Hän
+                korostaa, että vähimmäismitoituksen lisäksi on turvattava myös omaishoidon ja kotihoidon resurssit.</p>
+            <p>– Muuten käy niin, että saamme kyllä mitoituksen kuntoon ympärivuorokautisessa hoivassa, mutta
+                kotihoidossa ei ole enää työntekijöitä. Se hinta olisi liian suuri maksettavaksi, Kiuru sanoo.</p>
+            <p>Asian ratkaisemiseksi hallitus aikoo osoittaa lisää rahaa kotihoidon kehittämiseen.</p>
+            <p><b>Hoitotakuuseen kaa</b>
+                <b>vaillaan 150:tä miljoonaa euroa</b></p>
+            <p>Kiuru esitteli hallituskauden tavoitteitaan tänään aamulla yhdessä sosiaali- ja terveysministeri
+                Aino-Kaisa Pekosen (vas.) kanssa sosiaali- ja terveysministeriössä (STM).</p>
+            <p>Pääministeri Antti Rinteen (sd.) hallitus on luvannut 1  000 lääkäriä terveyskeskuksiin, jotta hoitoon
+                pääsy nopeutuisi ja seitsemän vuorokauden hoitotakuu toteutuisi. </p>
+            <p>Terveydenhuoltolakia on tarkoitus uudistaa ensi vuonna. Hoitotakuun voimaantuloon kaavaillaan kuitenkin
+                joidenkin vuosien mittaista siirtymäaikaa.</p>
+            <p>Kiurun mukaan hoitojonojen lyhentämiseen on varattu "merkittävä summa rahaa".</p>
+            <p>STM:n sosiaali- ja terveydenhuollon ohjausosaston osastopäällikkö Pasi Pohjola tarkentaa, että
+                hoitotakuun toteuttamiseen on kaavailtu noin 150 miljoonaa euroa vuosille 2020–2022. Summa tarkentuu,
+                kun hallitus päättää tulevasta talousarviosta.</p>
+            <p>Tällä hetkellä kiireettömään hoitoon pääsy vaihtelee laajasti ympäri Suomea. </p>
+            <p>Ministeriön arvion mukaan lähes 60 prosenttia suomalaisista ei pääse lääkäriin alle viikossa. Pohjola
+                kertoo, että alueellisesti kirjo on iso: osassa Suomea kiireettömään hoitoon pääsyä joutuu jonottamaan
+                jopa 8–9 viikkoa.</p>
+            <p>Hoitotakuun toteuttaminen on vaikea tehtävä, Kiuru pohtii. Kyse on erityisesti lääkärien
+                houkuttelemisesta terveyskeskuksiin.</p>
+            <p>– Viime kädessä henkilökunnan saatavuus riippuu siitä, lähtevätkö lääkärit muista tehtävistä töihin
+                julkiselle sektorille toteuttamaan tätä suurta tavoitetta, Kiuru sanoo.</p>
+            <p>Hallitus aikoo kehittää terveyskeskuksia muun muassa lisäämällä erikoislääkärien vastaanottoja
+                perusterveydenhuollon puolelle. </p>
+            <p>Tavoitteena on myös palvelujen sovittaminen yhteen. Kiuru kaavailee, että tulevaisuuden sosiaali- ja
+                terveyskeskuksista saisi terveydenhuollon lisäksi monipuolisesti esimerkiksi sosiaali-, mielenterveys-
+                ja päihdepalveluja yhden luukun periaatteen hengessä.</p>
+            <p><b>Suurta sote-uudistusta yritetään nyt pilkottuna</b></p>
+            <p>Samaan aikaan, kun terveyskeskuksia kehitetään, hallitus laittaa liikkeelle myös sote-palvelujen
+                rakenneuudistuksen.</p>
+            <p>Edellisellä hallituskaudella sote- ja maakuntauudistusta pyrittiin viemään eteenpäin suurena könttänä.
+                Nyt kokonaisuutta on pilkottu pienempiin osiin.</p>
+            <p>Rakenneuudistus lähtee 18 maakunnan perustamisesta, mutta maakuntiin siirtyy ainoastaan sote-palvelut,
+                ensihoito ja pelastustoimi.</p>
+            <p>Maakuntien laajempaa monialaisuutta ja rahoitusta pohditaan parlamentaarisessa valmistelussa. </p>
+            <p>Monialaisten maakuntien edistäminen on ollut hallituksessa erityisesti keskustan sydäntä lähellä.</p>
+            <p>Vaikuttaa kuitenkin siltä, että laajempi monialaisuuden mahdollinen toteutuminen jää myöhemmäksi. SDP:n
+                Kiuru korostaa, että sote-palvelujen rakenneuudistus on saatava ensin valmiiksi ennen kuin maakuntien
+                laajemmasta monialaisuudesta voidaan tehdä päätöksiä.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "hs/base.html" %}
+
+{% block content %}
+
+<article>
+        <header id="articleHeader">
+          <div id="titleCollapse">
+            <div class="verticalCenterOuter">
+              <div class="verticalCenterInner">
+                <h1 id="titleHolder">Selvitys: Kiina asentaa vakoilusovelluksia uiguurialueella vierailevien matkailijoiden puhelimiin</h1>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div id="content"><noscript>JavaScript must be enabled to use this feature.</noscript><div><figure><img srcset="https://hs.mediadelivery.fi/img/115/999535f92bbf449992eff5a8234668a8.jpg.webp 115w, https://hs.mediadelivery.fi/img/230/999535f92bbf449992eff5a8234668a8.jpg.webp 230w, https://hs.mediadelivery.fi/img/320/999535f92bbf449992eff5a8234668a8.jpg.webp 320w, https://hs.mediadelivery.fi/img/468/999535f92bbf449992eff5a8234668a8.jpg.webp 468w, https://hs.mediadelivery.fi/img/658/999535f92bbf449992eff5a8234668a8.jpg.webp 658w, https://hs.mediadelivery.fi/img/978/999535f92bbf449992eff5a8234668a8.jpg.webp 978w, https://hs.mediadelivery.fi/img/1440/999535f92bbf449992eff5a8234668a8.jpg.webp 1440w, https://hs.mediadelivery.fi/img/1920/999535f92bbf449992eff5a8234668a8.jpg.webp 1920w" width="594" height="334"><figcaption dir="auto">Poliisit partioivat kesäkuun alussa Xinjiangin Kashgarissa. Viranomaisten valvontatoimet ovat alueella mittavia. (KUVA: GREG BAKER / AFP)</figcaption></figure><div itemprop="articleBody" dir="ltr">. Lisäksi selvitystyöhön on osallistunut amerikkalaisen <a href="https://www.vice.com/en_us/article/7xgame/at-chinese-border-tourists-forced-to-install-a-text-stealing-piece-of-malware" dir="ltr">Vice-sivuston</a></div><div itemprop="articleBody" dir="ltr" {% if not paywall.show %} class="paytext" {% endif %}> sekä saksalaisten NDR-yleisradioyhtiön ja <a href="https://www.sueddeutsche.de/politik/china-app-ueberwachung-touristen-1.4508470" dir="ltr">Süddeutsche Zeitung</a></div>
+        {% if paywall.show %}
+        <div itemprop="articleBody" dir="ltr"> -lehden toimittajia.<br dir="ltr"><br dir="ltr">Rajanylittäjät ovat huomanneet viranomaisten ottavan heidän älypuhelimensa rajatarkastuksen yhteydessä, mutta heille ei ole kerrottu valvontasovelluksesta. Useimmissa medioiden selvittämissä tapauksissa sovellus on poistettu ennen kuin viranomaiset ovat antaneet sen takaisin, mutta jotkut haastatellut henkilöt ovat löytäneet sen laitteestaan jälkikäteen.<br dir="ltr">
+</div><div itemprop="articleBody" dir="ltr">
+<br dir="ltr"><span dir="ltr">Xinjiangin</span> uiguurit ovat pääasiassa sunnalaista islamia harjoittava vähemmistökansa, johon kohdistuu Kiinassa raskasta valvontaa ja sortotoimia. YK:n ihmisoikeuspaneeli <a href="https://www.hs.fi/ulkomaat/art-2000005787523.html" dir="ltr">arvioi viime vuonna</a></div><div itemprop="articleBody" dir="ltr">, että jopa miljoonia uiguureja on pakotettu salaisille ”uudelleenkoulutusleireille”, joiden olemassaoloa Kiina ei ole virallisesti myöntänyt.<br dir="ltr"><br dir="ltr">Helsingin Sanomat kertoi maaliskuussa, että viranomaiset määräsivät jo toissa vuonna xinjiangilaisia lataamaan älypuhelimeensa sovelluksen, joka raportoi niissä olevasta ”epäilyttävästä materiaalista”. Uusi selvitys paljastaa siitä kertovien lehtien mukaan, että samantyyppistä teknistä valvontaa kohdistuu myös ulkomaalaisiin turisteihin ja muihin vierailijoihin.<br dir="ltr"><br dir="ltr">Selvityksessä myös kuvaillaan, millaista materiaalia rajatarkastuksissa asennettu sovellus etsii puhelimista. Mukana kerrotaan olevan islamistijärjestöjen propagandaa, mutta myös muun muassa neutraalia islamiin liittyvää materiaalia, Tiibetin hengellisen johtajan dalai-laman kuvia ja japanilaisen grindcore-yhtyeen musiikkia.<br dir="ltr">
+
+<br dir="ltr">Kiinan viranomaiset eivät ole kommentoineet asiaa tiedotusvälineille.<br dir="ltr"><br dir="ltr"><span dir="ltr">Xinjiangissa</span> vieraillut HS:n Kiinan-kirjeenvaihtaja <a href="https://www.hs.fi/haku/?query=katriina+pajari" dir="ltr">Katriina Pajari</a></div><div itemprop="articleBody" dir="ltr"> kertoi maaliskuussa ilmestyneessä reportaasissaan uiguureihin kohdistuvasta laajamittaisesta valvonnasta.<br dir="ltr"><br dir="ltr"><a href="https://dynamic.hs.fi/2019/uiguurimuslimit/" dir="ltr"><strong dir="ltr">Lue koko reportaasi tästä</strong>: Kiinan pimeä reuna</a></div><div itemprop="articleBody" dir="ltr"><br><br dir="ltr">Uiguureita on vaadittu menemään metallinpaljastimien ja vartaloskannereiden läpi, jos he haluavat esimerkiksi kauppakeskukseen tai sairaalaan. Viranomaiset valvovat heitä muun muassa kotietsinnöillä, ja julkisilla paikoilla valvontakameroita on tiheässä.<br dir="ltr"><br dir="ltr">Myös HS:n toimittajan ja kuvaajan työtä häirittiin jatkuvasti heidän liikkuessaan Xinjiangissa. Viranomaiset muun muassa pysäyttivät heidät useita kertoja, kuulustelivat heitä tuntien ajan ja halusivat tarkistaa puhelimessa olleet kuvat.<br dir="ltr">
+</div></div></div>
+              {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

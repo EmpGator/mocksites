@@ -1,0 +1,35 @@
+{% extends "ts/base.html" %}
+
+{% block content %}
+<article>
+        <header id="articleHeader">
+          <div id="titleCollapse">
+            <div class="verticalCenterOuter">
+              <div class="verticalCenterInner">
+                <h1 id="titleHolder">Contract signed: The third Royal Caribbean Icon ship is built at Meyer in Turku</h1>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div id="content"><noscript>JavaScript must be enabled to use this feature.</noscript><div><font>Contract signed: The third Royal Caribbean Icon ship is built at Meyer in Turku</font><font>Ari-Matti Ruuska</font><img src="https://www.ts.fi/static/content/pic_5_4628710_k4372500_651.jpg" alt="Royal Caribbean on viimeksi rakentanut Turussa Allure of the Seas -risteilij&amp;#228;n, joka valmistui 2010.  Tilauksessa Turun telakalta on nyt kolme Icon-risteilij&amp;#228;&amp;#228;." width="651" height="421"><font>Royal Caribbean has recently built the Allure of the Seas cruise ship in Turku, which was completed in 2010. The order now has three Icon cruisers from the Turku shipyard.</font><div dir="ltr">
+                                <a href="https://www.ts.fi/uutiset/paikalliset/" dir="ltr"><font dir="ltr"><font dir="ltr">Local </font></font></a>
+ 
+
+                            <font dir="ltr"><span dir="ltr"><font dir="ltr">Turun Sanomat</font></span></font>
+                            
+                            
+                            <time datetime="2019-07-02 14:11+03:00" title="2.7.2019 14:11" dir="ltr"><font dir="ltr"><font dir="ltr">7/29/2014 2:11 PM PM in United States!</font></font></time>
+                                
+                                <span dir="ltr"><font dir="ltr"><font dir="ltr">3</font></font></span>
+                        </div><font>Royal Caribbean Cruises and Meyer Turku Shipyard have signed a shipping contract for the delivery of the third Icon-class cruise ship.</font><font dir="ltr"><font dir="ltr">The order will be delivered in spring 2025. The financing arrangements for the agreement are still open. </font><font dir="ltr">The first two Icon vessels will be delivered from the Meyer Turku shipyard in 2022 and 2024.</font></font><p dir="ltr" {% if not paywall.show %} class="paytext" {% endif %}><span dir="ltr"><font dir="ltr"><font dir="ltr">Icon ships</font></font></span><font dir="ltr"><font dir="ltr"> are cruise </font><span dir="ltr"><font dir="ltr">ships</font></span><font dir="ltr"> of about 200,000 gross tonnage and use LNG as fuel.</font></font></p>
+                        {% if paywall.show %}
+
+                        <p dir="ltr" ><font dir="ltr"><font dir="ltr">- The ship design is well advanced at Meyer Turku shipyard, and on these ships we redefine what a modern cruise ship is. </font><font dir="ltr">Environmental friendliness, durability and emission reduction have been at the heart of Icon's design. </font><font dir="ltr">Together with Meyer Turku, we have introduced the latest technologies and we are also developing a completely new technology. </font><font dir="ltr">We rely on the development capacity and flexibility of Meyer Turku and the Finnish maritime cluster, as well as the appropriate Finnish business environment, Executive Vice President Maritime &amp; Newbuilding of the Royal Caribbean Cruises, </font></font><span dir="ltr"><font dir="ltr"><font dir="ltr">Harri Kulovaara</font></font></span><font dir="ltr"><font dir="ltr"> commented on the release.</font></font></p><p dir="ltr"><span dir="ltr"><font dir="ltr"><font dir="ltr">Meyer Turku has a</font></font></span><font dir="ltr"><font dir="ltr"> long common history with Royal Caribbean. </font><font dir="ltr">The fruit of this cooperation has been the Royal Promenade of Voyager of the Seas, completed in 1999, and the large and complex Oasis and Allure of the Seas ships completed in 2009 and 2010.</font></font></p><p dir="ltr"><font dir="ltr"><font dir="ltr">“We are very grateful that Royal Caribbean has shown its confidence in Icon's design and our ability to build such special ships. </font><font dir="ltr">Icon III expands our order books to reach 2025, which gives the shipyard and the Finnish shipbuilding cluster a long-term perspective. </font><font dir="ltr">We need this long order book to prepare ourselves for the often state-owned competition of the future. </font><font dir="ltr">The order of Icon III has been made with confidence that we will be able to maintain flexibility and competitiveness in the future business environment as well, </font><font dir="ltr">says </font></font><span dir="ltr"><font dir="ltr"><font dir="ltr">Me</font></font></span><font dir="ltr"><font dir="ltr"> Meyer, Managing Director of Meyer Turku </font><font dir="ltr">.</font></font></p></div></div>
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

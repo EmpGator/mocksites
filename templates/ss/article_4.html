@@ -1,0 +1,190 @@
+{% extends "ss/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>How Wonder Works</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            When I was growing up in New York City, a high point of my calendar was the annual arrival of the
+            Ringling Brothers and Barnum &amp; Bailey Circus — ‘the greatest show on earth.’ My parents endured the
+            green-haired clowns, sequinned acrobats and festooned elephants as a kind of garish pageantry. For me,
+            though, it was a spectacular interruption of humdrum reality – a world of wonder, in that trite but
+            telling phrase.<br>
+            Wonder is sometimes said to be a childish emotion, one that we grow out of. But that is surely wrong. As
+            adults, we might experience it when gaping at grand vistas. I was dumbstruck when I first saw a sunset
+            over the Serengeti. We also experience wonder when we discover extraordinary facts. I was enthralled to
+            learn that, when arranged in a line, the neurons in a human brain would stretch the 700 miles from
+            London to Berlin. But why? What purpose could this wide-eyed, slack-jawed feeling serve? It’s difficult
+            to determine the biological function of any affect, but whatever it evolved <em>for</em> (and I’ll come
+            to that), wonder might be humanity’s most important emotion.
+        </p>
+        {% if paywall.show %}
+
+            <p>First, let’s be clear what we’re talking about. My favourite definition of wonder comes from the
+                18th-century Scottish moral philosopher Adam Smith, better known for first articulating the tenets of
+                capitalism. He wrote that wonder arises ‘when something quite new and singular is presented… [and]
+                memory cannot, from all its stores, cast up any image that nearly resembles this strange appearance’.
+                Smith associated this quality of experience with a distinctive bodily feeling — ‘that staring, and
+                sometimes that rolling of the eyes, that suspension of the breath, and that swelling of the heart’.</p>
+            <p>These bodily symptoms point to three dimensions that might in fact be essential components of wonder. The
+                first is <em>sensory</em>: wondrous things engage our senses — we stare and widen our eyes. The second
+                is <em>cognitive</em>: such things are perplexing because we cannot rely on past experience to
+                comprehend them. This leads to a suspension of breath, akin to the freezing response that kicks in when
+                we are startled: we gasp and say ‘Wow!’ Finally, wonder has a dimension that can be described as <em>spiritual</em>:
+                we look upwards in veneration; hence Smith’s invocation of the swelling heart.</p>
+            <p>English contains many words related to this multifarious emotion. At the mild end of the spectrum, we
+                talk about things being marvellous. More intense episodes might be described as stunning or astonishing.
+                At the extreme, we find experiences of awe and the sublime. These terms seem to refer to the same affect
+                at different levels of intensity, just as anger progresses from mild irritation to violent fury, and
+                sadness ranges from wistfulness to abject despair.</p>
+            <p>Smith’s analysis appears in his <em>History of Astronomy</em> (1795). In that underappreciated work, he
+                proposed that wonder is crucial for science. Astronomers, for instance, are moved by it to investigate
+                the night sky. He might have picked up this idea from the French philosopher René Descartes, who in his
+                <em>Discourse on the Method </em>(1637) described wonder as the emotion that motivates scientists to
+                investigate rainbows and other strange phenomena. In a similar spirit, Socrates said that philosophy
+                begins in wonder: that wonder is what leads us to try to understand our world. In our own time, Richard
+                Dawkins has portrayed wonder as a wellspring from which scientific inquiry begins. Animals simply act,
+                seeking satiation, safety and sex. Humans reflect, seeking comprehension.</p>
+            <p>For a less flattering view, we turn to the 17th-century English philosopher Francis Bacon, the father of
+                the scientific method. He called wonder ‘broken knowledge’ — a mystified incomprehension that science
+                alone could cure. But this mischaracterises science and wonder alike. Scientists are spurred on by
+                wonder, and they also produce wondrous theories. The paradoxes of quantum theory, the efficiency of the
+                genome: these are spectacular. Knowledge does not abolish wonder; indeed, scientific discoveries are
+                often more wondrous than the mysteries they unravel. Without science, we are stuck with the drab world
+                of appearances. With it, we discover endless depths, more astounding that we could have imagined.</p>
+            <p><span>I</span>n this respect, science shares much with religion. Gods and monsters are wondrous things,
+                recruited to explain life’s unknowns. Also, like science, religion has a striking capacity to make us
+                feel simultaneously insignificant and elevated. Dacher Keltner, professor of psychology at the
+                University of California, Berkeley, has found that awe, an intense form of wonder, makes people feel
+                physically smaller than they are. It is no accident that places of worship often exaggerate these
+                feelings. Temples have grand, looming columns, dazzling stained glass windows, vaulting ceilings, and
+                intricately decorated surfaces. Rituals use song, dance, smell, and elaborate costumes to engage our
+                senses in ways that are bewildering, overwhelming, and transcendent.</p>
+            <p>Wonder, then, unites science and religion, two of the greatest human institutions. Let’s bring in a
+                third. Religion is the first context in which we find art. The Venus of Willendorf appears to be an
+                idol, and animals on the walls of the Chauvet, Altamira and Lascaux caves are thought to have been used
+                in shamanic rites, with participants travelling to imaginative netherworlds in trance-like states under
+                the hypnotic flicker of torchlight. Up through the Renaissance, art primarily appeared in churches. When
+                in the Middle Ages Giotto broke free from the constraints of Gothic painting, he did not produce secular
+                art but a deeply spiritual vision, rendering divine personages more accessible by showing them in fleshy
+                verisimilitude. His Scrovegni Chapel in Padua is like a jewel-box, exploding with figures who breathe,
+                battle, weep, writhe, and rise from the dead to meet their God beneath an ethereal cobalt canopy. It is,
+                in short, a wonder.</p>
+            <p>When art officially parted company from religion in the 18th century, some links remained. Artists began
+                to be described as ‘creative’ individuals, whereas the power of creation had formerly been reserved for
+                God alone. With the rise of the signature, artists could obtain cultlike status. A signature showed that
+                this was no longer the product of an anonymous craftsman, and drew attention to the occult powers of the
+                maker, who converted humble oils and pigments into objects of captivating beauty, and brought imaginary
+                worlds to life. The cult of the signature is a recent phenomenon and yet, by promoting reverence for
+                artists, it preserves an old link between beauty and sanctity.</p>
+            <p>Art museums are a recent invention, too. During the Middle Ages, artworks appeared almost exclusively in
+                religious contexts. After that, they began cropping up in private collections, called cabinets of
+                curiosity (<em>Wunderkammern</em>, in German). These collections intermingled paintings and sculptures
+                with other items deemed marvellous or miraculous: animal specimens, fossils, shells, feathers, exotic
+                weapons, decorative books. Art was continuous with science — a human practice whose products could be
+                compared to oddities found in the natural world.</p>
+            <p>This spirit dominated into the 19th century. The early acquisitions of the British Museum included
+                everything from animal bones to Italian paintings. In a compendious book called <em>The World of
+                    Wonders: A Record of Things Wonderful in Nature, Science, and Art</em> (1883) we find entries on
+                electric eels, luminous plants, volcanic eruptions, comets, salt mines, the Dead Sea, and dinosaur
+                bones, casually interspersed with entries on Venetian glass, New Zealand wood carvings, and the tomb of
+                Mausolus. The founder of the circus that I used to attend was the showman and charlatan P&nbsp;T&nbsp;Barnum,
+                who took over the American Museum in New York in 1841. There he displayed portraits of famous
+                personages, wax statues, and a scale model of Niagara Falls, at the same time introducing enthralled
+                crowds to the ‘Siamese’ twins Chang and Eng Bunker, and a little person dubbed General Tom Thumb. The
+                museum was advertised on luminous posters proclaiming ‘the greatest show on Earth’ — the same show that
+                he would eventually take on the road with his travelling circus. Today, the link between circuses and
+                museums might be hard to fathom, but at the time the connection would have seemed quite natural. As
+                temples of wonder, museums were showcases for oddities: a fine portrait, a waxwork tableau and a
+                biological aberration all had their place.</p>
+            <p>By the end of the century, however, science and art had parted company. Major cities began opening
+                dedicated art museums, places where people could come to view paintings without the distraction of
+                butterfly wings, bearded ladies and deformed animal foetuses in jars. Nowadays, we don’t think of
+                museums as houses of curiosity, but they remain places of wonder. They are shrines for art, where we go
+                to be amazed.</p>
+            <p><span>A</span>theist that I am, it took some time for me to realise that I am a spiritual person. I
+                regularly go to museums to stand in mute reverence before the artworks that I admire. Recently, I have
+                been conducting psychological studies with Angelika Seidel, my collaborator at the City University of
+                New York (CUNY), to explore this kind of emotional spell.</p>
+            <p>We told test subjects to imagine that the Mona Lisa was destroyed in a fire, but that there happened to
+                be a perfect copy that even experts couldn’t tell from the original. If they could see just one or the
+                other, would they rather see the ashes of the original Mona Lisa or a perfect duplicate? Eighty per cent
+                of our respondents chose the ashes: apparently we disvalue copies and attribute almost magical
+                significance to originals. In another study, we hung reproductions of paintings on a wall and told test
+                subjects either that they were works by famous artists or that they were forgeries. The very same
+                paintings appeared physically larger when attributed to famous artists. We also found that pictures look
+                better and more wondrous when they are placed high on a wall: when we have to look up at an artwork, it
+                impresses us more.</p>
+            <p>In the mid-18th century, the philosopher Edmund Burke hypothesised a connection between aesthetics and
+                fear. In a similar vein, the poet Rainer Maria Rilke proclaimed: ‘beauty is nothing but the beginning of
+                terror’. To put this association to the test, I, together with Kendall Eskine and Natalie Kacinik,
+                psychologists at CUNY, recently conducted another experiment. First, we scared a subset of our
+                respondents by showing them a startling film in which a zombie jumps out on a seemingly peaceful country
+                road. Then we asked all of our subjects to evaluate some abstract, geometric paintings by El Lissitzky.
+                Those subjects who had been startled found the paintings more stirring, inspiring, interesting, and
+                moving. This link between art and fear relates to the spiritual dimension of wonder. Just as people
+                report fear of God, great art can be overwhelming. It stops us in our tracks and demands worshipful
+                attention.</p>
+            <p>Bringing these threads together, we can see that science, religion and art are unified in wonder. Each
+                engages our senses, elicits curiosity and instils reverence. Without wonder, it is hard to believe that
+                we would engage in these distinctively human pursuits. Robert Fuller, professor of religious studies at
+                Bradley University in Illinois, contends that it is ‘one of the principal human experiences that lead to
+                belief in an unseen order’. In science, that invisible order might include microorganisms and the
+                invisible laws of nature. In religion, we find supernatural powers and divine agents. Artists invent new
+                ways of seeing that give us a fresh perspective on the world we inhabit.</p>
+            <p><span>A</span>rt, science and religion appear to be uniquely human institutions. This suggests that
+                wonder has a bearing on human uniqueness as such, which in turn raises questions about its origins. Did
+                wonder evolve? Are we the only creatures who experience it?</p>
+            <p>Descartes claimed that it was innate in human beings; in fact, he called it our most fundamental emotion.
+                The pioneering environmentalist Rachel Carson also posited an inborn sense of wonder, one especially
+                prevalent in children. An alternative possibility is that wonder is a natural by-product of more basic
+                capacities, such as sensory attention, curiosity and respect, the last of which is crucial in social
+                status hierarchies. Extraordinary things trigger all three of these responses at once, evoking the state
+                we call wonder.</p>
+            <p>Other animals can experience it, too. The primatologist Jane Goodall was observing her chimpanzees in
+                Gombe when she noticed a male chimp gesturing excitedly at a beautiful waterfall. He perched on a nearby
+                rock and gaped at the flowing torrents of water for a good 10 minutes. Goodall and her team saw such
+                responses on several occasions. She concluded that chimps have a sense of wonder, even speculating about
+                a nascent form of spirituality in our simian cousins.</p>
+            <p>This leaves us with a puzzle. If wonder is found in all human beings and higher primates, why do science,
+                art and religion appear to be recent developments in the history of our species? Anatomically modern
+                humans have been around for 200,000 years, yet the earliest evidence for religious rituals appears about
+                70,000 years ago, in the Kalahari Desert, and the oldest cave paintings (at El Castillo in Spain) are
+                only 40,000 years old. Science as we know it is much younger than that — perhaps only a few hundred
+                years old. It is also noteworthy that these endeavours are not essential for survival, which means they
+                probably aren’t direct products of natural selection. Art, science and religion are all forms of excess;
+                they transcend the practical ends of daily life. Perhaps evolution never selected for wonder itself.</p>
+            <p>And if wonder is shared beyond our own species, why don’t we find apes carpooling to church each Sunday?
+                The answer is that the emotion alone is not sufficient. It imbues us with the sense of the
+                extraordinary, but it takes considerable intellectual prowess and creativity to cope with extraordinary
+                things by devising origin myths, conducting experiments and crafting artistic representations. Apes
+                rarely innovate; their wonder is a dead-end street. So it was for our ancestors. For most of our
+                history, humans travelled in small groups in constant search for subsistence, which left little
+                opportunity to devise theories or create artworks. As we gained more control over our environment,
+                resources increased, leading to larger group sizes, more permanent dwellings, leisure time, and a
+                division of labour. Only then could wonder bear its fruit.</p>
+            <p>Art, science and religion reflect the cultural maturation of our species. Children at the circus are
+                content to ogle at a spectacle. Adults might tire of it, craving wonders that are more profound,
+                fertile, illuminating. For the mature mind, wondrous experience can be used to inspire a painting, a
+                myth or a scientific hypothesis. These things take patience, and an audience equally eager to move
+                beyond the initial state of bewilderment. The late arrival of the most human institutions suggests that
+                our species took some time to reach this stage. We needed to master our environment enough to exceed the
+                basic necessities of survival before we could make use of wonder.</p>
+            <div><p>If this story is right, wonder did not evolve for any purpose. It is, rather, a by-product of
+                natural inclinations, and its great human derivatives are not inevitable. But wonder is the accidental
+                impetus behind our greatest achievements. Art, science and religion are inventions for feeding the
+                appetite that wonder excites in us. They also become sources of wonder in their own right, generating
+                epicycles of boundless creativity and enduring inquiry. Each of these institutions allows us to
+                transcend our animality by transporting us to hidden worlds. In harvesting the fruits of wonder, we came
+                into our own as a species.</p></div>
+            <p><em><a href="https://aeon.co/users/jesse-prinz">Jesse Prinz</a> is professor of philosophy at the City
+                University of New York. His latest book is </em>Beyond Human Nature<em> (2012).
+            </em></p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}

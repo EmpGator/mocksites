@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link href="{{ url_for('static', filename='ks/style.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    <img src="{{ url_for('static', filename='ks/top.png') }}">
+    <img src="{{ url_for('static', filename='ks/main.png') }}" alt="" usemap="#map" />
+    <map name="map" id="map">
+        <area alt="" title="" href="/ks/article/0" shape="rect" coords="48,13,333,183" />
+        <area alt="" title="" href="/ks/article/1" shape="rect" coords="47,208,332,490" />
+        <area alt="" title="" href="/ks/article/2" shape="rect" coords="46,549,324,848" />
+        <area alt="" title="" href="/ks/article/3" shape="rect" coords="347,44,929,524" />
+        <area alt="" title="" href="/ks/article/4" shape="rect" coords="348,596,929,1122" />
+        <area alt="" title="" href="/ks/article/0" shape="rect" coords="956,287,1229,384" />
+        <area alt="" title="" href="/ks/article/1" shape="rect" coords="955,390,1222,464" />
+        <area alt="" title="" href="/ks/article/2" shape="rect" coords="957,473,1225,541" />
+        <area alt="" title="" href="/ks/article/3" shape="rect" coords="955,552,1217,600" />
+        <area alt="" title="" href="/ks/article/4" shape="rect" coords="955,605,1225,659" />
+        <area alt="" title="" href="/ks/article/5" shape="rect" coords="956,669,1224,716" />
+        <area alt="" title="" href="/ks/article/6" shape="rect" coords="956,721,1226,772" />
+        <area alt="" title="" href="/ks/article/7" shape="rect" coords="957,775,1225,829" />
+        <area alt="" title="" href="/ks/article/8" shape="rect" coords="957,834,1224,882" />
+        <area alt="" title="" href="/ks/article/9" shape="rect" coords="955,885,1218,937" />
+    </map>
+{%  endblock %}

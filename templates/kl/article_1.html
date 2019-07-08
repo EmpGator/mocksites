@@ -1,0 +1,79 @@
+{% extends "kl/base.html" %}
+
+{% block content %}
+    <article>
+        <h1>How To Schedule Your Day For Peak Creative Performance</h1>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            About four years ago I started working for myself. I wanted the freedom and flexibility to own my
+            schedule and the space to bring my ideas to life.<br>
+            One of the biggest challenges was structuring my time so I was fully experiencing the benefits of
+            working for myself while also being as creative and productive as possible. At first, the idea of
+            systems and planning made me cringe. I felt like they would hold back my creative potential. Eventually,
+            organization and effectiveness challenges pilled up and I decided to give structure a try.
+        </p>
+        {% if paywall.show %}
+
+            <p>I wondered:</p>
+            <p><em>How do I balance client service with working on my own ideas?</em></p>
+            <p>How do I avoid interruptions that mess with my creative flow?</p></div>
+            <div><p><em>How do I <a
+                    href="https://www.fastcompany.com/3008359/3-ways-tackle-your-procrastination-problem">stop putting
+                off</a> the stuff I hate but still have to do?</em></p>
+                <p>In my first attempt, I mapped out my day hour by hour, squeezing in all the elements of what I
+                    defined as an “ideal day.” After a few weeks, I ended up feeling like a robot and the predictability
+                    was anything but inspiring.</p>
+                <p>That’s when I decided to zoom out and think more about the categories of an ideal day and how I can
+                    batch my time to be most effective.</p>
+                <p>My problem became more clear: <em>How do I make sure I’m getting stuff done, taking care of myself,
+                    making time from for play, and actively pushing myself outside my comfort zone?</em></p>
+                <p>That’s when I developed a framework called “Work, Play, Fit, Push.” Hanging from my wall, it looks
+                    like:</p>
+                <figure>
+                    <div id="RIL_IMG_1"><p><img id="image_1"
+                                                src="https://pocket-image-cache.com/direct?resize=w2000&amp;url=https%3A%2F%2Fimages.fastcompany.net%2Fimage%2Fupload%2Fw_596%2Cc_limit%2Cq_auto%3Abest%2Cf_auto%2Ffc%2F3008409-inline-69247ac6-9335-44d3-81dc-90c233526c73.jpg">
+                    </p></div>
+                    <br></figure>
+                <p>Here’s how it works:</p></div>
+            <div><p><strong>1. Set priorities on Sunday.</strong><br>
+                Every Sunday, I sit down and map out my week. Instead of defining the hour-by-hour of each day, I
+                outline my weekly priorities and what I want to have accomplished by the following Sunday.</p>
+                <p><strong>2. Map out work, play, fit, and push.</strong><br><strong>Work:</strong> For each day, I
+                    outline my “Top 3,” meaning the three most important things I will have accomplished by the end of
+                    the day. Sometimes I’ll map out the entire week on Sunday because my priorities are super clear.
+                    Other times, I’ll decide on my Top 3 on a day-by-day basis.</p>
+                <p><strong>Play:</strong> I’ve found that play enables me to self-express, reflect, and give my ideas
+                    space, which shows up positively in my work. Making time to create art, get into nature, go on photo
+                    walks, read poetry, skip down sidewalks and the like puts me in a constant state of curiosity and
+                    flow.</p>
+                <p><strong>Fit:</strong> Movement keeps ideas moving forward so I aim to move my body for at least 30
+                    minutes each day.</p>
+                <p><strong>Push:</strong> Since learning and growth is important to me, I do something that scares me
+                    (almost) every day. This may be asking someone whom I deeply respect for an interview or writing
+                    about a topic that makes me feel vulnerable.</p>
+                <p><strong>3. Batch your days.</strong><br>
+                    Batching actions into specific days and creating time for creativity has been a huge gamechanger for
+                    me. Here’s how I break down my schedule.</p></div>
+            <div><p><strong>CREATE on Monday/Wednesday/Friday:</strong> I create holes in my schedule for thinking and
+                creating. On these days, instead of thinking about how to spend my time in advance, I pay attention to
+                my body and take breaks as needed.</p>
+                <p><strong>CALLS and MEETINGS on Tuesday/Thursday: </strong>When possible, I avoid phone calls and
+                    meetings because I find them typically unproductive and often easy to solve via email. I set aside
+                    three hours on Tuesday and Thursday for meetings, and once these spots are filled, I say no. There
+                    are, of course, occasional exceptions.</p>
+                <p><strong>“Hate you but have to do you” is saved for Wednesday morning: </strong>Things like paying
+                    bills, clearing out my email inbox, and the like, take up just one morning.</p>
+                <p><strong>SPONTANEOUS Saturday: </strong>With so much structure, I make room for spontaneity. On
+                    Saturday, I let go and go where the day takes me. Balancing structure with a day of
+                    free-spiritedness makes me feel whole.</p>
+                <p><strong>INTENTIONAL Sunday:</strong> Plan for the week ahead.</p>
+                <p>Above all, when it comes to reaching peak creative performance, it’s all about experimenting to
+                    figure out what works best <em>for you</em>.</p></div>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+
+    </article>
+{% endblock %}
