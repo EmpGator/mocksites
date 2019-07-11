@@ -6,7 +6,7 @@ import requests
 
 app = Flask(__name__)
 app.secret_key = b'dsaadsads'
-
+finnplus_domain = 'http://127.0.0.1:5000'
 
 class LoginForm(FlaskForm):
     name = StringField('name', validators=[DataRequired()])
@@ -47,10 +47,10 @@ def show_content(url):
         jwt = session.get('accessToken', '')
         print(jwt)
         headers = {'Authorization': f'Bearer {jwt}'}
-        r = requests.post('http://localhost:5000/api/userdata', data=payload, headers=headers)
+        r = requests.post(finnplus_domain + '/api/userdata', data=payload, headers=headers)
     else:
         print('auth', auth)
-        r = requests.post('http://localhost:5000/api/userdata', data=payload, auth=auth)
+        r = requests.post(finnplus_domain + '/api/userdata', data=payload, auth=auth)
     if r.status_code == 200:
         data = r.json()
         if data['access']:
@@ -69,9 +69,9 @@ def get_info():
             print('not jwt')
             return None
         headers = {'Authorization': f'Bearer {jwt}'}
-        r = requests.post('http://localhost:5000/api/userinfo', headers=headers)
+        r = requests.post(finnplus_domain + '/api/userinfo', headers=headers)
     else:
-        r = requests.post('http://localhost:5000/api/userinfo', auth=auth)
+        r = requests.post(finnplus_domain + '/api/userinfo', auth=auth)
     if r.status_code == 200:
         print('r 200')
         data = r.json()
@@ -115,12 +115,12 @@ def finnplus():
     auth = session.get('user', None)
 
     if auth:
-        r = requests.post('http://localhost:5000/api/articlepaid',
+        r = requests.post(finnplus_domain + '/api/articlepaid',
                           auth=auth, data=data)
     else:
         jwt = session.get('accessToken', '')
         headers = {'Authorization': f'Bearer {jwt}'}
-        r = requests.post('http://localhost:5000/api/articlepaid',
+        r = requests.post(finnplus_domain + '/api/articlepaid',
                           headers=headers, data=data)
     print(r.status_code)
     print(r.text)
@@ -164,6 +164,9 @@ def news(site='mock', id=0):
     show = show_content(str(request.url))
     return render_template(f'{site}/article_{id}.html', paywall=show, test='test')
 
+@app.context_processor
+def finnplus_processor():
+    return dict(finnplus_domain=finnplus_domain)
 
 if __name__ == '__main__':
     app.run(port=8000)

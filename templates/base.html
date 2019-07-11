@@ -3,16 +3,28 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
     {% block head %}
     {% endblock %}
 </head>
 <body>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Not enough tokens</p>
+    <p><a href=http://finnplus.eu.pythonanywhere.com/>Get more tokens</a></p>
+  </div>
+
+</div>
 		<header>
 			<nav class="fixed-header">
-		        <div ><a href="http://localhost:5000">FINN+</a></div>
+		        <div ><a href="{{ finnplus_domain }}">FINN+</a></div>
 		        <ul >
                     {% with messages = get_flashed_messages() %}
                         {% for message in messages %}
+                            <script>noTokensPopup();</script>
                             <li>{{ message }}</li>
                         {% endfor %}
                     {% endwith %}
