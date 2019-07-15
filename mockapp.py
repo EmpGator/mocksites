@@ -37,6 +37,12 @@ class Paywall:
         self.block = True
         return self
 
+    def __str__(self):
+        if self.show:
+            return  'Paywall Show'
+        elif self.pay:
+            return 'Paywall Show'
+        return 'Paywall block'
 
 def show_content(url):
     auth = session.get('user', None)
@@ -81,6 +87,39 @@ def get_info():
         session['value'] = data.get('value')
         return data
 
+def test(url='', pay=False):
+    print('unified userinfo and pay test')
+    auth = session.get('user', None)
+    paywall = Paywall()
+    payload = {'url':url, 'domain':url, 'pay':pay}
+    print(f'Payload: {payload}')
+    if not auth:
+        print('not auth')
+        jwt = session.get('accessToken')
+        if not jwt:
+            print('not jwt')
+            return None, None
+        headers = {'Authorization': f'Bearer {jwt}'}
+        r = requests.post(finnplus_domain + '/api/test', headers=headers, json=payload)
+    else:
+        r = requests.post(finnplus_domain + '/api/test', auth=auth, json=payload)
+    if r.status_code == 200:
+        print('r 200')
+        data = r.json()
+        print(data)
+        session['name'] = data.get('name')
+        session['payment_type'] = data.get('payment_type')
+        session['value'] = data.get('value')
+        data = r.json()
+        if data['access']:
+            return paywall.set_show(), data
+        return paywall.set_pay(), data
+    else:
+        print(r.status_code)
+    return paywall, {}
+
+
+
 
 @app.route('/loginfinnplus', methods=['POST'])
 def loginfinnplus():
@@ -120,11 +159,11 @@ def finnplus():
     else:
         jwt = session.get('accessToken', '')
         headers = {'Authorization': f'Bearer {jwt}'}
+        data['pay'] = True
         r = requests.post(finnplus_domain + '/api/articlepaid',
-                          headers=headers, data=data)
-    print(r.status_code)
-    print(r.text)
-    if r.text.strip() == 'Not enough tokens':
+                          headers=headers, json=data)
+    data = r.json()
+    if data.get('message') != 'ok':
         flash('Not enough tokens')
     return make_response('ok', 200)
 
@@ -133,7 +172,7 @@ def finnplus():
 def utility_processor():
     def get_user_data():
         return get_info()
-    return dict(get_user_data=get_user_data)
+    return dict(get_user_data=get_user_data, finnplus_domain=finnplus_domain)
 
 
 @app.route('/setcookie/<jwt>')
@@ -154,7 +193,7 @@ def rss():
 def front(site='mock'):
     if site == 'favicon.ico':
         return redirect(url_for('static', filename='favicon.ico'))
-    print(session.get('user'))
+    _, data = test(request.url)
     return render_template(f'{site}/index.html')
 
 
@@ -162,11 +201,9 @@ def front(site='mock'):
 def news(site='mock', id=0):
     print('show content')
     show = show_content(str(request.url))
-    return render_template(f'{site}/article_{id}.html', paywall=show, test='test')
-
-@app.context_processor
-def finnplus_processor():
-    return dict(finnplus_domain=finnplus_domain)
+    #show, data = test(request.url)
+    #print(show, data)
+    return render_template(f'{site}/article_{id}.html', paywall=show)
 
 if __name__ == '__main__':
     app.run(port=8000)
