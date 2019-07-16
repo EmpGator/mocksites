@@ -162,8 +162,8 @@ def finnplus():
         data['pay'] = True
         r = requests.post(finnplus_domain + '/api/articlepaid',
                           headers=headers, json=data)
-    data = r.json()
-    if data.get('message') != 'ok':
+    #data = r.json() data.get('message') != 'ok'
+    if r.text.strip() == "Not enough tokens":
         flash('Not enough tokens')
     return make_response('ok', 200)
 
