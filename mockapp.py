@@ -58,10 +58,14 @@ def show_content(url):
         print('auth', auth)
         r = requests.post(finnplus_domain + '/api/userdata', data=payload, auth=auth)
     if r.status_code == 200:
+        print('r 200')
         data = r.json()
         if data['access']:
             return paywall.set_show()
         return paywall.set_pay()
+    else:
+        print(r.status_code)
+        print(r.text)
     return paywall
 
 
