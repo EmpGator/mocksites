@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:iltalehti="https://www.iltalehti.fi/rss" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
   <channel>
-    <atom:link href="https://www.iltalehti.fi/rss" rel="self" type="application/rss+xml"/>
-    <title>Iltalehti.fi tuoreimmat uutiset - Uutiset</title>
-    <link>{{ domain }}</link>
-    <description>Iltalehden 20 tuoreinta uutista - Uutiset</description>
+    <atom:link href="{{ feed.rss }}" rel="self" type="application/rss+xml"/>
+    <title>{{ feed.title }}</title>
+    <link>{{ feed.domain }}</link>
+    <description>{{ feed.desc }}</description>
     <language>fi</language>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <lastBuildDate>Mon, 01 Jul 2019 18:12:59 +0300</lastBuildDate>
-    {% for item in items %}
+    {% for item in feed.entries %}
     <item>
       <title>{{ item.title }}</title>
       <link>{{ item.url }}</link>
       <guid isPermaLink="false">{{ item.guid }}</guid>
       <enclosure url="{{ item.mediaurl }}"/>
       <media:content url="{{ item.mediaurl }}">
-        <media:credit></media:credit>
-        <media:description type="plain"></media:description>
+
       </media:content>
       <category>{{ item.category }}</category>
-      <pubDate></pubDate>
-      <description></description>
+      <pubDate>{{ item.date }}</pubDate>
+      <description>{{ item.desc }}</description>
     </item>
     {% endfor %}
   </channel>

@@ -28,7 +28,6 @@
                             <li>{{ message }}</li>
                         {% endfor %}
                     {% endwith %}
-                    {% set data = get_user_data() %}
                     {% if data %}
                         <li>Payment type: {{ data.payment_type }}</li>
                         <li>{{ data.value }}</li>

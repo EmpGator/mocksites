@@ -198,7 +198,8 @@ def front(site='mock'):
     if site == 'favicon.ico':
         return redirect(url_for('static', filename='favicon.ico'))
     _, data = test(request.url)
-    return render_template(f'{site}/index.html')
+    print(data)
+    return render_template(f'{site}/index.html', data=data)
 
 
 @app.route('/<site>/article/<id>')
@@ -208,6 +209,49 @@ def news(site='mock', id=0):
     #show, data = test(request.url)
     #print(show, data)
     return render_template(f'{site}/article_{id}.html', paywall=show)
+
+
+@app.route('/<site>/rss')
+def generate_rss(site='mock'):
+    from bs4 import BeautifulSoup
+    from random import choice, randint
+    from datetime import timedelta, date
+    base_url = request.url.replace('rss', 'article')
+    domain = request.url.replace('/rss', '')
+    url_list = [base_url + f'/{j}' for j in range(10)]
+    feed = dict(name=site, domain=domain, desc=None, entries=[], rss=request.url)
+    categories = ['politics', 'sports', 'economy', 'technology', 'health', 'entertainment']
+    for i, url in enumerate(url_list):
+        r = requests.get(url)
+        soup = BeautifulSoup(r.content)
+        imgs = soup.find_all('img')
+        if len(imgs) >= 3:
+            img = imgs[1].get('src')
+            if not img:
+                try:
+                    img = imgs[1].get('srcset').split(',')[-1:][0].split(' ')[1]
+                except IndexError:
+                    print('index error')
+                    img = ''
+        else:
+            img = ''
+        try:
+            desc = ' '.join(soup.find_all(attrs={'class': 'paytext'})[0].get_text().strip().split(' '))
+        except IndexError:
+            desc = ''
+        try:
+            title = ' '.join(soup.find_all('h1')[0].get_text().strip().split(' '))
+        except IndexError:
+            title = ''
+        category = choice(categories)
+        day = date(2019, 5, 1) + timedelta(days=randint(0, 83))
+        feed['entries'].append({'title': title, 'mediaurl': img, 'desc': desc, 'category': category,
+                                'url': url, 'guid': i, 'date': day})
+        template = render_template('base.xml', feed=feed)
+        resp = make_response(template)
+        resp.headers['Content-Type'] = 'application/xml'
+    return resp
+
 
 if __name__ == '__main__':
     app.run(port=8000)
