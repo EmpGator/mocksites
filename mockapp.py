@@ -8,6 +8,10 @@ app = Flask(__name__)
 app.secret_key = b'dsaadsads'
 finnplus_domain = 'http://127.0.0.1:5000'
 
+# TODO: Clean useless stuff
+# TODO: Make newspages fetch userdata separately from payment data
+
+
 class LoginForm(FlaskForm):
     name = StringField('name', validators=[DataRequired()])
     password = PasswordField('password', validators=[DataRequired()])
@@ -213,6 +217,7 @@ def news(site='mock', id=0):
 
 @app.route('/<site>/rss')
 def generate_rss(site='mock'):
+    # TODO: clean this
     from bs4 import BeautifulSoup
     from random import choice, randint
     from datetime import timedelta, date
