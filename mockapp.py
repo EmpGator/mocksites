@@ -212,7 +212,8 @@ def news(site='mock', id=0):
     show = show_content(str(request.url))
     #show, data = test(request.url)
     #print(show, data)
-    return render_template(f'{site}/article_{id}.html', paywall=show)
+    data = get_info()
+    return render_template(f'{site}/article_{id}.html', paywall=show, data=data)
 
 
 @app.route('/<site>/rss')
