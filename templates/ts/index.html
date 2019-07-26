@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-		
+{% extends "base.html" %}
+
+{% block head %}
+    <link href="{{ url_for('static', filename='ts/style.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
 	<img src="{{ url_for('static', filename='ts/main.png') }}" alt="" usemap="#map" />
 
 	<map name="map" id="map">
@@ -21,6 +20,5 @@
 	    <area target="_self" alt="article10" title="article10" href="/ts/article/0" coords="723,648,1019,705" shape="rect">
 	</map>
 	<img src="{{ url_for('static', filename='ts/bottom1.png') }}" alt="">
+{%  endblock %}
 
-</body>
-</html>

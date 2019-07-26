@@ -29,8 +29,8 @@
                         {% endfor %}
                     {% endwith %}
                     {% if data %}
-                        <li>Payment type: {{ data.payment_type }}</li>
-                        <li>{{ data.value }}</li>
+                        <li>Payment type: {{ data.method }}</li>
+                        <li>{{ data.message}}</li>
                         <li>Logged in as: {{ data.name }}</li>
 		                <li><a href="/logout">Logout</a></li>
                     {% endif %}
