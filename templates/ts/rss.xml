@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:iltalehti="https://www.iltalehti.fi/rss" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <atom:link href="http://127.0.0.1:8000/ts/rss" rel="self" type="application/rss+xml"/>
+    <title></title>
+    <link>http://127.0.0.1:8000/ts</link>
+    <description>None</description>
+    <language>fi</language>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <lastBuildDate>Mon, 01 Jul 2019 18:12:59 +0300</lastBuildDate>
+
+    <item>
+      <title>Poliisilla työntäyteinen juhannus Turun seudulla</title>
+      <link>http://127.0.0.1:8000/ts/article/0</link>
+      <guid isPermaLink="false">0</guid>
+      <enclosure url="https://www.ts.fi/static/content/pic_5_4619575_k3425658_651.jpg"/>
+      <media:content url="https://www.ts.fi/static/content/pic_5_4619575_k3425658_651.jpg">
+
+      </media:content>
+      <category>health</category>
+      <pubDate>2019-05-28</pubDate>
+      <description>Poliisin juhannusviikonloppu oli työntäyteinen Turun seudulla. Poliisin mukaan tutkittavaksi tuli useita törkeitä ja tavanomaisia rattijuopumuksia sekä yksi vesiliikennejuopumus.</description>
+    </item>
+
+    <item>
+      <title>Kahvi aktivoi elimistön &#34;hyvän&#34; ruskean rasvan</title>
+      <link>http://127.0.0.1:8000/ts/article/1</link>
+      <guid isPermaLink="false">1</guid>
+      <enclosure url="https://www.ts.fi/static/content/pic_5_4621518_k4351371_651.jpg"/>
+      <media:content url="https://www.ts.fi/static/content/pic_5_4621518_k4351371_651.jpg">
+
+      </media:content>
+      <category>economy</category>
+      <pubDate>2019-05-28</pubDate>
+      <description>Tuore tutkimus kertoo kahvilla olevan yhteys niin sanotun &#34;hyvän rasvan&#34; eli ruskean rasvan toimintaan.</description>
+    </item>
+
+    <item>
+      <title>Tanskalainen SP Group osti laitilalaisen Coreplastin</title>
+      <link>http://127.0.0.1:8000/ts/article/2</link>
+      <guid isPermaLink="false">2</guid>
+      <enclosure url="https://www.ts.fi/static/content/pic_5_4621532_k329682_651.jpg"/>
+      <media:content url="https://www.ts.fi/static/content/pic_5_4621532_k329682_651.jpg">
+
+      </media:content>
+      <category>entertainment</category>
+      <pubDate>2019-05-25</pubDate>
+      <description>Muovialan sopimusvalmistaja Coreplast Laitila Oy siirtyy tanskalaisomistukseen. SP Group A/S osti tiistaina muun muassa heijastimistaan tunnetun yrityksen koko osakekannan.</description>
+    </item>
+
+    <item>
+      <title>Korkeasaaren eläintarhaan muutti margai – pikkukissa kiipeää kuin orava</title>
+      <link>http://127.0.0.1:8000/ts/article/3</link>
+      <guid isPermaLink="false">3</guid>
+      <enclosure url="https://www.ts.fi/static/content/pic_5_4621635_k4351554_651.jpg"/>
+      <media:content url="https://www.ts.fi/static/content/pic_5_4621635_k4351554_651.jpg">
+
+      </media:content>
+      <category>economy</category>
+      <pubDate>2019-07-09</pubDate>
+      <description>Korkeasaareen on saapunut uusi pieni kissapeto, margai.</description>
+    </item>
+
+    <item>
+      <title>Italialaisesta Sassolista parlamentin uusi puhemies – äänestys meni toiselle kierrokselle</title>
+      <link>http://127.0.0.1:8000/ts/article/4</link>
+      <guid isPermaLink="false">4</guid>
+      <enclosure url=""/>
+      <media:content url="">
+
+      </media:content>
+      <category>economy</category>
+      <pubDate>2019-07-20</pubDate>
+      <description>Kautensa tiistaina aloittanut uusi Euroopan parlamentti on valinnut uudeksi puhemiehekseen Euroopan
+                parlamentin sosiaalidemokraattisen ryhmän (S&amp;D) David-Maria Sassolin Strasbourgissa
+                keskiviikkona. Puhemiehen kausi on kahden ja puolen vuoden pituinen.</description>
+    </item>
+
+    <item>
+      <title>Zimbabwessa on pula kaikesta – nyt loppuivat passit ja rekisterikilvet</title>
+      <link>http://127.0.0.1:8000/ts/article/5</link>
+      <guid isPermaLink="false">5</guid>
+      <enclosure url="https://www.ts.fi/static/content/pic_5_4629726_k4375606_651.jpg"/>
+      <media:content url="https://www.ts.fi/static/content/pic_5_4629726_k4375606_651.jpg">
+
+      </media:content>
+      <category>technology</category>
+      <pubDate>2019-07-19</pubDate>
+      <description>President Robert Mugabe, who ruled the country for a long time, was
+                    overthrown in 2017. His successor Emmerson Mnangagwa was expected to turn the country&#39;s economy, but
+                    otherwise. There is still no food and fuel left, now we also have passports
+                    and license plates.</description>
+    </item>
+
+    <item>
+      <title>Suoratoistopalvelut ja elokuvien vuokraaminen netistä yleistyvät – valtaosa eurooppalaisista kokee tuhlaavansa niihin jo liikaa</title>
+      <link>http://127.0.0.1:8000/ts/article/6</link>
+      <guid isPermaLink="false">6</guid>
+      <enclosure url="https://www.ts.fi/static/content/pic_5_4629635_k3787843_651.jpg"/>
+      <media:content url="https://www.ts.fi/static/content/pic_5_4629635_k3787843_651.jpg">
+
+      </media:content>
+      <category>sports</category>
+      <pubDate>2019-07-05</pubDate>
+      <description>Kyselyyn vastasi 1005 iältään 16-74-vuotiasta suomalaista.</description>
+    </item>
+
+    <item>
+      <title>Contract signed: The third Royal Caribbean Icon ship is built at Meyer in Turku</title>
+      <link>http://127.0.0.1:8000/ts/article/7</link>
+      <guid isPermaLink="false">7</guid>
+      <enclosure url="https://www.ts.fi/static/content/pic_5_4628710_k4372500_651.jpg"/>
+      <media:content url="https://www.ts.fi/static/content/pic_5_4628710_k4372500_651.jpg">
+
+      </media:content>
+      <category>sports</category>
+      <pubDate>2019-07-16</pubDate>
+      <description>Icon ships are cruise ships of about 200,000 gross tonnage and use LNG as fuel.</description>
+    </item>
+
+    <item>
+      <title>Turun seutu hyvin edustettu nuorten EM-joukkueessa</title>
+      <link>http://127.0.0.1:8000/ts/article/8</link>
+      <guid isPermaLink="false">8</guid>
+      <enclosure url="https://www.ts.fi/static/content/pic_5_4628372_k4331475_651.jpg"/>
+      <media:content url="https://www.ts.fi/static/content/pic_5_4628372_k4331475_651.jpg">
+
+      </media:content>
+      <category>health</category>
+      <pubDate>2019-05-28</pubDate>
+      <description>Turun seudulta joukkueeseen nimettiin juoksijat Markus Teijula Naantalin Löylystä 800 metrille, Valtteri Kalliokulju Liedon Parmasta miesten pika-aitoihin ja Emma Hyvärinen Turun Urheiluliitosta naisten aitajuoksuun. Lisäksi Forssan Salaman Astrid Snäll juoksee 3000 metrin esteet.</description>
+    </item>
+
+    <item>
+      <title>Italialaisesta Sassolista parlamentin uusi puhemies – äänestys meni toiselle kierrokselle</title>
+      <link>http://127.0.0.1:8000/ts/article/9</link>
+      <guid isPermaLink="false">9</guid>
+      <enclosure url="https://www.ts.fi/static/content/pic_5_4629718_k4375574_651.jpg"/>
+      <media:content url="https://www.ts.fi/static/content/pic_5_4629718_k4375574_651.jpg">
+
+      </media:content>
+      <category>sports</category>
+      <pubDate>2019-06-14</pubDate>
+      <description>Puhemiehen valinta meni toiselle äänestyskierrokselle, sillä kukaan ehdokkaista ei saanut äänteen enemmistöä.</description>
+    </item>
+
+  </channel>
+</rss>
