@@ -7,6 +7,7 @@ import requests
 app = Flask(__name__)
 app.secret_key = b'dsaadsads'
 finnplus_domain = 'http://127.0.0.1:5000'
+mockapp_domain = 'http://127.0.0.1:5000'
 
 # TODO: Clean useless stuff
 # TODO: Make newspages fetch userdata separately from payment data
@@ -48,7 +49,7 @@ class Paywall:
             return 'Paywall Show'
         return 'Paywall block'
 
-def show_content(url):
+def old_show_content(url):
     auth = session.get('user', None)
     paywall = Paywall()
     payload = {'url': url}
@@ -73,7 +74,7 @@ def show_content(url):
     return paywall
 
 
-def get_info():
+def old_get_info():
     print('get info')
     auth = session.get('user', None)
     if not auth:
@@ -95,36 +96,58 @@ def get_info():
         session['value'] = data.get('value')
         return data
 
-def test(url='', pay=False):
-    print('unified userinfo and pay test')
+
+def get_response(payload, request_url):
     auth = session.get('user', None)
-    paywall = Paywall()
-    payload = {'url':url, 'domain':url, 'pay':pay}
-    print(f'Payload: {payload}')
-    if not auth:
-        print('not auth')
-        jwt = session.get('accessToken')
-        if not jwt:
-            print('not jwt')
-            return None, None
+    jwt = session.get('accessToken')
+    if auth:
+        print(f'User: {auth}')
+        r = requests.post(request_url, auth=auth, json=payload)
+    elif jwt:
+        print(f'jwt {jwt}')
+        print(request_url, payload)
         headers = {'Authorization': f'Bearer {jwt}'}
-        r = requests.post(finnplus_domain + '/api/test', headers=headers, json=payload)
+        r = requests.post(request_url, headers=headers, json=payload)
     else:
-        r = requests.post(finnplus_domain + '/api/test', auth=auth, json=payload)
-    if r.status_code == 200:
+        print('not auth or jwt')
+        r = None
+    return r
+
+
+def get_info(url='', domain='', article_data={}):
+    print('Userinfo query')
+    paywall = Paywall()
+    payload = {'url': url, 'domain': domain, **article_data}
+    request_url = finnplus_domain + '/api/userinfo'
+    r = get_response(payload, request_url)
+    if not r:
+        print('no auth or jwt')
+        return paywall, {}
+    elif r.status_code == 200:
         print('r 200')
         data = r.json()
         print(data)
-        session['name'] = data.get('name')
-        session['payment_type'] = data.get('payment_type')
-        session['value'] = data.get('value')
-        data = r.json()
         if data['access']:
             return paywall.set_show(), data
         return paywall.set_pay(), data
     else:
+        print(f'Request to {request_url} failed')
         print(r.status_code)
+        print(r.text)
     return paywall, {}
+
+
+def pay_article(url, domain):
+    request_url = finnplus_domain + '/api/payarticle'
+    payload = {'url': url, 'domain': domain}
+    resp = get_response(payload, request_url)
+    if resp and resp.status_code == 200:
+        return resp.json()
+    print('Request to testpay failed')
+    print(resp.text)
+    return {}
+
+
 
 
 
@@ -151,7 +174,8 @@ def logout():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    _, data = get_info(url=request.referrer, domain=request.referrer)
+    return render_template('index.html', data=data)
 
 
 @app.route('/finnplus', methods=['POST'])
@@ -193,15 +217,11 @@ def setcookie(jwt=None):
     return redirect(url_to)
 
 
-@app.route('/rss')
-def rss():
-    return render_template('news_app.xml')
-
 @app.route('/<site>/')
 def front(site='mock'):
     if site == 'favicon.ico':
         return redirect(url_for('static', filename='favicon.ico'))
-    _, data = test(request.url)
+    _, data = get_info(request.url)
     print(data)
     return render_template(f'{site}/index.html', data=data)
 
@@ -209,26 +229,46 @@ def front(site='mock'):
 @app.route('/<site>/article/<id>')
 def news(site='mock', id=0):
     print('show content')
-    show = show_content(str(request.url))
-    #show, data = test(request.url)
-    #print(show, data)
-    data = get_info()
+    domain = f'{mockapp_domain}/{site}'
+    art_data = {
+        'article_name': None,
+        'article_date': None,
+        'article_desc': None,
+        'article_category': None
+    }
+    show, data = get_info(request.url, domain=domain, article_data=art_data)
+    if show.pay == True and data.get('can_pay'):
+        data = pay_article(request.url, domain)
+        show = Paywall().set_show()
+    elif show.show == True:
+        data = pay_article(request.url, domain)
     return render_template(f'{site}/article_{id}.html', paywall=show, data=data)
 
 
 @app.route('/<site>/rss')
 def generate_rss(site='mock'):
-    # TODO: clean this
+    from jinja2 import TemplateNotFound
+    try:
+        template = render_template(f'{site}/rss.xml')
+    except TemplateNotFound:
+        feed = generate_feed(site, request.url)
+        template = render_template('base.xml', feed=feed)
+    resp = make_response(template)
+    resp.headers['Content-Type'] = 'application/xml'
+    return resp
+
+
+def generate_feed(site, request_url):
     from bs4 import BeautifulSoup
     from random import choice, randint
     from datetime import timedelta, date
-    base_url = request.url.replace('rss', 'article')
-    domain = request.url.replace('/rss', '')
+    base_url = request_url.replace('rss', 'article')
+    domain = request_url.replace('/rss', '')
     url_list = [base_url + f'/{j}' for j in range(10)]
-    feed = dict(name=site, domain=domain, desc=None, entries=[], rss=request.url)
+    feed = dict(name=site, domain=domain, desc=None, entries=[], rss=request_url)
     categories = ['politics', 'sports', 'economy', 'technology', 'health', 'entertainment']
     for i, url in enumerate(url_list):
-        r = requests.get(url)
+        r = requests.get(url, auth=('admin', 'test'))
         soup = BeautifulSoup(r.content)
         imgs = soup.find_all('img')
         if len(imgs) >= 3:
@@ -253,11 +293,6 @@ def generate_rss(site='mock'):
         day = date(2019, 5, 1) + timedelta(days=randint(0, 83))
         feed['entries'].append({'title': title, 'mediaurl': img, 'desc': desc, 'category': category,
                                 'url': url, 'guid': i, 'date': day})
-        template = render_template('base.xml', feed=feed)
-        resp = make_response(template)
-        resp.headers['Content-Type'] = 'application/xml'
-    return resp
-
 
 if __name__ == '__main__':
     app.run(port=8000)
