@@ -9,6 +9,7 @@ app.secret_key = b'dsaadsads'
 finnplus_domain = 'http://127.0.0.1:5000'
 mockapp_domain = 'http://127.0.0.1:5000'
 
+
 # TODO: Clean useless stuff
 # TODO: Make newspages fetch userdata separately from payment data
 
@@ -44,57 +45,10 @@ class Paywall:
 
     def __str__(self):
         if self.show:
-            return  'Paywall Show'
+            return 'Paywall Show'
         elif self.pay:
             return 'Paywall Show'
         return 'Paywall block'
-
-def old_show_content(url):
-    auth = session.get('user', None)
-    paywall = Paywall()
-    payload = {'url': url}
-    if not auth:
-        print('not auth')
-        jwt = session.get('accessToken', '')
-        print(jwt)
-        headers = {'Authorization': f'Bearer {jwt}'}
-        r = requests.post(finnplus_domain + '/api/userdata', data=payload, headers=headers)
-    else:
-        print('auth', auth)
-        r = requests.post(finnplus_domain + '/api/userdata', data=payload, auth=auth)
-    if r.status_code == 200:
-        print('r 200')
-        data = r.json()
-        if data['access']:
-            return paywall.set_show()
-        return paywall.set_pay()
-    else:
-        print(r.status_code)
-        print(r.text)
-    return paywall
-
-
-def old_get_info():
-    print('get info')
-    auth = session.get('user', None)
-    if not auth:
-        print('not auth')
-        jwt = session.get('accessToken')
-        if not jwt:
-            print('not jwt')
-            return None
-        headers = {'Authorization': f'Bearer {jwt}'}
-        r = requests.post(finnplus_domain + '/api/userinfo', headers=headers)
-    else:
-        r = requests.post(finnplus_domain + '/api/userinfo', auth=auth)
-    if r.status_code == 200:
-        print('r 200')
-        data = r.json()
-        print(data)
-        session['name'] = data.get('name')
-        session['payment_type'] = data.get('payment_type')
-        session['value'] = data.get('value')
-        return data
 
 
 def get_response(payload, request_url):
@@ -143,13 +97,9 @@ def pay_article(url, domain):
     resp = get_response(payload, request_url)
     if resp and resp.status_code == 200:
         return resp.json()
-    print('Request to testpay failed')
+    print('Request to payarticle failed')
     print(resp.text)
     return {}
-
-
-
-
 
 
 @app.route('/loginfinnplus', methods=['POST'])
@@ -194,7 +144,6 @@ def finnplus():
         data['pay'] = True
         r = requests.post(finnplus_domain + '/api/articlepaid',
                           headers=headers, json=data)
-    #data = r.json() data.get('message') != 'ok'
     if r.text.strip() == "Not enough tokens":
         flash('Not enough tokens')
     return make_response('ok', 200)
@@ -202,9 +151,7 @@ def finnplus():
 
 @app.context_processor
 def utility_processor():
-    def get_user_data():
-        return get_info()
-    return dict(get_user_data=get_user_data, finnplus_domain=finnplus_domain)
+    return dict(finnplus_domain=finnplus_domain)
 
 
 @app.route('/setcookie/<jwt>')
@@ -293,6 +240,10 @@ def generate_feed(site, request_url):
         day = date(2019, 5, 1) + timedelta(days=randint(0, 83))
         feed['entries'].append({'title': title, 'mediaurl': img, 'desc': desc, 'category': category,
                                 'url': url, 'guid': i, 'date': day})
+
+    with open('test.xml', 'w') as f:
+        f.write(render_template('base.xml', feed=feed))
+
 
 if __name__ == '__main__':
     app.run(port=8000)
