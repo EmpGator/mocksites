@@ -1,4 +1,4 @@
-from flask import Flask, session, render_template, redirect, url_for, request, make_response, flash
+from flask import Flask, session, render_template, redirect, url_for, request, make_response, flash, jsonify
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired
@@ -8,10 +8,6 @@ app = Flask(__name__)
 app.secret_key = b'dsaadsads'
 finnplus_domain = 'http://127.0.0.1:5000'
 mockapp_domain = 'http://127.0.0.1:5000'
-
-
-# TODO: Clean useless stuff
-# TODO: Make newspages fetch userdata separately from payment data
 
 
 class LoginForm(FlaskForm):
@@ -132,21 +128,11 @@ def index():
 def finnplus():
     """ This informs finnplus that article has been paid """
     print('Posting to paidarticle')
-    data = request.get_json()
-    auth = session.get('user', None)
+    data = request.json
+    domain = data['url'][:-10]
+    data = pay_article(data['url'], domain)
+    return jsonify(data)
 
-    if auth:
-        r = requests.post(finnplus_domain + '/api/articlepaid',
-                          auth=auth, data=data)
-    else:
-        jwt = session.get('accessToken', '')
-        headers = {'Authorization': f'Bearer {jwt}'}
-        data['pay'] = True
-        r = requests.post(finnplus_domain + '/api/articlepaid',
-                          headers=headers, json=data)
-    if r.text.strip() == "Not enough tokens":
-        flash('Not enough tokens')
-    return make_response('ok', 200)
 
 
 @app.context_processor
@@ -166,6 +152,7 @@ def setcookie(jwt=None):
 
 @app.route('/<site>/')
 def front(site='mock'):
+
     if site == 'favicon.ico':
         return redirect(url_for('static', filename='favicon.ico'))
     _, data = get_info(request.url)
@@ -185,11 +172,10 @@ def news(site='mock', id=0):
     }
     show, data = get_info(request.url, domain=domain, article_data=art_data)
     if show.pay == True and data.get('can_pay'):
-        data = pay_article(request.url, domain)
+        #data = pay_article(request.url, domain)
         show = Paywall().set_show()
-    elif show.show == True:
-        data = pay_article(request.url, domain)
-    return render_template(f'{site}/article_{id}.html', paywall=show, data=data)
+
+    return render_template(f'{site}/article_{id}.html', paywall=show, data=data, pay=True)
 
 
 @app.route('/<site>/rss')

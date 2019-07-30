@@ -1,3 +1,7 @@
+body {
+    margin-top: 100px;
+}
+
 .paytext {
     background-image: linear-gradient(#000, #c9c9c9, #fff);
     -webkit-text-fill-color: transparent;
@@ -42,28 +46,24 @@ a.btn {
     text-align: center;
 }
 
-header {
+.header {
     height: 60px;
     z-index: 10;
     color: #c9c9c9;
-}
-
-.fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background: #292f36;
 }
 
 nav {
     width: 100%;
     height: 60px;
-    background: #292f36;
-    position: fixed;
     z-index: 10;
 }
 
-nav div {
+nav .headerFinnplus {
     color: white;
     font-size: 2rem;
     line-height: 60px;
@@ -84,11 +84,8 @@ nav ul li {
     line-height: 60px;
     margin-left: 40px;
 }
-nav ul li a {
-    text-decoration: none;
-    color: #a9abae;
-}
-nav div a {
+
+nav a {
     text-decoration: none;
     color: #a9abae;
 }
@@ -131,4 +128,34 @@ nav div a {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+#paid {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color:white;
+    margin:-26px;
+    font-size: 16px;
+    visibility: hidden;
+}
+
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: #ccc;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #166DE8;
+    width: 0%;
+}
+
+.progress-divider {
+    position: absolute;
+    width: 4px;
+    height: 12px;
+    background-color: #292f36;
+    margin: auto 50% auto 50%;
 }

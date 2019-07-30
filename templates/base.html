@@ -1,6 +1,6 @@
 <html>
 <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
@@ -18,10 +18,11 @@
   </div>
 
 </div>
-		<header>
+		<div class="header">
 			<nav class="fixed-header">
-		        <div ><a href="{{ finnplus_domain }}">FINN+</a></div>
+		        <div class="headerFinnplus"><a href="{{ finnplus_domain }}">FINN+</a></div>
 		        <ul >
+
                     {% with messages = get_flashed_messages() %}
                         {% for message in messages %}
                             <script>noTokensPopup();</script>
@@ -29,17 +30,24 @@
                         {% endfor %}
                     {% endwith %}
                     {% if data %}
-                        <li>Payment type: {{ data.method }}</li>
-                        <li>{{ data.message}}</li>
-                        <li>Logged in as: {{ data.name }}</li>
+                        <li id="payType">Payment type: {{ data.method }}</li>
+                        <li id="payMsg">{{ data.message}}</li>
+                        <li id="userName">Logged in as: {{ data.name }}</li>
 		                <li><a href="/logout">Logout</a></li>
                     {% endif %}
 		        </ul>
-		        </div>
 	    	</nav>
-	    </header>
+            {% if pay %}
+            <p id= "paid">&#10004 paid</p>
+            <div class="progress-container">
+                <div class="progress-divider" id="divider"></div>
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+            {%  endif %}
+	    </div>
 
     {% block body %}
     {% endblock %}
+
 </body>
 </html>
