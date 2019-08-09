@@ -1,20 +1,35 @@
-<div class="container center">
-    <button id="paybutton" class="btn btn-large teal modal-trigger">Pay 1 token</button>
-    <script>
-        var button = document.getElementById('paybutton');
-        button.onclick = function () {
-            var params = {'url': window.location.href, 'txid': 1};
-            var ajaxRequest = $.ajax({
-                async: true,
-                url: '/finnplus',
-                type: 'POST',
-                dataType: 'text',
-                contentType: 'application/json; charset=utf-8',
-                data: JSON.stringify(params),
-            });
-            ajaxRequest.done(function () {
-                location.reload();
-            });
-        }
-    </script>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Not enough tokens</p>
+    <!-- <iframe src="{{ finnplus_domain }}/payment" frameborder="0" height="800" width="1300"></iframe> -->
+    <a href="{{ finnplus_domain }}/payment" >Get more from here</a>
+  </div>
+
 </div>
+
+<script>
+    function noTokensPopup() {
+            // Get the modal
+        var modal = document.getElementById("myModal");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        modal.style.display = "block";
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        };
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+    }
+
+    noTokensPopup()
+
+
+</script>

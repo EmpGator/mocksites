@@ -48,38 +48,46 @@ class Paywall:
 
 
 def get_response(payload, request_url):
+
     auth = session.get('user', None)
     jwt = session.get('accessToken')
     if auth:
+        print('Getting response from finnplus with')
         print(f'User: {auth}')
         r = requests.post(request_url, auth=auth, json=payload)
     elif jwt:
+        print('Getting response from finnplus with')
         print(f'jwt {jwt}')
-        print(request_url, payload)
         headers = {'Authorization': f'Bearer {jwt}'}
         r = requests.post(request_url, headers=headers, json=payload)
     else:
-        print('not auth or jwt')
+        print('no auth or jwt aboprting request')
         r = None
     return r
 
 
 def get_info(url='', domain='', article_data={}):
-    print('Userinfo query')
+    print('Asking userinfo from finnpluss')
     paywall = Paywall()
     payload = {'url': url, 'domain': domain, **article_data}
     request_url = finnplus_domain + '/api/userinfo'
     r = get_response(payload, request_url)
     if not r:
-        print('no auth or jwt')
+        print('No response, blocking content')
         return paywall, {}
     elif r.status_code == 200:
-        print('r 200')
+        print('Response was good, getting access data')
         data = r.json()
-        print(data)
+        print('Access: ', data['access'])
         if data['access']:
+            print('Access allowed')
             return paywall.set_show(), data
-        return paywall.set_pay(), data
+        elif data.get('can_pay'):
+            print('Access not allowed, but user can pay, request payment')
+            return paywall.set_show(), data
+        else:
+            print('User cant pay')
+            return paywall.set_pay(), data
     else:
         print(f'Request to {request_url} failed')
         print(r.status_code)
@@ -131,6 +139,9 @@ def finnplus():
     data = request.json
     domain = data['url'][:-10]
     data = pay_article(data['url'], domain)
+    print(data)
+    if not data.get('payment_successful'):
+        return make_response(403)
     return jsonify(data)
 
 
@@ -162,7 +173,7 @@ def front(site='mock'):
 
 @app.route('/<site>/article/<id>')
 def news(site='mock', id=0):
-    print('show content')
+    print('Checking if content is can be paid')
     domain = f'{mockapp_domain}/{site}'
     art_data = {
         'article_name': None,
@@ -171,11 +182,13 @@ def news(site='mock', id=0):
         'article_category': None
     }
     show, data = get_info(request.url, domain=domain, article_data=art_data)
-    if show.pay == True and data.get('can_pay'):
-        #data = pay_article(request.url, domain)
-        show = Paywall().set_show()
+    pay = False
+    if data.get('method') == 'Monthly Subscription':
+        pay = False
+    elif not data.get('access') and data.get('can_pay'):
+        pay = True
 
-    return render_template(f'{site}/article_{id}.html', paywall=show, data=data, pay=True)
+    return render_template(f'{site}/article_{id}.html', paywall=show, data=data, pay=pay)
 
 
 @app.route('/<site>/rss')

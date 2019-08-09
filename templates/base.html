@@ -8,16 +8,7 @@
     {% endblock %}
 </head>
 <body>
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Not enough tokens</p>
-    <p><a href=http://finnplus.eu.pythonanywhere.com/>Get more tokens</a></p>
-  </div>
-
-</div>
 		<div class="header">
 			<nav class="fixed-header">
 		        <div class="headerFinnplus"><a href="{{ finnplus_domain }}">FINN+</a></div>
@@ -38,12 +29,14 @@
 		        </ul>
 	    	</nav>
             {% if pay %}
-            <p id= "paid">&#10004 paid</p>
+                    <p id= "paid">&#10004 paid</p>
+            {% endif %}
             <div class="progress-container">
-                <div class="progress-divider" id="divider"></div>
+                {% if pay %}
+                    <div class="progress-divider" id="divider"></div>
+                {% endif %}
                 <div class="progress-bar" id="myBar"></div>
             </div>
-            {%  endif %}
 	    </div>
 
     {% block body %}
