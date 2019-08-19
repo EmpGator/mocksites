@@ -153,9 +153,6 @@ def utility_processor():
 
 @app.route('/setcookie/<jwt>')
 def setcookie(jwt=None):
-
-    url_to = request.args.get('url_to')
-    print(jwt)
     session['accessToken'] = jwt
     return make_response('ok', 200)
 
