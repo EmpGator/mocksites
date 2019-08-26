@@ -26,7 +26,7 @@ body {
   color:green;
   margin:0;
   font-size: 16px;
-  visibility: hidden;
+
 }
 
 .progress-container {
@@ -52,7 +52,8 @@ body {
 
 <div class="header">
   <h2>header bar</h2>
-  <p id= "paid">&#10004 paid</p>
+
+  <p id= "paid"> 100% till payment </p>
   <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>  
@@ -86,8 +87,11 @@ function myFunction() {
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
+  if(scrolled < 50)
+    document.getElementById("paid").innerHTML = `${100 - Math.round(scrolled)*2}% till payment`
   if(scrolled >= 50 )
-    document.getElementById("paid").style.visibility= "visible";
+    document.getElementById("paid").innerHTML= "paid &#10004";
+  
 }
 </script>
 
