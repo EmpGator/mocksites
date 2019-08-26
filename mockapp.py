@@ -7,7 +7,7 @@ import requests
 app = Flask(__name__)
 app.secret_key = b'dsaadsads'
 finnplus_domain = 'http://127.0.0.1:5000'
-mockapp_domain = 'http://127.0.0.1:5000'
+mockapp_domain = 'http://127.0.0.1:8000'
 
 
 class LoginForm(FlaskForm):
@@ -95,9 +95,9 @@ def get_info(url='', domain='', article_data={}):
     return paywall, {}
 
 
-def pay_article(url, domain):
+def pay_article(url, domain, article_info={}):
     request_url = finnplus_domain + '/api/payarticle'
-    payload = {'url': url, 'domain': domain}
+    payload = {'url': url, 'domain': domain, **article_info}
     resp = get_response(payload, request_url)
     if resp and resp.status_code == 200:
         return resp.json()
@@ -141,7 +141,7 @@ def finnplus():
     data = pay_article(data['url'], domain)
     print(data)
     if not data.get('payment_successful'):
-        return make_response(403)
+        return make_response('Payment failed', 403)
     return jsonify(data)
 
 
@@ -156,6 +156,11 @@ def setcookie(jwt=None):
     session['accessToken'] = jwt
     return make_response('ok', 200)
 
+@app.route('/<site>/setcookie/<jwt>')
+def setcookiesite(site=None, jwt=None):
+    session['accessToken'] = jwt
+    return make_response('ok', 200)
+
 
 @app.route('/<site>/')
 def front(site='mock'):
@@ -163,8 +168,27 @@ def front(site='mock'):
     if site == 'favicon.ico':
         return redirect(url_for('static', filename='favicon.ico'))
     _, data = get_info(request.url)
-    print(data)
     return render_template(f'{site}/index.html', data=data)
+
+@app.route('/blog/article/<id>')
+def blog(id=0):
+    domain = f'{mockapp_domain}/blog'
+    art_data = {
+        'url': f'{mockapp_domain}/blog/article/{id}',
+        'domain': f'{mockapp_domain}/blog',
+        'article_name': 'Mallinimi',
+        'article_date': '2019-08-22',
+        'article_desc': 'Pitkäkuvaus blaa blaa bloo bloo blub blub',
+        'article_category': 'sports',
+        'price': 1
+    }
+    show, data = get_info(request.url, domain=domain, article_data=art_data)
+    pay = False
+    if data.get('method') == 'Monthly Subscription':
+        pay = False
+    elif not data.get('access') and data.get('can_pay'):
+        pay = True
+    return render_template(f'blog/article_{id}.html', paywall=show, data=data, pay=pay)
 
 
 @app.route('/<site>/article/<id>')
@@ -172,10 +196,12 @@ def news(site='mock', id=0):
     print('Checking if content is can be paid')
     domain = f'{mockapp_domain}/{site}'
     art_data = {
-        'article_name': None,
-        'article_date': None,
-        'article_desc': None,
-        'article_category': None
+        'url': None,
+        'domain': '',
+        'article_name': 'Mallinimi',
+        'article_date': '2019-08-22',
+        'article_desc': 'Pitkäkuvaus',
+        'article_category': 'sports'
     }
     show, data = get_info(request.url, domain=domain, article_data=art_data)
     pay = False
