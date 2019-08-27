@@ -25,8 +25,15 @@ body {
   text-align: center;
   color:green;
   margin:0;
-  font-size: 16px;
+  font-size: 14px;
+  visibility: hidden;
+}
 
+#tillPayment {
+  text-align: center;
+  color:green;
+  margin:0;
+  font-size: 14px;
 }
 
 .progress-container {
@@ -53,7 +60,8 @@ body {
 <div class="header">
   <h2>header bar</h2>
 
-  <p id= "paid"> 100% till payment </p>
+  <p id= "tillPayment"> 100% till payment </p>
+  <p id= "paid"> paid &#10004 </p>
   <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>  
@@ -87,11 +95,15 @@ function myFunction() {
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
-  if(scrolled < 50)
-    document.getElementById("paid").innerHTML = `${100 - Math.round(scrolled)*2}% till payment`
-  if(scrolled >= 50 )
-    document.getElementById("paid").innerHTML= "paid &#10004";
-  
+  if(scrolled < 50 ){
+    document.getElementById("tillPayment").innerHTML = `${100 - Math.round(scrolled)*2}% till payment`
+  };
+  console.log(`innerHTML = ${document.getElementById("paid").innerHTML}`)
+  if(scrolled >= 50 ){
+    document.getElementById("tillPayment").style.visibility= "hidden";
+    document.getElementById("paid").style.visibility= "visible";
+
+  }
 }
 </script>
 
