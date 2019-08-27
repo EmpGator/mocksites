@@ -137,6 +137,16 @@ nav a {
     color:white;
     margin:-26px;
     font-size: 16px;
+    visibility: hidden;
+}
+
+#tillPayment {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color:white;
+    margin:-26px;
+    font-size: 14px;
 }
 
 .progress-container {

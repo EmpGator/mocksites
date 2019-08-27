@@ -26,8 +26,9 @@ function payArticleOnPercent(scrolled, percent=50) {
   if (scrolled >= percent && !pay) {
     payArticle(window.location.href);
     pay = true;
-    document.getElementById("paid").innerHTML= "paid &#10004";
+    document.getElementById("paid").style.visibility= "visible";
     document.getElementById("divider").style.visibility = "hidden";
+    document.getElementById("tillPayment").style.visibility= "hidden";
   }
 }
 
@@ -44,9 +45,10 @@ function payOnScroll() {
   if (bar != null) {
     bar.style.width = scrolled + "%";
   }
-  if (scrolled < 50) {
-    document.getElementById("paid").innerHTML = `${100 - Math.round(scrolled)*2}% till payment`
+  if(scrolled < 50 ){
+    document.getElementById("tillPayment").innerHTML = `${100 - Math.round(scrolled)*2}% till payment`
   }
+
   return scrolled
 }
 
