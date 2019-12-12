@@ -1,0 +1,68 @@
+{% extends "waldonews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Why You Should Start Thinking About Your Cholesterol Earlier</h1>
+        <img src="https://api.time.com/wp-content/uploads/2019/12/cholesterol.jpg?w=800&quality=85">
+        <p>High cholesterol is known to be one of the primary <a
+                href="https://time.com/4661099/10-factors-heart-disease-risk/">risk factors for heart disease</a>,
+            since it can contribute to plaque buildup in the arteries. But even though the U.S. Centers for Disease
+            Control and Prevention <a href="https://www.cdc.gov/features/cholesterol-screenings/index.html"
+                                      target="_blank">recommends</a> regular cholesterol testing starting around age
+            20, many Americans don’t give cholesterol—or <a
+                    href="https://time.com/5583805/heart-problems-young-americans/">heart disease</a>, for that
+            matter—much thought until later in life.</p>
+        <p><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32519-X/fulltext"
+              target="_blank">A new modeling study</a> published in <em>the Lancet </em>gives extra reason not to
+            put off cholesterol screening and treatment. It confirms that high blood levels of “bad” (or non-HDL)
+            cholesterol are associated with a greater risk of developing cardiovascular issues including stroke and
+            heart disease.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>The researchers collected data from 38 studies conducted in North America, Europe and Australia,
+                comprising about 400,000 people without cardiovascular disease, a third of whom were younger than 45. At
+                the start of each study, participants’ cholesterol levels were measured, and they answered questions
+                about their medical histories, lifestyle and demographics. During a follow-up period of up to 43 years,
+                almost 55,000 of the study participants developed heart disease or stroke.</p>
+        {% if paywall.show %}
+
+            <p>The researchers used that information both to find connections between baseline cholesterol levels and
+                later heart issues, and to create a model for predicting a person’s risk of heart problems based on
+                their sex, age and common risk factors, including smoking status, blood pressure, body mass index,
+                diabetes diagnosis and medication regimens.</p>
+
+            <p>Based on that model, the authors estimated that a man younger than 45 with non-HDL cholesterol between
+                145-185 mg/dL—levels below 130 mg/dL are considered healthy—and at least two other heart disease-risk
+                factors has a 29% chance of having a heart problem by age 75. Meanwhile, a man older than 60 with
+                exactly the same characteristics has a 21% probability of having a heart problem by age 75. For women,
+                those numbers were 16% and 12%, respectively.</p>
+            <p>One explanation, the authors say in a statement, is that younger adults who already have high cholesterol
+                can expect damage to accumulate over a longer period of time, whereas older adults may have developed
+                the issue later on, and so have had less time for the progression to reach critical levels.</p>
+            <p>It’s also possible that older adults who met the study’s initial criteria of not having cardiovascular
+                disease were in better health than their peers overall.</p>
+            <p>While any modeling estimate leaves room for error, the study emphasizes the importance of lowering high
+                cholesterol early and, ideally, preventing it in the first place. The study authors estimate that a man
+                younger than 45 who halves his non-HDL cholesterol levels could slash his chance of later heart problems
+                from 29% to 6%, while a younger woman’s probability could drop from 16% to 4%.</p>
+            <p>Doctors can prescribe medications—often <a
+                    href="https://time.com/4509750/statins-lower-cholesterol-heart-attack/">statins</a>—to lower
+                cholesterol, but lifestyle choices can also make a big difference. Diet is among the most important
+                interventions. There’s some debate about whether foods that contain dietary cholesterol, <a
+                        href="https://time.com/5469246/eggs-nutrition-healthy/">such as eggs</a>, actually raise blood
+                cholesterol; U.S. federal dietary guidelines no longer explicitly cap daily cholesterol intake. But they
+                do still recommend limiting high-cholesterol foods, such as fatty meats and high-fat dairy, for a
+                variety of health reasons.</p>
+            <p>Instead, people should eat plenty of produce, whole grains and <a
+                    href="https://time.com/4411754/fat-mediterranean-diet/">healthy fats</a>, like those from fish and
+                avocados. Exercising regularly, relieving stress, getting plenty of sleep and avoiding smoking can also
+                help <a href="https://time.com/4743162/how-to-lower-cholesterol/">keep cholesterol in check</a>.</p>
+            <p><strong>Write to </strong>Jamie Ducharme at <a
+                    href="mailto:jamie.ducharme@time.com?subject=(READER FEEDBACK) Why You Should Start Thinking About Your Cholesterol Earlier"
+                    target="_self" rel="noopener noreferrer">jamie.ducharme@time.com</a>.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

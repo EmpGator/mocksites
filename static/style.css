@@ -2,6 +2,60 @@ body {
     margin-top: 100px;
 }
 
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background: #021E72;
+    color: white;
+    width: 328px;
+    height: 36px;
+    border-radius: 4px;
+    font-family: Roboto, "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    vertical-align: center;
+    margin-bottom: 30px;
+}
+
+.outlined {
+    color: #021E72;
+    background: white;
+    border: 1px solid #021E72;
+    border-radius: 4px;
+    width: 328px;
+    height: 36px;
+}
+
+.primary {
+    font-family: Roboto, "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+
+    text-align: center;
+    letter-spacing: 1.25px;
+
+    color: #000000;
+}
+
+.secondary {
+    font-family: Roboto, "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 1.25px;
+
+    color: #7B7B7B;
+}
+
 .paytext {
     background-image: linear-gradient(#000, #c9c9c9, #fff);
     -webkit-text-fill-color: transparent;
@@ -17,30 +71,6 @@ a.btn {
     margin-right: 10px;
 }
 
-.btn-large {
-    height: 54px;
-    line-height: 54px;
-    font-size: 15px;
-    padding: 0 28px;
-    overflow: visible;
-    -webkit-appearance: button;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
-    background-color: #009688 !important;
-    text-transform: uppercase;
-    vertical-align: middle;
-    border: none;
-    border-radius: 2px;
-    display: inline-block;
-    outline: 0;
-    -webkit-transition: background-color .2s ease-out;
-    transition: background-color .2s ease-out;
-    cursor: pointer;
-    text-align: center;
-    letter-spacing: .5px;
-    color: #fff;
-    margin-bottom: 50px;
-}
 
 .container {
     text-align: center;
@@ -49,27 +79,24 @@ a.btn {
 .header {
     height: 60px;
     z-index: 10;
-    color: #c9c9c9;
+    color: black;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #292f36;
+    background: #F4F4F4;
 }
 
 nav {
     width: 100%;
     height: 60px;
     z-index: 10;
+    display: grid;
+    grid-template-columns: 20% auto 20%;
 }
 
 nav .headerFinnplus {
-    color: white;
-    font-size: 2rem;
-    line-height: 60px;
-    position: absolute;
-    top: 0;
-    left: 2%;
+    margin-left: 40px;
 }
 
 nav ul {
@@ -87,84 +114,83 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #a9abae;
+    color: black;
 }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 1300px;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#paid {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    color:white;
-    margin:-26px;
-    font-size: 16px;
-    visibility: hidden;
-}
 
 #tillPayment {
     width: 100%;
     position: absolute;
     text-align: center;
-    color:white;
+    color: black;
     margin:-26px;
-    font-size: 14px;
+
+    font-family: Roboto, Segoe UI;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.8px;
+}
+
+#payMsg {
+    text-align: right;
+    margin-right: 20px;
+    padding-top: 10px;
+    color: black;
+    vertical-align: middle;
+    font-family: Roboto, Segoe UI;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.8px;
 }
 
 .progress-container {
     width: 100%;
-    height: 12px;
-    background: #ccc;
+    height: 4px;
+    background: #BAC1D5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .progress-bar {
-    height: 12px;
-    background: #166DE8;
+    height: 4px;
+    background: #021E72;
     width: 0%;
 }
 
-.progress-divider {
+.progress-divider-old {
     position: absolute;
     width: 4px;
     height: 12px;
     background-color: #292f36;
     margin: auto 50% auto 50%;
+}
+
+.progress-divider {
+    position: absolute;
+    left: 49.44%;
+    right: 49.44%;
+    width: 16px;
+    height: 16px;
+    background: #F4F4F4;
+    border: 4px solid #BAC1D5;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    margin-top: -6px;
+}
+
+.headerText {
+    padding-top: 10px;
+    text-align: center;
+    color: black;
+    vertical-align: middle;
+    font-family: Roboto, "Segoe UI";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.8px;
 }

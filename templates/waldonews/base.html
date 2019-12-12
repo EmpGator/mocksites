@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link href="{{ url_for('static', filename='waldonews/style.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    {% block content %}
+    {% endblock %}
+{%  endblock %}

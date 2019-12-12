@@ -1,0 +1,79 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Our nature crisis is also a human crisis.</h1>
+        <img src="https://miro.medium.com/max/1000/1*ySHR13eAgzYIVPvCrPBKcw.jpeg">
+        <p id="d536" data-selectable-paragraph="">Our natural world is in crisis. It is no overstatement to say that
+            human activity and consumption is pushing nature to the brink. We are cutting down forests, overfishing
+            the seas, polluting rivers, and degrading soil. Globally, wildlife populations have declined by 60% on
+            average since 1970, while extinction rates have risen to such an extent that many scientists now believe
+            we have entered a sixth mass extinction.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            Tackling this ‘nature crisis’ may seem to many to be a remote,
+            moral duty and not as pressing as other concerns, such as climate change. With many of us increasingly
+            disconnected from nature, it is often perceived as a nice-to-have. Nothing could be further from the
+            truth.
+        </p>
+        {% if paywall.show %}
+            <p id="c391" data-selectable-paragraph="">Protecting and caring for nature is not simply a moral
+                responsibility; it is essential to our well-being, and indeed our survival.</p>
+            <p id="007d" data-selectable-paragraph="">Nature provides us with the food we eat, the air we breathe, and
+                the water we drink. We depend on it to grow our crops, to source our medicines, to house us, and to
+                clothe us. In doing so, it underpins our societies, our economics and our physical wellbeing. For many,
+                it is also the basis for cultural identity and priceless spiritual value.</p>
+            <p id="667d" data-selectable-paragraph="">The loss of nature has direct implications for us all, but
+                particularly for indigenous peoples and local communities that depend heavily on nature. The way of life
+                and the rights of these groups are undermined as a result of nature loss. At the same time, nature loss
+                increases their vulnerability to natural disasters and climate change.</p>
+            <p id="2e5b" data-selectable-paragraph="">It is also a generational issue. Nature’s decline directly impacts
+                on the security of future generations. The young and future generations, who will have played little to
+                no part in the loss of nature, will bear the full brunt of the actions of past and current generations.
+                Young people are within their right to demand responsible and sustainable natural resource management by
+                their leaders. In essence, the ability of the world to meet the 2030 agenda for sustainable development
+                is severely jeopardized by nature loss.</p>
+            <p id="3514" data-selectable-paragraph=""><strong><em>Action for nature and people</em></strong></p>
+            <p id="7b8d" data-selectable-paragraph="">Our nature crisis is an existential crisis, but there is still
+                time to protect what is left and start restoring nature. To do this, we must radically change the way we
+                live, including how we perceive economic growth and development.</p>
+            <p id="9e2b" data-selectable-paragraph="">At the heart of these efforts must be recognition that the Nature
+                Agenda is also about people, their rights, wellbeing and economic prosperity. Only by appreciating these
+                linkages, and creating a common narrative for nature and people, will we be able to secure a sustainable
+                future for both.</p>
+            <figure>
+                <div>
+                    <div>
+                        <div>
+                            <div><p><img src="https://miro.medium.com/max/60/1*eooNwZipz26wl3AHI-utNA.jpeg?q=20"
+                                         role="presentation" width="5692" height="3200"></p>
+                                <p><img role="presentation"
+                                        src="https://miro.medium.com/max/5692/1*eooNwZipz26wl3AHI-utNA.jpeg"
+                                        moz-reader-full-width="true" moz-reader-center="true" width="5692"
+                                        height="3200"></p></div>
+                        </div>
+                    </div>
+                </div>
+                <figcaption data-selectable-paragraph="">© Shutterstock / A3pfamily / WWF</figcaption>
+            </figure>
+            <p id="1d47" data-selectable-paragraph="">During the United Nations General Assembly week in New York City,
+                the World Economic Forum, WWF, IUCN, Conservation International, Bhumi Project, YMCA, Natural Justice,
+                Africa Platform, and African Wildlife Foundation co-convened an event bringing together leaders across
+                non-environment organizations to discuss the impact of nature on people and potential solutions. WWF,
+                World YMCA, and the Bhumi Project were among 36 organizations — representing conservation, development,
+                humanitarian, faith-based, rights-based, youth and indigenous organizations — which met to discuss the
+                nature and people agenda. This gathering was particularly timely as our leaders are scheduled to make
+                key decisions on nature, climate and development in 2020, and governments are preparing for these
+                decisions at a key Convention on Biological Diversity preparatory meeting in Montreal in November
+                2019.</p>
+            <p id="ec78" data-selectable-paragraph="">Recognizing the impact of nature across all sectors, and the need
+                to work together to protect and restore it, is the first step to developing a coalition for the nature
+                and people agenda. We will need to see continued and greater collaboration across development and
+                environmental stakeholders if we are to secure strong decisions for nature and people next year. There’s
+                a lot at stake.</p>
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

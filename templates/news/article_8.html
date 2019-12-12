@@ -1,0 +1,48 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Hypothetical Value To Real Value</h1>
+        <p>I remember when my son came home one day in high school and told me he wanted to “day trade” along with
+            some friends who were doing it. We opened a TD Ameritrade account and staked him with a small amount of
+            money, enough to trade but not enough that if he lost it all it would be an issue. And off he went.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            A few weeks later he asked me “Dad, what is a PE ratio?” So I said to him “you know that deli that you
+            stop in every morning and get a bacon egg and cheese on the way to school?” He said “yes”. I said “let’s
+            say tomorrow the owner says to you, I’m selling the business, do you want to buy it? We make $1mm a year
+            in profits and have for the last thirty years.” Then I said, “how much would you pay him for it?” My son
+            thought about it and said “Four to five million dollars.” I asked him why. He said, “Because I would get
+            my money back in four to five years and then make a million dollars a year after that.” I said, “you
+            offered to pay a PE of 4 to 5.” And he said, “Oh, I get it.”
+        </p>
+        {% if paywall.show %}
+
+            <p>I like to call that kind of valuation “real value”. You pay $4-5mm for a business and you get your money
+                back after a few years and then cash flow after that. While nothing in life is guaranteed, real value is
+                tangible. You can see your way to realizing it. It’s right there in front of you.</p>
+            <p>Then there is what happens in early-stage investing. We offer $1mm for 20-25% of a company and value it
+                at the same $4-5mm. But there is no cash flow. There is no revenue. There are no customers. There is no
+                product. Just a few people and an idea. That is hypothetical value. We think “if this becomes worth a
+                billion dollars, we might hold onto half of our initial ownership and end up with $100 million or more”.
+                And we plunk down the money and go.</p>
+            <p>Here is the thing. A startup becomes a company and eventually, that company gets valued on real value
+                metrics. Someday it will have customers, and revenue, and profits. And investors will think “how many
+                years of profits will I be willing to pay for that company?” A PE ratio will be applied and it will be
+                valued on the business fundamentals and not what can or could be.</p>
+            <p>Venture capitalists and seed funds and angel investors make or lose money on the journey from
+                hypothetical value to real value. And when the spread between the two narrows, the money we make is
+                less. When the spread increases, the money we make is more.</p>
+            <p>It is easier to drink your own Kool-Aid in the world of hypothetical values. You handicap the odds of
+                winning more aggressively. You trade ownership for capital at work. You accept the new normal.</p>
+            <p>Real value doesn’t move so fast. Because it is right in front of you. You can see it. So it is not prone
+                to flights of fancy.</p>
+            <p>I try to keep this framework front and center in my brain as we meet with founders and work to find
+                transactions that work for everyone. I find it to be a stabilizing force in an unstable market.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

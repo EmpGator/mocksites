@@ -1,0 +1,96 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Netflix Is Spending $420 Million on Indian Content, CEO Says</h1>
+        <img src="https://www.cryptonewsz.com/wp-content/uploads/2019/06/BloombergTerminal.jpg">
+        <p><a href="https://www.bloomberg.com/quote/NFLX:US" itemprop="StoryLink" itemscope="itemscope"
+              title="Company Overview">
+            <meta itemprop="security" content="NFLX US Equity">
+            <meta itemprop="type" content="SecurityLink">
+            Netflix Inc.</a> is plowing 30 billion rupees (<span data-value="420000000" data-original="$420 million"
+                                                                 data-icon="true"
+                                                                 data-symbol="$">$420 million</span>) this year and
+            next to produce more local content in India, one of the biggest and most-crowded markets for the world’s
+            largest paid streaming-service provider.
+        </p>
+        <p{% if not paywall.show %} class="paytext" {% endif %}>
+            “You’ll start to see a lot of stuff hit the screen, big investment,” Chief Executive Officer Reed
+            Hastings said at an event in New Delhi on Friday. “We’re really trying to invest in that becoming more
+            Indian in the content offering.”
+        </p>
+        {% if paywall.show %}
+
+            <p>The Los Gatos, California-based company is jostling with other giants such as <a
+                    href="https://www.bloomberg.com/quote/1705061D:US" itemprop="StoryLink" itemscope="itemscope"
+                    title="Company Overview">
+                <meta itemprop="security" content="1705061D US Equity">
+                <meta itemprop="type" content="SecurityLink">
+                Walt Disney Co.</a>-owned Hotstar and <a href="https://www.bloomberg.com/quote/AMZN:US"
+                                                         itemprop="StoryLink" itemscope="itemscope"
+                                                         title="Company Overview">
+                <meta itemprop="security" content="AMZN US Equity">
+                <meta itemprop="type" content="SecurityLink">
+                Amazon.com Inc.</a> Prime for a slice of the growing market as more Indians use smartphones to view
+                videos. The companies are offering relatively cheaper packages to lure paying subscribers in a country
+                used to free YouTube offerings.
+            </p>
+
+            <p>Hastings has said Netflix’s goal is to attract 100 million customers in India -- almost 25 times its
+                estimated subscriber base there as of this year. The world’s second-most populous country is a priority
+                for company, which is effectively blocked in China.</p>
+            <p>Disney’s Hotstar, which is already the leader in India, will get a boost soon when the entertainment
+                giant eventually introduces Disney+, a new streaming service it started last month in some markets.</p>
+
+            <p>
+                <a href="https://www.bloomberg.com/news/articles/2019-10-24/the-battle-of-the-streaming-services-is-the-show-that-will-never-end"
+                   itemprop="StoryLink" itemscope="itemscope"
+                   title="The Battle of the Streaming Services Reaches Full Tilt" target="_blank">
+                    <meta itemprop="suid" content="PZVIGR6S972B">
+                    <meta itemprop="type" content="StoryLink">
+                    The Battle of the Streaming Services Reaches Full Tilt</a></p>
+            <p>With a market that could hit almost 850 million smartphone users by 2022, compared with about half a
+                billion now, India is drawing all the major global players as well as a slew of local streaming firms
+                backed by Bollywood production houses. The <span data-value="500000000" data-original="$500 million"
+                                                                 data-icon="true" data-symbol="$">$500 million</span>
+                Indian video-streaming market could grow to 10 times that size by 2023, according to a <a
+                        href="https://www.ibef.org/news/video-streaming-market-in-india-to-reach-us-5-billion-by-2023-bcg-report"
+                        itemprop="StoryLink" itemscope="itemscope" title="Link to report" target="_blank"
+                        rel="nofollow noopener">
+                    <meta itemprop="type" content="WebLink">
+                    report</a> by the Boston Consulting Group last year.
+            </p>
+            <p>Highlighting the competition, <a href="https://www.bloomberg.com/quote/AAPL:US" itemprop="StoryLink"
+                                                itemscope="itemscope" title="Company Overview">
+                <meta itemprop="security" content="AAPL US Equity">
+                <meta itemprop="type" content="SecurityLink">
+                Apple Inc.</a> <a
+                    href="https://www.bloomberg.com/news/articles/2019-09-11/apple-tv-squeezing-into-india-market-with-1-40-a-month-service"
+                    itemprop="StoryLink" itemscope="itemscope"
+                    title="Apple TV Squeezing Into India Market With $1.40 a Month Service" target="_blank">
+                <meta itemprop="suid" content="PXNPYCT0AFBC">
+                <meta itemprop="type" content="StoryLink">
+                jumped</a> into the market in September with its Apple TV+, while <a
+                    href="https://www.bloomberg.com/quote/WMT:US" itemprop="StoryLink" itemscope="itemscope"
+                    title="Company Overview">
+                <meta itemprop="security" content="WMT US Equity">
+                <meta itemprop="type" content="SecurityLink">
+                Walmart Inc.</a>’s local asset, Flipkart Online Services Pvt., <a
+                    href="https://www.bloomberg.com/news/articles/2019-08-05/walmart-takes-on-amazon-with-free-streaming-video-in-india"
+                    itemprop="StoryLink" itemscope="itemscope"
+                    title="Walmart Takes on Amazon With Free Streaming Video in India" target="_blank">
+                <meta itemprop="suid" content="PVRB026S972B">
+                <meta itemprop="type" content="StoryLink">
+                unveiled</a> its plans in August to start a free Indian video streaming service.
+            </p>
+
+            <p>“We got one eye to being very local and authentic and one eye to what will be shared around the world,”
+                he said. “But that is the advantage of Netflix to be able to produce in India and share that.”</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

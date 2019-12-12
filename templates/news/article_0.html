@@ -1,0 +1,109 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <img width="800" src="https://cdn.thewirecutter.com/wp-content/uploads/2019/11/00wc_datahealth_1024.png">
+        <h1>What to Consider Before Trading Your Health Data for Cash</h1>
+        <p>After I signed up for my insurance plan, I got an email with a link to a “wellness program” that, if I traded
+            some health data—such as steps from a pedometer or smartwatch exercise data—could earn me a small monthly
+            payout and some gift cards. But the second I logged in, I felt paranoid about the whole thing.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>If you work for a company with employer-sponsored health insurance, there’s a chance you’ve come across
+            wellness programs such as <a href="https://unitedhealthcaremotion.com/" target="_blank">UnitedHealthcare
+                Motion</a>, <a href="https://www.go365.com/" target="_blank">Humana Go365</a>, <a
+                    href="https://www.attainbyaetna.com/" target="_blank">Attain by Aetna</a>, and <a
+                    href="https://www.vitalitygroup.com/" target="_blank">Vitality</a> (The New York Times, Wirecutter’s
+            parent company, offers Vitality to its employees). Each program works similarly, offering some type of
+            discount or financial incentive in exchange for reaching goals, usually verified by requesting health data
+            collected by a phone or fitness tracker. Insurance companies offer these programs to encourage people to
+            begin or maintain healthy habits, like eating well and exercising, thus reducing health care costs.
+            Employers offer them as a way to provide financial rewards you can use toward the cost of insurance or gift
+            cards.</p>
+        {% if paywall.show %}
+        <p>Financial rewards and gift cards are tantalizing incentives, but you shouldn’t make the choice to trade away
+            your health data without considering the potential issues first.</p>
+        <h3>What laws protect my health data?</h3>
+        <p>The laws surrounding health data are complex, and your wellness program may not include the data privacy you
+            expect. The health information you share with insurance companies, HMOs, health care providers, or company
+            health plans is protected by the Health Insurance Portability and Accountability Act (HIPAA), which helps
+            keep your data private. But not all workplace wellness programs are covered by HIPAA. If a program or
+            wearable tracking device is covered by HIPAA, your employer will never have access to the data collected,
+            but if HIPAA doesn’t apply, you’re trusting those entities to not share the data with your employer,
+            third-party ad agencies, or anyone else. Without HIPAA, a wellness program (or, more accurately, the
+            operator or administrator behind it) may sell the health information it collects, which could put you at
+            risk of having your data used against you or unlawfully in some way.</p>
+        <p>Pam Dixon, executive director of the <a href="https://www.worldprivacyforum.org/" target="_blank">World
+            Privacy Forum</a>, told me, “The best thing to do is take a close look at the privacy policy for that
+            program. If it is a HIPAA-covered program, they’re going to have something called a <a
+                    href="https://www.hhs.gov/hipaa/for-individuals/notice-privacy-practices/index.html"
+                    target="_blank">Notice of Privacy Practices</a>.” Look for phrases like “your rights under HIPAA,”
+            “Notice of Privacy Practices,” or “NPP” in the privacy policy.</p>
+        <p>“If you see the term ‘we are HIPAA-compliant,’ the basic rule of thumb is the program does not fall under
+            HIPAA,” Dixon added.</p>
+        <p>Yes, it’s confusing—although a program may call itself compliant, that doesn’t mean it’s regulated, she said.
+            If it’s not covered by HIPAA, that opens the door for any data you provide to potentially be shared with
+            third parties for advertising and marketing purposes.</p>
+        <p>The U.S. Department of Health and Human Services <a
+                href="https://www.hhs.gov/hipaa/for-professionals/privacy/workplace-wellness/index.html"
+                target="_blank">also adds this distinction</a>: If a wellness program is offered as part of a group
+            health plan, your information is protected by HIPAA rules; if the wellness program is offered directly by an
+            employer, the information is not protected.</p>
+        <p>When I asked <a href="https://www.annaslomovic.com/" target="_blank">Anna Slomovic, PhD</a>, a data
+            management and policy consultant, about this, she told me, “You have to remember when data is shared between
+            organizations, what is happening is the data is copied and the copy is handed over. So one copy may be
+            covered by HIPAA and the other copy may not be.” This could include data from the devices you track activity
+            with, like a Fitbit, where the data is covered only by Fitbit's privacy policy—unless it gets moved over to
+            a HIPAA-covered entity or someone acting on its behalf.</p>
+        <h3>What are the problems with this type of data sharing?</h3>
+        <p>Health data is some of the most private data you have, so it’s worth being mindful of where that information
+            is shared and how it could be used. You may not have an issue sharing the number of steps you take on your
+            pedometer, but consider what other data your fitness tracker might gather. Referencing a <a
+                    href="https://link.springer.com/chapter/10.1007/978-3-319-48342-9_3" target="_blank">chapter</a>
+            from the 2017 book, <em>Under Observation: The Interplay Between eHealth and Surveillance</em>, Slomovic
+            showed how much data wearable devices, apps, and health portals collected. Even in 2014, this info ranged
+            from location history to the modes of transport wearers tend to use.</p>
+        <p>As to how your health data could be used, we can all imagine the worst-case scenarios of sharing info about
+            our eating, dieting, and exercising habits (or lack thereof) with insurance companies, but it’s what we
+            haven’t thought of yet that’s more worrisome. “You don’t think this data means anything, and then all of a
+            sudden somebody else takes the data and rearranges it, and all the sudden it’s a big deal,” Slomovic pointed
+            out. We’ve already seen some surprising ways that fitness data can be repurposed, like when Nathan Ruser, a
+            student at Australian National University, used data from the fitness app Strava to <a
+                    href="https://www.nytimes.com/video/world/middleeast/100000005705502/big-data-big-problems-how-stravas-heat-map-uncovers-military-bases.html"
+                    target="_blank">reveal the locations of military bases</a>.</p>
+        <p>Many wellness programs ask you to complete surveys and risk assessments to earn points. These surveys may
+            also ask questions you’re not comfortable answering, like whether you plan to get pregnant in the next year
+            or two. There’s not much to gain from sharing this type of info, and you should avoid doing so—you don’t
+            have to answer every question.</p>
+        <p>If your family is covered by your health plan, it’s important to consider their privacy as well, especially
+            that of your children. Make sure your children don’t fill out any health surveys that aren’t covered by
+            HIPAA, and watch out for programs that overreach for their data (and your partner’s, too).</p>
+        <p>Even if you trust all these companies to never share your health information, don’t forget about the
+            possibility of data breaches. In a <a
+                    href="https://annals.org/aim/article-abstract/2751916/types-information-compromised-breaches-protected-health-information"
+                    target="_blank">paper published in the Annals of Internal Medicine</a> (subscription required),
+            researchers found that 71 percent of 1,461 reported data breaches at hospitals between October 2009 and July
+            2019 included sensitive info, such as patient names, addresses, email addresses, or other personal
+            identifiers. These breaches exposed millions of people to the risk of identity theft or financial fraud.</p>
+        <h3>What should I do?</h3>
+        <p>Wellness programs are often marketed as a way for you to earn money, but you can also view your participation
+            as a cost.</p>
+        <p>Still, the financial benefits are hard to ignore. Though it’s important to consider the potential issues,
+            participating in a wellness program is not universally bad. Aside from considering HIPAA coverage, it’s best
+            to steer clear of participating in programs that ask for more info than you’re comfortable sharing (like
+            genetic test results) or that pay based on specific outcomes, like weight loss.</p>
+        <p>Beyond that, Slomovic suggested considering two questions: Do you have a choice in the first place, whether
+            you can afford to not be in these programs, both financially and in terms of being being seen as a team
+            player? And if you can afford to choose, do you care what’s going to happen to that data?</p>
+        <p>If you don’t like the potential that your data could be used in ways you don’t like, you should avoid these
+            programs. If you’re still undecided, Dixon recommended using what she calls the “five analysis” to decide
+            whether a program is worth it for you: “How does it impact you five days from now, five months from now, and
+            five years from now?” </p>
+        <p>Even if you’re comfortable assuming data security risks—and you consider yourself “healthy”—there’s always
+            the possibility that your health status could change during the course of your participation in any wellness
+            program.</p>
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "waldonews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>General Motors teams up with LG Chem to jump-start its clean-tech future </h1>
+        <h2>The companies say the $2.3 billion electric battery operation will create 1,100 jobs near Lordstown,
+            Ohio.</h2>
+
+        <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/BJKAUKVUKUI6TLGIDWCHXLGKOM.jpg&w=1440">
+        <p>The companies said their $2.3 billion investment will create 1,100 jobs near Lordstown, Ohio.
+            It’s the same area where General Motors in November sold a shuttered manufacturing facility to
+            Lordstown Motors, a company seeking to build battery-electric pickups.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>General Motors announced a joint venture Thursday with South Korea-based LG Chem to
+            manufacture electric vehicle batteries in northeast Ohio, a significant step for the nation’s
+            largest automaker in its bid to electrify its future offerings.</p>
+        {% if paywall.show %}
+            <div>
+                <section><p>The joint venture, coupled with the sale to Lordstown Motors, “positions Northeast Ohio and
+                    the Mahoning Valley as a major hub for technology and electric vehicle manufacturing,” GM said in a
+                    news release.</p>
+                    <p>GM chief executive Mary Barra announced the plan during a conference call, and the companies said
+                        the venture would be an equal split.</p>
+                    <p>
+                        “<a href="https://www.washingtonpost.com/technology/2019/12/05/ok-beemer-why-european-luxury-sedans-are-becoming-relic-past-electric-suvs-are-rise/?tid=lk_inline_manual_9"
+                            target="_blank">What</a> you’re hearing from General Motors is a commitment to electric
+                        vehicles,” said Barra, who later noted, “There’s still going to be a demand for internal
+                        combustion vehicles.”</p>
+                    <p>GM is in a fierce battle to catch up with U.S. rivals in the electric vehicle space, after
+                        Silicon Valley-based Tesla cornered the early-adopter market and Ford recently announced a
+                        Mustang Mach-E electric variant to great fanfare in Los Angeles.</p>
+                    <p>Though consumers have been slow to adopt the technology so far, the electric vehicle market is
+                        expected to grow substantially in coming years — as automakers introduce mass-market electric
+                        vehicles with longer ranges at lower costs. According to analysis from CFRA Research, automakers
+                        are expected to introduce 25 new electric models in the United States alone next year. The shift
+                        is also creating a demand for lithium-ion batteries. Tesla aims to meet global demand with its
+                        Gigafactory 3, under construction in Shanghai.</p>
+                    <p>Already, Tesla has overtaken luxury sedans with sales of its electric Model 3, although many
+                        consumers are also turning to SUVs. And many luxury car manufacturers are banking on electric
+                        SUVs, crossovers and trucks as the <a
+                                href="https://www.washingtonpost.com/technology/2019/12/05/ok-beemer-why-european-luxury-sedans-are-becoming-relic-past-electric-suvs-are-rise/?tid=lk_inline_manual_14"
+                                target="_blank">potential future of the industry</a>.<b> </b></p>
+                    <p>About a decade ago, GM introduced many customers to electrification with its Chevrolet Volt, the
+                        since-discontinued sedan that went a short range on battery-only power before a gas engine
+                        kicked in to generate power for long-distance trips. Chevy went fully electric with its Bolt, a
+                        longer-range car that ran only on battery power, but sales have paled in comparison with Tesla’s
+                        similarly priced Model 3.</p>
+                    <p>GM has significant catching up to do. The CFRA analysis predicted electric vehicles would make up
+                        2 percent of GM’s sales by 2030, less than its Big Three competitors Ford and Chrysler and
+                        substantially less than European automakers such as BMW, Mercedes and Volkswagen.</p>
+                    <p>Barra said the combined expertise of the companies could accelerate electric vehicle adoption and
+                        leadership, as GM seeks to add 20 electric vehicle models to its fleet by 2023. The company said
+                        the facility would supply many projects in the near and distant future, such as a
+                        battery-electric pickup slated to arrive in 2021.</p>
+                    <p>The complex also would have the flexibility to expand to meet demand. The companies aim to
+                        produce batteries that will maximize vehicle range at a lower cost than competitors through
+                        economies of scale. Other battery factories in the United States include another LG Chem
+                        facility in Michigan and Tesla’s Nevada Gigafactory.</p>
+                    <p>She added that it would be up to workers whether the facility was represented by a union such as
+                        United Auto Workers. GM said its Ohio facility is expected to break ground in mid-2020.</p>
+                    <p>“This is something the people of Ohio and the state has earned because of their capabilities,”
+                        Barra said. “Clearly we want to tap into the great workforce that’s in Ohio.”</p></section>
+            </div>
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

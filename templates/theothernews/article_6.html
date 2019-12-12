@@ -1,0 +1,105 @@
+{% extends "theothernews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Kansas City Is First Major City In America To Offer Free Public Transportation. Is That A Good Thing?</h1>
+        <p>The problem: Traffic congestion is increasing rapidly as more and more people move to urban areas.</p>
+        <p>The solution: Offer free public transportation to encourage people to leave their cars at home. Fewer cars
+            means less air pollution and a quieter environment.</p>
+        <p>At the urging of its mayor, Quinton Lucas, the city council of Kansas City has voted unanimously to make
+            all city bus routes free. The city’s light rail is already free to use. This move makes Kansas City the
+            first major American city to make its public transportation system free to use for all. The cost of the
+            new policy is expected to be $8 million a year, according to <a
+                    href="https://www.435mag.com/kansas-city-becomes-first-major-american-city-with-universal-fare-free-public-transit/">435
+                Magazine</a>.</p>
+        <p><a href="https://www.kshb.com/news/local-news/kcmo-city-council-to-decide-on-free-bus-fares">KSHB
+            News</a> reports, “The council voted 13-0 to pass a resolution ‘directing the City Manager to include a
+            funding request in the next fiscal year budget to make fixed route public transportation fare free
+            within the City’ among other things, a measure branded as ‘Zero Fare Transit.’ The council still needs
+            to work out details of the proposal, including how it will be funded and where that money will come
+            from. Currently, a trip on a city bus costs $1.50 per ride or $50 for a monthly pass.”</p>
+        <img src="https://cleantechnica.com/files/2019/12/Free-Bus-TransitCenter.jpg"/>
+        <p{% if not paywall.show %} class="paytext" {% endif %}>
+            One of the benefits supporters of the plan foresee is helping low income residents get to and from work.
+            Councilman Eric Bunch says, “When we’re talking about improving people’s lives who are our most
+            vulnerable citizens, I don’t think there’s any question that we need to find that money. That’s not a
+            ton of money and it’s money that we as a city, if we want to prioritize public transportation, it’s
+            something that we can find.”
+        </p>
+        {% if paywall.show %}
+
+            <h3>Free Transportation Or Better Transportation?</h3>
+            <p>Free public transportation may not be the panacea for urban congestion many advocates think it is,
+                according to <a
+                        href="https://jalopnik.com/kansas-city-almost-has-free-public-transit-but-should-1840267151"><em>Jalopnik</em></a><em>.</em>
+                It points to an experiment with free transportation in Austin, Texas between October of 1989 and
+                December of 1990. A <a
+                        href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.504.198&amp;rep=rep1&amp;type=pdf">review
+                    of that program</a> found significant issues, not the least of which was that buses became rolling
+                homeless shelters. The report summary concluded,</p>
+            <p><em>In the fare-free demonstrations in larger systems reviewed in this paper, most of the new riders
+                generated were not the choice riders they were seeking to lure out of automobiles in order to decrease
+                traffic congestion and air pollution. </em></p>
+            <p><em>The larger transit systems that offered free fares suffered dramatic rates of vandalism, graffiti,
+                and rowdiness due to younger passengers who could ride the system for free, causing numerous negative
+                consequences. Vehicle maintenance and security costs escalated due to the need for repairs associated
+                with abuse from passengers. The greater presence of vagrants on board buses also discouraged choice
+                riders and caused increased complaints from long-time passengers.</em></p>
+            <p>In other words, the promised reward — fewer cars on the road — did not materialize and the costs of
+                operating the public transit system increased significantly. The <a
+                        href="https://transitcenter.org/transit-be-free/">TransitCenter</a> has examined several cities
+                that have implemented free public transit programs and found mixed results. In Dunkirk, France, the plan
+                has seen ridership increase 85%, but in Tallinn, Estonia, a similar program saw only a 3% rise in
+                ridership. In general, TransitCenter suggests, people are perfectly happy to pay for public
+                transportation if it is efficient, clean, and timely. It says on its website,</p>
+            <p><em>When researching our forthcoming report, <a
+                    href="https://transitcenter.org/publication/whos-on-board-2019/">Who’s on Board 2019</a>, we
+                surveyed 1700 transit riders in seven different cities across the US. What we heard is that most
+                low-income bus riders rate lowering fares as less important than improving the quality of the service.
+                This suggests that if a transit agency had to choose between devoting funds to reducing fares or to
+                maintaining or improving service, most riders would prefer the latter. The idea of making transit “free”
+                turns out to be less appealing to the public than making improvements to transit.</em></p>
+            <p><em>What are superior and sustainable ways to move the needle on ridership? Making transit fast,
+                frequent, and reliable. In just a few short years, Seattle has nearly tripled the number of people able
+                to walk to frequent transit, and ridership continues to climb. Ridership has also been gaining in San
+                Francisco, where SFMTA has an ongoing program to speed up buses. Cities like Austin, Richmond, and
+                Columbus are redesigning their bus networks to better connect people to jobs, and seeing ridership
+                growth as a result.</em></p>
+            <p>TransitCenter says the cost of parking or accessing cities by car can make a big difference in the number
+                of people riding public transit. In London, congestion charges have led to an 18% increase in people
+                taking the subway. In Los Angeles, Phil Washington, CEO of LA Metro recently created a stir when he
+                proposed a similar congestion charge could raise $12 billion a year — money that could be used to fund
+                free public transportation with plenty left over. Under his plan, buses on major routes would come every
+                90 seconds. The plan is a long way from being adopted but it has created lots of healthy debate, which
+                is a good thing. TransitCenter concludes its latest analysis of the value of free transportation this
+                way:</p>
+            <p><em>Free transit makes for a terrific news hook. But the only way to see the full benefits of transit –
+                like improved air quality, less congestion, and more vibrant cities is for people to actually start
+                riding transit in substantial numbers. To this end, agencies should immediately make transit more
+                accessible by offering discounts to riders who need them the most. More employers should be compelled,
+                whether through penalty or incentive, to subsidize transit passes. </em></p>
+            <p><em>But what advocates and policymakers should actually be focusing on is a multi-pronged approach to
+                make driving less attractive, and undoing policies that make driving feel free. Cities and transit
+                agencies should work together to raise parking rates and replace swaths of curbside parking with transit
+                priority streets. </em></p>
+            <p><em>And while congestion pricing isn’t feasible for most US cities, large metro areas with robust transit
+                networks should start laying the groundwork. Funneling money from these pursuits directly into improving
+                transit will yield precisely the type of benefits sought by proponents of free transit.</em></p>
+            <h3>The Takeaway</h3>
+            <p>The takeaway is this. The paradigm that says anyone should be free to drive into any city at any time — a
+                notion that became firmly rooted in the American psyche after the explosion of suburbia after World War
+                II — needs to be a blown up and replaced with a new one that emphasizes public transport options that
+                meet the needs of most members of society at affordable prices. The age of the car is ending. It’s time
+                to move on to what’s next.</p>
+            <p>And let’s not forget that any new public transit options need to utilize zero emissions vehicles,
+                whether they are buses, ride sharing vans, or other vehicles. There is no point in making it easier to
+                get around if doing so results in a dying planet.&nbsp;</p>
+
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

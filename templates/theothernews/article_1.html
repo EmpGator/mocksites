@@ -1,0 +1,63 @@
+{% extends "theothernews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>America is Choking in Traffic, But Cities Are Banning Electric Scooters. What Gives?</h1>
+        <p>Winter has come for dockless electric scooters.</p>
+        <p>From San Francisco to the District of Columbia, local governments across the country have moved to ban or
+            otherwise curtail the explosive growth of these two-wheeled shared fleets through fines, fees and
+            artificial market caps.</p>
+        <p>Like the ride-hailing platforms before them, it was only a question of when, not whether, bureaucrats
+            would act, but their ill-considered intervention threatens one of the most transformative urban mobility
+            development in decades and comes at the expense of greener, more livable communities.</p>
+        <p{% if not paywall.show %} class="paytext" {% endif %}>
+            Consider DC, where local transportation authorities implemented this month new rules requiring e-scooter
+            companies to limit the size of their fleets—despite tremendous demand and early indications that their
+            availability is encouraging inner-city residents to eschew automobiles. (A survey of 4,500 scooterists
+            by the Portland Bureau of Transportation found six percent of users reported selling their cars because
+            of the new mobility offering and another 16 percent said they were considering it.)
+        </p>
+        {% if paywall.show %}
+
+            <p>At the same time, DC stipulated that scooters be limited to a lazy 10 miles per hour. But capping the
+                allowable speed of scooters operated alongside speeding cars and trucks to one slower than the average
+                electric wheelchair is an invitation to more harm and chaos, not less.</p>
+            <p>In practice, the new regulations will encourage fleet deployment to only the wealthiest neighborhoods,
+                denying access to chronically underserved communities, while at the same time discouraging the use of
+                this carbon-neutral mode of transportation by restricting their speed. They're also a transparent
+                attempt to erode the convenience offering: after all, who would pay to sputter along at the pace of mall
+                walkers?</p>
+            <p>Sure, it's not altogether uncommon to see a scooter zipping down a sidewalk, but scooterists don't own a
+                monopoly on risky or self-centered behavior. Indeed, schmuck drivers run lights, block intersections and
+                occupy bike lanes, while pedestrians shamble into traffic to play real-life games of chicken—all with
+                impunity. And yet no one in city government would dare suggest penalizing car or shoe makers for the
+                road-going misdeeds of their customers, because the proposition is both plainly unfair and
+                ridiculous.</p>
+            <p>Of course, shared mobility platforms aren't the perfect answer to America's urban transportation woes,
+                and they're not the only one, but their rise has done more to connect transit deserts and historically
+                underserved communities than any bureaucrat in forty years.</p>
+            <p>Rather than facilitating that innovation, local governments across the country are stifling it for
+                reasons that aren't immediately clear. Whatever the reason, their actions amount to a denial of choice
+                for consumers—of convenience, cost and access.</p>
+            <p>Shared, electric scooters and bikes aren't an inherent risk to America's public safety—our roads, which
+                singularly prioritize cars over cyclists or pedestrians or even scooterists, are. And dim regulatory
+                regimes like DC's that perpetuate urban America's pro-car bias aren't going to make them any safer.</p>
+            <p>There's room to regulate emerging dockless mobility solutions while still allowing for their use and
+                responsible expansion, like encouraging open-sourced data on the location and availability of
+                vehicles.</p>
+            <p>But governments have only shown an interest in crushing, not fostering, this market by artificially
+                constraining it. Worse, these rules punish the most significant patch to America's urban transportation
+                networks that still denies huge in-town, underserved populations access.</p>
+            <p>Local governments have a weighty responsibility to make cities livable. Rules that stifle innovative
+                mobility solutionsscoot us further, not closer, from the goal of greener, more mobile and more equitable
+                communities.</p>
+            <p><em>James Richardson formerly served as a spokesman and advisor for Governors Haley Barbour and Jon
+                Huntsman and the Republican National Committee.</em></p>
+            <p><em>The views expressed in this article are the author's own.​​​​​</em></p>
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

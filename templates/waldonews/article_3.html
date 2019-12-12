@@ -1,0 +1,75 @@
+{% extends "waldonews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>These Brands May Be to Blame for Vaping-Related Illnesses, According to CDC Report</h1>
+        <img src="https://api.time.com/wp-content/uploads/2019/12/vaping-THC.jpg?w=800&quality=85">
+
+        <p>Dank Vapes seem to be associated with many cases of e-cigarette and vaping-product associated <a
+                href="https://time.com/5692387/vaping-related-death-toll/" target="_blank"
+                rel="noopener noreferrer">lung injury</a> (EVALI) popping up across the country, the U.S. Centers
+            for Disease Control and Prevention (CDC) announced Friday.</p>
+        <p>The CDC has already pointed to products <a href="https://time.com/5688229/cdc-thc-vaping-deaths/"
+                                                      target="_blank" rel="noopener noreferrer">containing the
+            marijuana compound THC</a>—particularly those tainted by the <a
+                href="https://time.com/5722724/vaping-illness-chemical-vitamin-e/" target="_blank"
+                rel="noopener noreferrer">additive vitamin E acetate</a>—as a likely cause of many of the nearly
+            2,300 EVALI cases and 48 deaths reported during the outbreak. Now, for the first time, the agency has
+            released national data about specific brands used by individuals before they got sick.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            More than half the 482 hospitalized EVALI patients who provided specific product information to the CDC
+            reported using products from Dank Vapes, which the CDC calls “a class of largely counterfeit
+            THC-containing products of unknown origin.” An <a
+                href="https://www.inverse.com/article/58581-dank-vapes" target="_blank"
+                rel="noopener noreferrer"><em>Inverse </em>investigation</a> found that Dank Vapes is not a
+            legitimate company, but rather a label often affixed to counterfeit products produced by unknown makers.
+            “They act like a cannabis company, but they actually don’t exist. They’re in the packaging industry,” a
+            cannabis industry entrepreneur told <em>Inverse.</em>
+        </p>
+        {% if paywall.show %}
+
+            <p>The CDC’s investigation points to the nebulous network’s reach. Patients in every region said they had
+                used Dank Vapes products, though they were used a bit more often in the Midwest, Northeast and South
+                than the West. The CDC has <a
+                        href="https://www.cdc.gov/mmwr/volumes/68/wr/mm6839e2.htm?s_cid=mm6839e2_w" target="_blank"
+                        rel="noopener noreferrer">already reported evidence</a> that Dank Vapes products were associated
+                with illnesses in Illinois and Wisconsin.</p>
+
+
+
+
+
+
+
+            <p>Other vaping brands used by patients in the CDC’s report include TKO, Rove, Smart Cart, Kingpen and
+                Cookie, many of which were used by more people in the West than anywhere else.</p>
+            <p>In a statement provided to TIME, Kingpen manufacturer Loudpack drew a distinction between reputably made
+                Kingpen products, which are only available at California dispensaries, and bootleg products posing as
+                Kingpen’s. “The Kingpen products in the CDC report are dangerous because they are illegal. They are not
+                regulated or tested—nor are they the award-winning, authentic products manufactured by Loudpack,” the
+                statement reads. “Legal, regulated, licensed and tested cannabis companies must stop being blamed for
+                the actions by illegal entities, who we work day and night to prevent from putting more patients and
+                consumers in harm’s way.”</p>
+            <p>Though the data helps advance the CDC’s investigation, there are still many unanswered questions. The
+                nearly 500 patients included in the latest report said they had used 152 different products in all,
+                making it difficult to nail down which ones are the possible sources of illnesses—especially since some
+                patients use e-cigarettes from multiple brands.</p>
+            <p>It’s also not totally clear whether THC-containing products are to blame for all cases of EVALI. Eighty
+                percent of the 1,782 hospitalized EVALI patients for whom the CDC has information about product use said
+                they had vaped THC in the three months before symptoms (35% exclusively), but 54% also said they had
+                used nicotine (13% exclusively). Smaller numbers also reported additionally or exclusively using
+                products containing <a href="https://time.com/5601977/united-states-government-cbd/" target="_blank"
+                                       rel="noopener noreferrer">CBD</a>, a non-psychoactive marijuana compound.</p>
+            <p>There was some good news in the report, however. The CDC says the number of EVALI diagnoses has declined
+                each week since mid-September, suggesting that the outbreak may be approaching its end.</p>
+            <p><strong>Write to </strong>Jamie Ducharme at <a
+                    href="mailto:jamie.ducharme@time.com?subject=(READER FEEDBACK) These Brands May Be to Blame for Vaping-Related Illnesses, According to CDC Report"
+                    target="_self" rel="noopener noreferrer">jamie.ducharme@time.com</a>.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

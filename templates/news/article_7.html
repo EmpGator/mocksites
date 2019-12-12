@@ -1,0 +1,43 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Decentralized Finance – AVC</h1>
+
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            While we wait for the blockchain/crypto technology to scale to the point where it can be the foundation
+            of mainstream consumer applications (games, social media, e-commerce, etc), there is a sector where
+            scalability is a little less important and where blockchain/crypto is starting to show some real signs
+            of life.
+        </p>
+        {% if paywall.show %}
+
+            <p>In the crypto space, it is called Decentralized Finance, or DeFi for short. It includes, of course, all
+                of the ICO activity largely built on top of Ethereum and the ERC-20 token. But it also includes thinks
+                like Maker which is both a stable coin and a collateralized lending sytem. The collateral for the loans
+                is what stablizes the Maker stablecoin. We also are seeing other lending offerings develop in the DeFi
+                world and we are seeing things like hedging, shorting, derivatives, and more, all built on a
+                decentralized platform where there are no intermediaries, no clearinghouses, and the need for trusted
+                third parties is much less, sometimes not at all.<br></p>
+            <p>This makes sense for a number of reasons. While the transaction requirements of financial services
+                applications are not trivial, they are also not as demanding as mainstream consumer applications where
+                millions of users are transacting with each other and the system in real-time.<br></p>
+            <p>It is also the case that, unlike many of the new architectures that emerged over the years (mainframe,
+                mini, client-server, web), the blockchain/crypto space has always had money at its core and making
+                money, transacting in money, and everyting that goes along with that has been an early use case and for
+                most people, the driving use case for this technology.<br></p>
+            <p>All technologies need early use cases. I do not think DeFi will be the only thing that blockchain/crypto
+                is good for. I think we will see blockchains scale in the next few years to allow mainstream consumer
+                applcations to be built. </p>
+            <p>But until then, DeFi is a good place to hang out. It uses all of the same technologies, architectures,
+                and value systems that we have come to know and love in crypto. You can learn to build applications, use
+                applications, and generally come up to speed on the sector while serving real customers, building a
+                business, and, hopefully, making money.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

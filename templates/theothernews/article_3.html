@@ -1,0 +1,74 @@
+{% extends "theothernews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Microbe that eats meteorites might hint at our alien origins</h1>
+        <h2>Similar organisms might have seeded the early Earth with life.</h2>
+        <img src="https://media.mnn.com/assets/images/2019/12/Meteorite.jpg.653x0_q80_crop-smart.jpg" />
+        <p>There are those who believe that we're born of aliens, and not all of them wear tin foil hats.
+        </p>
+        <p>In fact, it's a topic of serious scientific investigation. The idea is sometimes called the "panspermia
+            hypothesis," which proposes that life on Earth did not originate here, but rather was seeded by
+            meteorites carrying alien microorganisms that arose on some other rock in the far-flung universe.
+        </p>
+
+
+        <p>Of course, without any known evidence of alien microbes from elsewhere, it's a difficult hypothesis to
+            test. But new research recently published in the journal <a
+                    href="https://www.nature.com/articles/s41598-019-54482-7??utm_medium=affiliate&amp;utm_source=commission_junction&amp;utm_campaign=3_nsn6445_deeplink_PID4011347&amp;utm_content=deeplink"
+                    target="_blank">Scientific Reports</a> might offer a boost to this much-debated idea.
+        </p>
+        <p{% if not paywall.show %} class="paytext" {% endif %}>
+            The study authors, led by astrobiologist Tetyana Milojevic from the University of Vienna, looked at a
+            peculiar microbe by the name of Metallosphaera sedula<em>, </em>which is known for its voracious
+            metal-hungry appetite. Because meteorites are filled with lots of the food that these microbes crave,
+            researchers wanted to see how well the bugs adapted to a steady diet of extraterrestrial rock.
+        </p>
+        {% if paywall.show %}
+            <p>What they found was quite remarkable. Not only did the M. sedula heartedly chomp on the meteorites, but
+                they actually harvested food from the space debris more efficiently than they could from Earth stones.
+            </p>
+            <p>"M. sedula was capable of autotrophic growth on stony meteorite NWA 1172, utilizing metals trapped within
+                it as the sole energy source," wrote the authors. "When grown in the presence of NWA 1172, cells of M.
+                sedula were characterized by intensive vivid motility."
+            </p><p>In other words, <em>nom nom nom</em>.
+        </p><p>The meteorites clearly produced healthier, fitter microorganisms. Scientists guessed that this might have
+            to do with the diverse content of tasty minerals found on the space rocks. Some of the meteorite material
+            contained around 30 different types of metals, which gave M. sedula a very balanced diet.
+        </p><p>While this research is hardly proof of panspermia, it does offer a model for how the idea could have
+            worked. Imagine hardy M. sedula-like organisms thriving on some metal-rich alien world in a galaxy far, far
+            away. Then, suddenly, a catastrophe: a collision with another planet. Such a collision could have sent the
+            organisms flying through space, clinging to debris from the world-shattering event.
+        </p><p>But this was an intergalactic voyage that they could survive, because they had all the food they needed
+            for the journey: the meteor that would become their transport.
+        </p><p>Imagine next that this microbe-carrying meteor found itself on a collision course with a newly-formed
+            planet Earth. Maybe these were the kinds of organisms that first landed on our barren world, eventually
+            evolving into life as we know it today. At the very least, this new research on M. sedula paints a pretty
+            picture as to how this story could have been possible.
+        </p><p>It's weird to think that an organism like M. sedula could have been our primordial Adam-and-Eve. Though
+            if you ever find yourself with an odd, unexplained craving for a metal snack, perhaps you'll know why.
+        </p>
+
+
+            <div>
+                <div>
+                    <p>
+                        <a href="https://www.mnn.com/users/bnelson78">Bryan Nelson</a> ( <a
+                            href="https://twitter.com/@brynelson"><i></i> @@brynelson</a> ) writes about everything from
+                        environmental problems here on Earth to big questions in space.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <p>Microbe that eats meteorites might hint at our alien origins</p>
+            <p>Similar organisms might have seeded the early Earth with life.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

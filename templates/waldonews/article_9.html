@@ -1,0 +1,91 @@
+{% extends "waldonews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Bitcoin consumes more energy than Switzerland, according to new estimate</h1>
+        <h2>Though researchers acknowledge that reliable estimates are ‘rare’</h2>
+        <img src="https://cdn.vox-cdn.com/thumbor/5ID3ej8Plw0hIGqbY6t2vkrb81M=/0x0:6123x4082/920x613/filters:focal(2573x1552:3551x2530):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/64672834/934468882.jpg.0.jpg"/>
+
+        <p id="iY9Xt0">Bitcoin consumes more energy than the entire nation of Switzerland, according to new
+            estimates published by researchers at the University of Cambridge.</p>
+        <p id="4P0Orz">An <a href="https://www.cbeci.org/">online tool</a> that launched this week called the
+            Cambridge Bitcoin Electricity Consumption Index, or CBECI, estimates how much energy is needed to
+            maintain the Bitcoin network in real time, before using this to calculate its annual energy usage. </p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>Currently, the CBECI says the global Bitcoin network is
+            consuming more than seven gigwatts of
+            electricity. Over the course of a year that’s equal to around 64 TWh or terawatt hours of energy
+            consumption. That’s more than the country of Switzerland uses over the same time period (58 TWh per
+            year), but less than Colombia (68 TWh per year). </p>
+        {% if paywall.show %}
+
+            <figure>
+  <span>
+    <span data-original="https://cdn.vox-cdn.com/uploads/chorus_asset/file/18281294/Screen_Shot_2019_07_04_at_12.33.38_PM.png">
+
+
+
+
+
+
+  <source type="image/webp">
+
+
+<img alt="" data-upload-width="914"
+     src="https://cdn.vox-cdn.com/thumbor/TGGUOCGGCjCUhsMvsDNDl6iuACE=/0x0:914x397/1200x0/filters:focal(0x0:914x397):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/18281294/Screen_Shot_2019_07_04_at_12.33.38_PM.png">
+
+
+
+
+    </span>
+
+  </span>
+
+            </figure>
+
+            <p id="k0a2mq">It means Bitcoin accounts for roughly 0.25 percent of the world’s entire electricity
+                consumption. That’s as much energy as all the tea kettles in the UK use over 11 years. It also means
+                that the electricity wasted each year by always-on but inactive electronic devices in the US could power
+                the Bitcoin network four times over. </p>
+            <p id="HPuFl7">“We want to use comparisons that set the narrative,” one of the co-creators of the CBECI,
+                Michel Rauchs, <a href="https://www.bbc.co.uk/news/technology-48853230">told <em>BBC News</em></a>.
+                ”Visitors to the website can make up their own mind as to whether it seems large or small.”</p>
+            <p id="IZ7MBY">It’s well established that Bitcoin requires a huge amount of electricity, used by miners
+                around the world running the computer hardware necessary to maintain the network and validate payments.
+                But it’s also worth remembering these figures are very much estimates.</p>
+
+            <p id="W6azIr">In a <a
+                    href="http://www.epe.admin.cam.ac.uk/cambridge-bitcoin-electricity-consumption-index-cbeci">blog
+                post</a> announcing the new index, the Cambridge Centre for Alternative Finance, which oversaw the work,
+                makes the same observation. “Reliable estimates of Bitcoin’s electricity usage are rare: in most cases,
+                they only provide a one-time snapshot and the numbers often show substantial discrepancies from one
+                model to another,” it says.</p>
+            <p id="WDPfcX">This uncertainty is reflected by the CBECI’s inclusion of lower and upper bounds for its
+                estimates. The lower bound is currently around 22 TWh while the upper bound is just under 150 TWh.
+                (Though these figures may have changed since the time of publication). </p>
+            <p id="jngXlm">It’s a significant spread, and it suggests that exact comparisons between different estimates
+                should be taken with a pinch of salt. Another popular estimate of the cryptocurrency’s energy usage <a
+                        href="https://digiconomist.net/bitcoin-energy-consumption">maintained by
+                    <em>Digiconomist</em></a> pegs the network’s yearly consumption at 70 TWh, for example — six TWh
+                greater than the University of Cambridge’s CBECI. You can read more about the exact methodology used to
+                calculate the CBECI <a href="https://www.cbeci.org/methodology/">here</a>. </p>
+            <p id="IqTWal">Regardless of the exact figures, the energy usage of Bitcoin is certainly eyebrow raising.
+                It’s increased rapidly, sometimes doubling in less than six months, and this sort of energy usages comes
+                with a significant carbon footprint. Though, again, exact estimates of this environmental impact <a
+                        href="https://www.vox.com/2019/6/18/18642645/bitcoin-energy-price-renewable-china">vary
+                    significantly</a> because of the difficulty of determining how the electricity used to power
+                Bitcoin’s mining hardware is generated.</p>
+            <p id="0GKyOB">The cryptocurrency also looks unwieldy in terms of day to day utility. Alex de Vries, a
+                Bitcoin expert at PwC, <a href="https://www.bbc.co.uk/news/technology-48853230">told <em>BBC
+                    News</em></a> that the network processes fewer than 100 million transactions per year, a “completely
+                insignificant” figure compared to the 500 billion payments processed by the traditional financial
+                industry. de Vries estimates that Bitcoin uses more energy per transaction than all the rest of the
+                world’s banks combined. </p>
+
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

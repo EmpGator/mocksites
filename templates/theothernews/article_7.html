@@ -1,0 +1,105 @@
+{% extends "theothernews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Urban Farms Are Off The Hook — And Off The Shelf (CleanTechnica Interview)</h1>
+        <div id="attachment_197471" class="wp-caption"><p><a
+                    href="https://cleantechnica.com/files/2019/12/urban-farms-Farmshelf.jpg"><img
+                    aria-describedby="caption-attachment-197471"
+                    src="https://cleantechnica.com/files/2019/12/urban-farms-Farmshelf.jpg"
+                    alt="urban farms hydroponics"></a></p>
+                <p id="caption-attachment-197471" class="wp-caption-text">The Farmshelf hydroponic model for urban farms
+                    (photo by Tina Casey)</p>
+        </div>
+        <p></p>
+        <p{% if not paywall.show %} class="paytext" {% endif %}>The urban farms of the future are already here, in the form of the now familiar field of hydroponics. So
+                does this mean that the urban agriculture revolution is just a matter of scaling up and breaking down
+                the technology into a user-friendly system?&nbsp; Maybe…or maybe not. A recent visit to the clean tech
+                incubator New Lab in Brooklyn underscored that technology is just part of a broader issue, namely, how
+                to introduce agricultural operations at scale into densely packed urban areas.</p>
+        {% if paywall.show %}
+
+            <h3>The Urban Farms Of The Future</h3>
+            <p><a href="https://newlab.com/">New Lab</a> showcased the hydroponic startup <a
+                    href="https://www.farmshelf.com/">Farmshelf</a> at its <a
+                    href="https://newlab.com/ic-event/smart-urban-food-systems-summit/">urban agriculture</a> conference
+                last month, and the company has some ambitious plans for the urban agriculture revolution.</p>
+            <p>It’s not quite a chicken-in-every-pot approach, but if all goes according to plan, Farmshelf could make
+                urban farms as ubiquitous — and as easy to operate — as the refrigerator in your kitchen.</p>
+            <p>Farmshelf’s narrow footprint and vertical layout takes on the issue of making space indoors for growing
+                crops. The company’s close attention to visual presentation also provides for placement in practically
+                any indoor environment where a bookshelf could fit, from restaurants and hotel lobbies to museums,
+                schools and community centers.</p>
+            <p>The business model is also built for scaling up. While the typical setup for a Farmshelf urban farm
+                currently costs thousands, co-founder Suma Reddy is looking at mass production to achieve a selling
+                price of about $800.</p>
+            <p>In other words, urban farming could become affordable for many households at a scale much larger than
+                those little counter-top setups.</p>
+            <p>As for user-friendliness, which Farmshelf addresses that issue through a plug-and-play, WiFi-connected
+                system. Think of it as any other kitchen appliance and you’re on the right track.</p>
+            <p>“When you see it, you understand it,” Reddy told the gathering at the New Lab event last month.</p>
+            <h3>A Holistic Approach To Urban Farming</h3>
+            <p>And, this is where things could get a bit sticky.</p>
+            <p>Hydroponic tech is not particularly compatible with growing corn, potatoes, and other large crops that
+                generate copious amounts of agricultural waste. However, there is still some waste involved in growing
+                lettuces, herbs, and other crops in hydroponic tables. That includes roots, stems, and unusable leaves
+                as well as leftovers from seed pods.</p>
+            <p>So what happens to waste disposal systems in a city when tens of thousands of residents, businesses,
+                nonprofit organizations, government agencies, and schools all rev up their hydroponic tables and start
+                chopping away?</p>
+            <p>That’s a good question, and that’s where the New Lab approach comes in.</p>
+            <p><em>CleanTechnica</em> had a chance to speak with New Lab’s Chief Product Officer, Satish Rao, about the
+                elements that make New Lab different from other clean tech incubators.</p>
+            <p>“At New Lab, we believe in building communities,” he explained. “When you look at urban problems like
+                food systems, transportation, and sustainability, it’s not just about technology solutions. You also
+                need policies and community planning.”</p>
+            <h3>A New Kind Of Entrepreneur</h3>
+            <p>Satish also noted that New Lab is nurturing an emerging trend in startup culture as it relates to new
+                technology:</p>
+            <p><em>“There has been a shift in the technology entrepreneur, following a shift in consumer behavior. </em><em>The
+                inventor of technology today cares about social impact. Instead of disrupting and then solving problems,
+                they come in with open eyes when developing new products.”</em></p>
+            <p>That includes urban agriculture.</p>
+            <p>“Food metabolism is an incredibly complex problem. Urban agriculture solves some problems but raises
+                others. The answer is to create holistic ecosystems,” said Satish.</p>
+            <p>One problem to resolve will be how to transport and process waste from urban farms without increasing
+                impacts on communities that host transportation, collection, and processing sites.</p>
+            <p>Satish also envisions a model in which urban farms and upstate farmers collaborate on land use, including
+                repurposing farmland for other uses and growing crops year-round.</p>
+            <h3>Urban Farms &amp; The Energy Question</h3>
+            <p>Over and above the issue of agricultural waste disposal is the issue of energy consumption.</p>
+            <p>Even with the use of high efficiency lighting, the mass introduction of hydroponic tables will have an
+                impact on electricity demand in a given area.</p>
+            <p>In the big picture, though, there is a trade-off between increasing electricity consumption at urban farm
+                sites, and decreasing energy related to the current practice of transporting full-grown crops in
+                refrigerated trucks around the country.</p>
+            <p>The&nbsp; <a
+                    href="https://cleantechnica.com/2018/12/14/energy-water-nexus-gets-100-million-love-tap-from-us-doe/">water-energy
+                nexus</a> is also in play. Hydroponic farming is far more water-efficient than conventional in-ground
+                agriculture, but the water-energy nexus involves location, location, location.</p>
+            <p>Urban farms, for the most part, are going to draw their water from potable water systems. That translates
+                into an increased use of energy for water transportation and treatment, including energy related to
+                producing chemicals for water treatment.</p>
+            <p>On the other hand, the mass adoption of urban farms could help reduce stress on water systems that are
+                over-used by conventional farming.</p>
+            <p>There’s a lot to sort out here in terms of sustainable urban planning, and don’t forget that <a
+                    href="https://wreg.com/2019/11/13/south-memphis-aquaponic-farm-blooms-with-help-from-fish-poop/">the
+                urban aquaponics trend</a> is bubbling up under the surface, too.</p>
+            <p>Meanwhile, <em>CleanTechnica</em> is looking forward to seeing what’s next around the corner for
+                Farmshelf and New Lab.</p>
+
+
+
+
+
+
+
+
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

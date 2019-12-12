@@ -1,0 +1,95 @@
+{% extends "waldonews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Even computer algorithms can be biased. Scientists have different ideas of how to prevent that </h1>
+        <img src="https://ca-times.brightspotcdn.com/dims4/default/e5008df/2147483647/strip/true/crop/2048x1365+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F80%2Fb8%2Fd26c1447b140f42235bdc82bed95%2Fla-oe-klein-new-sat-20160304-001">
+        <p>Scientists say they’ve developed a framework to <a
+                href="https://science.sciencemag.org/content/366/6468/999" target="_blank">make computer algorithms
+            “safer” to use</a> without creating bias based on race, gender or other factors. The trick, they say, is
+            to make it possible for users to tell the algorithm what kinds of pitfalls to avoid — without having to
+            know a lot about statistics or artificial intelligence.</p>
+        <p>With this safeguard in place, hospitals, companies and other potential users who may be wary of putting
+            machine learning to use could find it a more palatable tool for helping them solve problems, according
+            to a <a href="https://science.sciencemag.org/content/366/6468/999" target="_blank">report</a> in this
+            week’s edition of the journal Science.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>
+            Computer algorithms are used to make decisions in a range of settings, from courtrooms to schools to
+            online shopping sites. The programs sort through huge amounts of data in search of useful patterns that
+            can be applied to future decisions.
+        </p>
+        {% if paywall.show %}
+            <p>But researchers have been wrestling with a problem that’s become increasingly difficult to ignore:
+                Although the programs are automated, they often provide biased results.</p>
+            <p>For example, an algorithm used to determine prison sentences predicted <a
+                    href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+                    target="_blank">higher recidivism rates</a> for black defendants found guilty of crimes and a lower
+                risk for white ones. Those <a
+                        href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+                        target="_blank">predictions turned out to be wrong</a>, according to a ProPublica analysis.</p>
+            <p>Biases like this often originate in the real world. An algorithm used to determine which patients were
+                eligible for a health care coordination program was <a
+                        href="https://www.latimes.com/science/story/2019-10-24/computer-algorithm-fuels-racial-bias-in-us-healthcare">under-enrolling
+                    black patients</a> largely because the code relied on real-world health spending data — and black
+                patients had fewer dollars spent on them than whites did.</p>
+            <p>Even if the information itself is not biased, algorithms can still produce unfair or other “undesirable
+                outcomes,” said <a href="https://people.cs.umass.edu/~pthomas/" target="_blank">Philip Thomas</a>, an
+                artificial intelligence researcher at the University of Massachusetts Amherst and lead author of the new
+                study.</p>
+            <p>Sorting out which processes might be driving those unfair outcomes, and then fixing them, can be an
+                overwhelming task for doctors, hospitals or other potential users who just want a tool that will help
+                them make better decisions.</p>
+            <p>“They’re the experts in their field but perhaps not in machine learning — so we shouldn’t expect them to
+                have detailed knowledge of how algorithms work in order to control the behavior of the algorithms,”
+                Thomas said. “We want to give them a simple interface to define undesirable behavior for their
+                application and then ensure that the algorithm will avoid that behavior with high probability.”</p>
+            <p>So the computer scientists developed a different type of algorithm that allowed users to more easily
+                define what bad behavior they wanted their program to avoid. </p>
+            <p>This, of course, makes the algorithm designers’ job more difficult, Thomas said, because they have to
+                build their algorithm without knowing what biases or other problematic behaviors the eventual user won’t
+                want in the program.</p>
+            <p>“Instead, they have to make the algorithm smart enough to understand what the user is saying is
+                undesirable behavior, and then reason entirely on its own about what would cause this behavior, and then
+                avoid it with high probability,” he said. “That makes the algorithm a bit more complicated, but much
+                easier for people to use responsibly.”</p>
+            <p>To test their new framework, the researchers tried it out on a dataset of entrance exam scores for 43,303
+                Brazilian students and the grade point averages they earned during their first three semesters at
+                college. </p>
+            <p>Standard algorithms that tried to predict a student’s GPA based on his or her entrance exam scores were
+                biased against women: The grades they predicted for women were lower than were actually the case, and
+                the grades they predicted for men were higher. This caused an error gap between men and women that
+                averaged 0.3 GPA points — enough to make a major difference in a student’s admissions prospects.</p>
+            <p>The new algorithm, on the other hand, shrank that error range to within 0.05 GPA points — making it a
+                much fairer predictor of students’ success.</p>
+            <p>The computer scientists also tried out their framework on simulated data for diabetes patients. They
+                found it could adjust a patient’s insulin doses more effectively than a standard algorithm, resulting in
+                far fewer unwanted episodes of <a
+                        href="https://www.mayoclinic.org/diseases-conditions/hypoglycemia/symptoms-causes/syc-20373685"
+                        target="_blank">hypoglycemia</a>.</p><p>But others questioned the new approach.</p>
+            <p><a href="http://imes.mit.edu/research-staff-prof/leo-anthony-celi/" target="_blank">Dr. Leo Anthony
+                Celi</a>, an intensivist at Beth Israel Deaconess Medical Center and research scientist at MIT, argued
+                that the best way to avoid bias and other problems is to keep machine learning experts in the loop
+                throughout the entire process rather than limiting their input to the initial design stages. That way
+                they can see if an algorithm is behaving badly and make any necessary fixes.</p>
+            <p>“There’s just no way around that,” said Celi, who helped develop an artificial intelligence program to
+                improve treatment strategies for patients with sepsis.</p>
+            <p>Likewise, front-line users such as doctors, nurses and pharmacists should take a more active role in the
+                development of the algorithms they rely upon, he said.</p>
+            <p>The authors of the new study were quick to point out that their framework was more important than the
+                algorithms they generated by using it.</p>
+            <p>“We’re not saying these are the best algorithms,” said <a href="https://cs.stanford.edu/people/ebrun/"
+                                                                         target="_blank">Emma Brunskill</a>, a computer
+                scientist at Stanford University and the paper’s senior author. “We’re hoping that other researchers at
+                their own labs will continue to make better algorithms.”</p>
+            <p>Brunskill added that she’d like to see the new framework encourage people to apply algorithms to a
+                broader range of health and social problems.</p>
+            <p>The new work is sure to stir up debate — and perhaps more needed conversations between the healthcare and
+                machine learning communities, Celi said.</p>
+            <p>“If it makes people have more discussions then I think it’s valuable,” he said.</p>
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

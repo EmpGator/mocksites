@@ -1,0 +1,106 @@
+{% extends "waldonews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Airbnb Is Introducing New Rules to Rein in Parties and Nuisance Guests</h1>
+        <img src="https://api.time.com/wp-content/uploads/2019/12/airbnb-smartphone.jpg?w=800&quality=85">
+
+        <p>Airbnb is taking more steps to crack down on parties and nuisance guests in the wake of a Halloween
+            shooting at an Airbnb rental in a San Francisco suburb where five people were killed.</p>
+        <p>The company said Thursday it’s banning “open invite” parties at all of its accommodations. Those are
+            parties open to anyone and advertised on social media, for example.</p>
+        <p>Airbnb says boutique hotels and professional event venues will be exempt from the new rule.</p>
+        <p>The San Francisco-based company is also banning large parties at apartment buildings and condos.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>“This policy does not impact parties that are authorized by hosts and convened respectfully by guests,”
+                the company said in a news release. “Instead, our goal with this new policy is to address the small
+                number of guests who act irresponsibly and those rare hosts whose homes become persistent neighborhood
+                nuisances.”</p>
+        {% if paywall.show %}
+
+            <p>Airbnb says it’s in the process of identifying listings globally that may be violating the party house
+                ban, including accommodations in Los Angeles, Miami Beach, London and Montreal. The company says it’s
+                asking hosts to update their listings to comply with the ‘’open invite” ban.</p>
+            <div data-partial="tile" data-variation="inline-recirc double" data-type="feed"
+                 data-title="Related Stories">
+                <h2>Related Stories</h2>
+
+                <article data-crop="marquee_large_2x" data-headline-style="heading-content">
+
+                    <a href="https://time.com/5747418/exxon-mobil-climate-lawsuit-dismissed/">
+                        <div data-high-density="true"
+                             data-src="https://api.time.com/wp-content/uploads/2019/12/Ted-Wells.jpg?quality=85&amp;w=600"
+                             data-crop="marquee_large_2x" data-alt="" data-title="" data-shop-image="false">
+
+
+                            <p>
+                                <img src="https://api.time.com/wp-content/uploads/2019/12/Ted-Wells.jpg?w=600&amp;h=93&amp;quality=85"
+                                     alt="" title="">
+                            </p>
+
+
+                        </div>
+                    </a>
+
+
+                </article>
+                <article data-crop="marquee_large_2x" data-headline-style="heading-content">
+
+                    <a href="https://time.com/5746005/amazon-new-york-office/">
+                        <div data-high-density="true"
+                             data-src="https://api.time.com/wp-content/uploads/2019/12/Amazon-logo.jpg?quality=85&amp;w=600"
+                             data-crop="marquee_large_2x" data-alt="" data-title="" data-shop-image="false">
+
+
+                            <p>
+                                <img src="https://api.time.com/wp-content/uploads/2019/12/Amazon-logo.jpg?w=600&amp;h=93&amp;quality=85"
+                                     alt="" title="">
+                            </p>
+
+
+                        </div>
+                    </a>
+
+
+                </article>
+            </div>
+            <p>Airbnb is also issuing new guest behavior rules. In early 2020, guests will get a warning for one
+                instance of excessive noise, unauthorized guests, unauthorized parking, unauthorized smoking or
+                excessive messiness reported by a host or a neighbor. Further violations will result in account
+                suspension or removal.</p>
+            <p>Airbnb CEO Brian Chesky announced last month that changes would be coming after <a
+                    href="https://apnews.com/431135a2aea24475a6bb30b0d3579656" target="_blank">five people were
+                killed</a> at a Halloween party shooting in Orinda. The owner of the Airbnb rental didn’t authorize the
+                party, which had more than 100 guests.</p>
+            <p>AirbnbWatch, a hotel-funded group that calls for stricter local home-sharing regulations, faulted Airbnb
+                for responding only after the Orinda shooting. It also thinks the company’s efforts fall short.</p>
+
+
+
+
+
+
+            <p>The group said Airbnb should limit rentals to owner-occupied or primary residences. Hosts in those homes
+                are invested in their communities and are more careful about which guests they accept, it said.</p>
+            <p>But Daniel Guttentag, an assistant professor in the department of hospitality and tourism management at
+                the College of Charleston School of Business, said he thinks the new policies demonstrate Airbnb’s
+                genuine intention to rid the platform of some of its most problematic activity. He thinks the rules
+                could also help shield Airbnb from liability if a party goes awry.</p>
+            <p>“The challenge for Airbnb will be enforcing these rules, though, as its immense scale can make that
+                difficult,” Guttentag said. Airbnb has more than 7 million listings worldwide.</p>
+            <p>Guttentag said it could also be hard for Airbnb to determine what is “too loud” and ensure that neighbors
+                reporting a problem aren’t just trying to shut a rental down.</p>
+            <p>The company is under pressure to gain the trust of travelers, neighbors and lawmakers as it prepares for
+                its planned initial public offering next year.</p>
+            <p>Airbnb also said Thursday it’s establishing a dedicated hotline for mayors and city officials who have
+                questions about its policies.</p>
+            <p><strong>Contact us</strong> at <a
+                    href="mailto:editors@time.com?subject=(READER FEEDBACK) Airbnb Is Introducing New Rules to Rein in Parties and Nuisance Guests"
+                    target="_self" rel="noopener noreferrer">editors@time.com</a>.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -2,24 +2,25 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
     {% block head %}
     {% endblock %}
 </head>
 <body>
-
+        <!--
 		<div class="header">
 			<nav class="fixed-header">
 		        <div class="headerFinnplus"><a href="{{ finnplus_domain }}">FINN+</a></div>
 		        <ul >
-
                     {% with messages = get_flashed_messages() %}
                         {% for message in messages %}
                             <script>noTokensPopup();</script>
                             <li>{{ message }}</li>
                         {% endfor %}
                     {% endwith %}
+
                     {% if data %}
                         <li id="payType">Payment type: {{ data.method }}</li>
                         <li id="payMsg">{{ data.message}}</li>
@@ -39,6 +40,29 @@
                 <div class="progress-bar" id="myBar"></div>
             </div>
 	    </div>
+	    -->
+        <div class="header">
+            <nav class="fixed-header">
+                <p><a href="{{ finnplus_domain }}" class="headerFinnplus"><img src="{{ url_for('static', filename='finnplus.svg')}}"></a></p>
+                {% if data %}
+                    {% if pay %}
+                        <p id="paid" class="headerText">You will only be charged once you read past half of the article</p>
+                    {% elif paywall and paywall.show and not pay %}
+                        <p class="headerText">Article already paid</p>
+                    {% else %}
+                        <p class="headerText">Cant pay article</p>
+                    {% endif %}
+                    <p id="payMsg">{{ data.message}}</p>
+                {% endif %}
+            </nav>
+            {% if pay %}
+                <div class="progress-container">
+                    <div class="progress-divider" id="divider"></div>
+                    <div class="progress-bar" id="myBar"></div>
+                </div>
+                <script src="{{ url_for('static', filename='main.js') }}"></script>
+            {% endif %}
+        </div>
 
     {% block body %}
     {% endblock %}

@@ -1,0 +1,74 @@
+{% extends "theothernews/base.html" %}
+
+{% block content %}
+    <div class="content">
+    <h1>How dogs help kids learn to read</h1>
+    <h2>A nonjudgmental pooch is a great solution to a common problem.</h2>
+    <img src="https://media.mnn.com/assets/images/2018/02/shutterstock_692883502.jpg.653x0_q80_crop-smart.jpg">
+    <p>I consider myself to be a patient person. I can sit through hours of ballet rehersals and play practices,
+        unending games of Chutes and Ladders (without cheating!), and long, complicated stories about
+        who-had-what-for-lunch at school each day. But I'm finding that one aspect of parenting that can try
+        even my patience is in teaching my youngest how to read.
+    </p>
+
+        <p{% if not paywall.show %} class="paytext" {% endif %}>
+            Don't get me wrong. I really do love reading with my kids. In fact, it's one of my favorite things to do
+            with my kids. But it's just so very hard to listen to my youngest learn how to read, without jumping in
+            to read it for her. She can read the word "<em>the</em>" seven times in one book and then struggle to
+            sound it out the next time she sees it. She can sound out a word like "<em>harbor</em>" and then get
+            stumped at the word "<em>a</em>". (I'm not kidding!) And as much as I will myself to remain silent, I
+            can't help but tense up at the insane contradictions that come with learning how to read.
+        </p>
+        {% if paywall.show %}
+            <p>It turns out, I'm not alone. Researchers have found that it's hard for a parent — or anyone who already
+                knows how to read for that matter — to patiently sit by and listen to another person struggle to read.
+                This is precisely why the latest trend in teaching kids to read has gone to the dogs — literally.
+            </p>
+            <p>Experts say that reading to dogs — specifically those trained to read with children, like Daisy, in the
+                video below — helps kids get over the fear of being judged when they read. Because try as we might to
+                hide it, young kids feel that tension when they make mistakes. Reading to dogs gives kids a
+                non-judgmental, comforting companion to listen to them without the pressure of perfection.
+            </p><h2>Research confirms it</h2><p></p><p></p>
+            <p></p>
+            <p>Researchers from the University of British Columbia Okanagan School of Education watched 17 children in
+                grades 1 through 3 read. They were given reading passages that were slightly above their normal reading
+                level and were asked to read either to an observer alone or to a therapy dog and its owner. When the
+                children finished reading a page, they were asked if they wanted to continue.
+            </p>
+            <p>“The findings showed that children spent significantly more time reading and showed more persistence when
+                a dog—regardless of breed or age—was in the room as opposed to when they read without them,” says
+                doctoral student Camille Rousseau, in <a
+                        href="https://news.ok.ubc.ca/2019/11/28/ubc-study-demonstrates-dogs-promote-page-turning/"
+                        target="_blank">a statement</a>. “In addition, the children reported feeling more interested and
+                more competent.”
+            </p><p>Researchers hope that the findings, which were published in the journal <a
+                href="https://www.tandfonline.com/doi/abs/10.1080/08927936.2019.1645511" target="_blank">Anthrozoos</a>,
+            could help develop "gold-standard" canine-assisted program for struggling readers.
+        </p><p>Similarly, an earlier study by researchers at the <a
+                href="https://www.ucdavis.edu/news/reading-rover-does-it-really-help-children-veterinary-school-says-%E2%80%98yes%E2%80%99/"
+                target="_blank">University of California, Davis</a> found that kids who read to specially trained
+            therapy dogs improved their reading skills by 12% over the course of a 10-week program. Kids who read by
+            themselves or to adults showed no improvement in the same 10-week program.
+        </p><p>Maybe it's time to have the family dog help with reading lessons. And if you don't have a pup, check out
+            the <a href="http://www.therapyanimals.org/R.E.A.D.html" target="_blank">Reading Education Assistance
+                Dogs</a> (READ) program or <a href="https://www.tdi-dog.org/OurPrograms.aspx?Page=Libraries"
+                                              target="_blank">Tail Waggin' Tutors</a> to see if there are any reading
+            assistance dogs available in your area.
+        </p><p><em>Editor's note: This story has been updated with new information since it was published in March
+            2011.</em>
+        </p>
+
+
+            <p>Related topics:
+                <a href="https://www.mnn.com/eco-glossary/pets">Pets</a>
+            </p>
+            <p>How dogs help kids learn to read</p>
+            <p>Research shows that reading to dogs helps struggling kids learn to read.</p>
+
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

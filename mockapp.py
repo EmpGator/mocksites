@@ -3,7 +3,6 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired
 import requests
-
 app = Flask(__name__)
 app.secret_key = b'dsaadsads'
 finnplus_domain = 'http://127.0.0.1:5000'
@@ -70,6 +69,7 @@ def get_info(url='', domain='', article_data={}):
     print('Asking userinfo from finnpluss')
     paywall = Paywall()
     payload = {'url': url, 'domain': domain, **article_data}
+    print(payload)
     request_url = finnplus_domain + '/api/userinfo'
     r = get_response(payload, request_url)
     if not r:
@@ -116,7 +116,8 @@ def loginfinnplus():
 
 
 @app.route('/logout')
-def logout():
+@app.route('/<site>/logout')
+def logout(site=None):
     """logout route"""
     session['user'] = None
     session['accessToken'] = None
@@ -139,7 +140,6 @@ def finnplus():
     data = request.json
     domain = data['url'][:-10]
     data = pay_article(data['url'], domain)
-    print(data)
     if not data.get('payment_successful'):
         return make_response('Payment failed', 403)
     return jsonify(data)
@@ -170,34 +170,14 @@ def front(site='mock'):
     _, data = get_info(request.url)
     return render_template(f'{site}/index.html', data=data)
 
-@app.route('/blog/article/<id>')
-def blog(id=0):
-    domain = f'{mockapp_domain}/blog'
-    art_data = {
-        'url': f'{mockapp_domain}/blog/article/{id}',
-        'domain': f'{mockapp_domain}/blog',
-        'article_name': 'Mallinimi',
-        'article_date': '2019-08-22',
-        'article_desc': 'Pitkäkuvaus blaa blaa bloo bloo blub blub',
-        'article_category': 'sports',
-        'price': 1
-    }
-    show, data = get_info(request.url, domain=domain, article_data=art_data)
-    pay = False
-    if data.get('method') == 'Monthly Subscription':
-        pay = False
-    elif not data.get('access') and data.get('can_pay'):
-        pay = True
-    return render_template(f'blog/article_{id}.html', paywall=show, data=data, pay=pay)
-
 
 @app.route('/<site>/article/<id>')
 def news(site='mock', id=0):
     print('Checking if content is can be paid')
     domain = f'{mockapp_domain}/{site}'
     art_data = {
-        'url': None,
-        'domain': '',
+        'url': f'{domain}/article/{id}',
+        'domain': domain,
         'article_name': 'Mallinimi',
         'article_date': '2019-08-22',
         'article_desc': 'Pitkäkuvaus',
@@ -205,9 +185,9 @@ def news(site='mock', id=0):
     }
     show, data = get_info(request.url, domain=domain, article_data=art_data)
     pay = False
-    if data.get('method') == 'Monthly Subscription':
-        pay = False
-    elif not data.get('access') and data.get('can_pay'):
+    #if data.get('method') == 'Monthly Subscription':
+        #pay = False
+    if not data.get('access') and data.get('can_pay'):
         pay = True
 
     return render_template(f'{site}/article_{id}.html', paywall=show, data=data, pay=pay)
@@ -262,8 +242,14 @@ def generate_feed(site, request_url):
         feed['entries'].append({'title': title, 'mediaurl': img, 'desc': desc, 'category': category,
                                 'url': url, 'guid': i, 'date': day})
 
-    with open('test.xml', 'w') as f:
-        f.write(render_template('base.xml', feed=feed))
+    try:
+        import os
+        filepath = os.path.join('templates', site, 'rss.xml')
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(render_template('base.xml', feed=feed).replace(' ', ' '))
+    except Exception as e:
+        print('error: ', e)
+        print(render_template('base.xml', feed=feed)[10650:10750])
 
 
 if __name__ == '__main__':
