@@ -249,7 +249,6 @@ def generate_feed(site, request_url):
             f.write(render_template('base.xml', feed=feed).replace(' ', ' '))
     except Exception as e:
         print('error: ', e)
-        print(render_template('base.xml', feed=feed)[10650:10750])
 
 
 if __name__ == '__main__':
