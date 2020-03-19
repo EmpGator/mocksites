@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:iltalehti="https://www.iltalehti.fi/rss" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <atom:link href="http://tridample.eu.pythonanywhere.com/waldonews/rss" rel="self" type="application/rss+xml"/>
+    <title></title>
+    <link>http://tridample.eu.pythonanywhere.com/waldonews</link>
+    <description>None</description>
+    <language>fi</language>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <lastBuildDate>Mon, 01 Jul 2019 18:12:59 +0300</lastBuildDate>
+    
+    <item>
+      <title>General Motors teams up with LG Chem to jump-start its clean-tech future</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/0</link>
+      <guid isPermaLink="false">0</guid>
+      <enclosure url=""/>
+      <media:content url="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/BJKAUKVUKUI6TLGIDWCHXLGKOM.jpg">
+
+      </media:content>
+      <category>technology</category>
+      <pubDate>2019-07-07</pubDate>
+      <description>General Motors announced a joint venture Thursday with South Korea-based LG Chem to
+            manufacture electric vehicle batteries in northeast Ohio, a significant step for the nation’s
+            largest automaker in its bid to electrify its future offerings.</description>
+    </item>
+    
+    <item>
+      <title>Even computer algorithms can be biased. Scientists have different ideas of how to prevent that</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/1</link>
+      <guid isPermaLink="false">1</guid>
+      <enclosure url=""/>
+      <media:content url="https://ca-times.brightspotcdn.com/dims4/default/e5008df/2147483647/strip/true/crop/2048x1365+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F80%2Fb8%2Fd26c1447b140f42235bdc82bed95%2Fla-oe-klein-new-sat-20160304-001">
+
+      </media:content>
+      <category>entertainment</category>
+      <pubDate>2019-06-24</pubDate>
+      <description>Computer algorithms are used to make decisions in a range of settings, from courtrooms to schools to
+            online shopping sites. The programs sort through huge amounts of data in search of useful patterns that
+            can be applied to future decisions.</description>
+    </item>
+    
+    <item>
+      <title>Airbnb Is Introducing New Rules to Rein in Parties and Nuisance Guests</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/2</link>
+      <guid isPermaLink="false">2</guid>
+      <enclosure url=""/>
+      <media:content url="https://api.time.com/wp-content/uploads/2019/12/airbnb-smartphone.jpg">
+
+      </media:content>
+      <category>politics</category>
+      <pubDate>2019-06-21</pubDate>
+      <description>“This policy does not impact parties that are authorized by hosts and convened respectfully by guests,”
+                the company said in a news release. “Instead, our goal with this new policy is to address the small
+                number of guests who act irresponsibly and those rare hosts whose homes become persistent neighborhood
+                nuisances.”</description>
+    </item>
+    
+    <item>
+      <title>These Brands May Be to Blame for Vaping-Related Illnesses, According to CDC Report</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/3</link>
+      <guid isPermaLink="false">3</guid>
+      <enclosure url=""/>
+      <media:content url="https://api.time.com/wp-content/uploads/2019/12/vaping-THC.jpg">
+
+      </media:content>
+      <category>sports</category>
+      <pubDate>2019-07-06</pubDate>
+      <description>More than half the 482 hospitalized EVALI patients who provided specific product information to the CDC
+            reported using products from Dank Vapes, which the CDC calls “a class of largely counterfeit
+            THC-containing products of unknown origin.” An Inverse investigation found that Dank Vapes is not a
+            legitimate company, but rather a label often affixed to counterfeit products produced by unknown makers.
+            “They act like a cannabis company, but they actually don’t exist. They’re in the packaging industry,” a
+            cannabis industry entrepreneur told Inverse.</description>
+    </item>
+    
+    <item>
+      <title>AI Can Now Make Medical Predictions From Raw Data. But Can Deep Learning Be Trusted?</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/4</link>
+      <guid isPermaLink="false">4</guid>
+      <enclosure url=""/>
+      <media:content url="https://api.time.com/wp-content/uploads/2019/12/Deep.jpg">
+
+      </media:content>
+      <category>entertainment</category>
+      <pubDate>2019-05-17</pubDate>
+      <description>But deep learning tools also raise worrying questions because they solve problems in ways that humans
+                can’t always follow. If the connection between the data you feed into the model and the output it
+                delivers is inscrutable — hidden inside a so-called black box — how can it be trusted? Among
+                researchers, there’s a growing call to clarify how deep learning tools make decisions — and a debate
+                over what such interpretability might demand and when it’s truly needed. The stakes are particularly
+                high in medicine, where lives will be on the line.</description>
+    </item>
+    
+    <item>
+      <title>Why You Should Start Thinking About Your Cholesterol Earlier</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/5</link>
+      <guid isPermaLink="false">5</guid>
+      <enclosure url=""/>
+      <media:content url="https://api.time.com/wp-content/uploads/2019/12/cholesterol.jpg">
+
+      </media:content>
+      <category>economy</category>
+      <pubDate>2019-05-23</pubDate>
+      <description>The researchers collected data from 38 studies conducted in North America, Europe and Australia,
+                comprising about 400,000 people without cardiovascular disease, a third of whom were younger than 45. At
+                the start of each study, participants’ cholesterol levels were measured, and they answered questions
+                about their medical histories, lifestyle and demographics. During a follow-up period of up to 43 years,
+                almost 55,000 of the study participants developed heart disease or stroke.</description>
+    </item>
+    
+    <item>
+      <title>How The Mandalorian Fits Into the Larger Star Wars Timeline</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/6</link>
+      <guid isPermaLink="false">6</guid>
+      <enclosure url=""/>
+      <media:content url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.unilad.co.uk%2Fwp-content%2Fuploads%2F2019%2F11%2FBaby-Yoda-Star-Wars-The-Mandalorian.jpg">
+
+      </media:content>
+      <category>politics</category>
+      <pubDate>2019-06-01</pubDate>
+      <description>Thanks to the convoluted
+                    order in which the Star
+                    Wars movies have been released over the past 40-plus years, the timeline of events in the
+                    galaxy far, far away can be
+                    somewhat confusing. So with the launch of The
+                        Mandalorian, Disneyâ€™s new Star Wars TV series now available on the Disney+ streaming service,
+                    TIME is here to break down exactly how the show fits into the larger Star Wars timeline.</description>
+    </item>
+    
+    <item>
+      <title>There May Be Almost a Million Times More Microplastics in the Oceans Than We Thought</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/7</link>
+      <guid isPermaLink="false">7</guid>
+      <enclosure url=""/>
+      <media:content url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fakm-img-a-in.tosshub.com%2Findiatoday%2Fimages%2Fstory%2F201706%2Fin-hand-647_060817065430.jpg">
+
+      </media:content>
+      <category>sports</category>
+      <pubDate>2019-07-07</pubDate>
+      <description>Researchers at the University of California, San Diego, developed a new method of counting plastic. It
+                shows more traditional methods may be missing some of the smaller microplastics, with the effect of
+                underestimating the degree to which plastic is contaminating the world&#39;s oceans.</description>
+    </item>
+    
+    <item>
+      <title>Carbon markets could strengthen or screw over global action on climate change</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/8</link>
+      <guid isPermaLink="false">8</guid>
+      <enclosure url=""/>
+      <media:content url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpsmag.com%2F.image%2Ft_share%2FMTI3NTgxOTU0MTM1NjgzMDQy%2Fclimate-change-oceans.jpg">
+
+      </media:content>
+      <category>health</category>
+      <pubDate>2019-05-02</pubDate>
+      <description>Existing carbon markets have a checkered past, and unless tighter rules are put in place
+                moving forward, new carbon markets could actually make the climate crisis worse. That’s because, with a
+                poorly designed system, there’s the risk that carbon credits could offer polluters an opportunity to get
+                out of actually having to reduce their greenhouse gas emissions.</description>
+    </item>
+    
+    <item>
+      <title>Bitcoin consumes more energy than Switzerland, according to new estimate</title>
+      <link>http://tridample.eu.pythonanywhere.com/waldonews/article/9</link>
+      <guid isPermaLink="false">9</guid>
+      <enclosure url=""/>
+      <media:content url="https://cdn.vox-cdn.com/thumbor/5ID3ej8Plw0hIGqbY6t2vkrb81M=/0x0:6123x4082/920x613/filters:focal(2573x1552:3551x2530):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/64672834/934468882.jpg.0.jpg">
+
+      </media:content>
+      <category>technology</category>
+      <pubDate>2019-05-26</pubDate>
+      <description>Currently, the CBECI says the global Bitcoin network is
+            consuming more than seven gigwatts of
+            electricity. Over the course of a year that’s equal to around 64 TWh or terawatt hours of energy
+            consumption. That’s more than the country of Switzerland uses over the same time period (58 TWh per
+            year), but less than Colombia (68 TWh per year).</description>
+    </item>
+    
+  </channel>
+</rss>

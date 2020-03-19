@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:iltalehti="https://www.iltalehti.fi/rss" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <atom:link href="http://tridample.eu.pythonanywhere.com/theothernews/rss" rel="self" type="application/rss+xml"/>
+    <title></title>
+    <link>http://tridample.eu.pythonanywhere.com/theothernews</link>
+    <description>None</description>
+    <language>fi</language>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <lastBuildDate>Mon, 01 Jul 2019 18:12:59 +0300</lastBuildDate>
+    
+    <item>
+      <title>Netflix Is Spending $420 Million on Indian Content, CEO Says</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/0</link>
+      <guid isPermaLink="false">0</guid>
+      <enclosure url=""/>
+      <media:content url="https://www.cryptonewsz.com/wp-content/uploads/2019/06/BloombergTerminal.jpg">
+
+      </media:content>
+      <category>technology</category>
+      <pubDate>2019-07-11</pubDate>
+      <description>“You’ll start to see a lot of stuff hit the screen, big investment,” Chief Executive Officer Reed
+            Hastings said at an event in New Delhi on Friday. “We’re really trying to invest in that becoming more
+            Indian in the content offering.”</description>
+    </item>
+    
+    <item>
+      <title>America is Choking in Traffic, But Cities Are Banning Electric Scooters. What Gives?</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/1</link>
+      <guid isPermaLink="false">1</guid>
+      <enclosure url=""/>
+      <media:content url="">
+
+      </media:content>
+      <category>health</category>
+      <pubDate>2019-06-12</pubDate>
+      <description>Consider DC, where local transportation authorities implemented this month new rules requiring e-scooter
+            companies to limit the size of their fleetsâ€”despite tremendous demand and early indications that their
+            availability is encouraging inner-city residents to eschew automobiles. (A survey of 4,500 scooterists
+            by the Portland Bureau of Transportation found six percent of users reported selling their cars because
+            of the new mobility offering and another 16 percent said they were considering it.)</description>
+    </item>
+    
+    <item>
+      <title>7 Reasons You Should Eat Oatmeal Every Day</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/2</link>
+      <guid isPermaLink="false">2</guid>
+      <enclosure url=""/>
+      <media:content url="">
+
+      </media:content>
+      <category>technology</category>
+      <pubDate>2019-05-20</pubDate>
+      <description>For me, oatmeal brings a
+            Ratatouille moment. When I was a young child, my dad worked a very early shift. He used to wake me
+            up in the wee hours of the morning and welcome me to the table with a steamy bowl of oatmeal. I never knew
+            or cared about what time it was, I only knew that it was dark outside and that I was going to be surrounded
+            by a dish of warmth. To this day, when I’m stressed or I’m just in the mood for a hug from my plate, I know
+            I can count on the comfort of this guilt-free food that somehow feels indulgent.</description>
+    </item>
+    
+    <item>
+      <title>Microbe that eats meteorites might hint at our alien origins</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/3</link>
+      <guid isPermaLink="false">3</guid>
+      <enclosure url=""/>
+      <media:content url="https://media.mnn.com/assets/images/2019/12/Meteorite.jpg.653x0_q80_crop-smart.jpg">
+
+      </media:content>
+      <category>health</category>
+      <pubDate>2019-07-08</pubDate>
+      <description>The study authors, led by astrobiologist Tetyana Milojevic from the University of Vienna, looked at a
+            peculiar microbe by the name of Metallosphaera sedula, which is known for its voracious
+            metal-hungry appetite. Because meteorites are filled with lots of the food that these microbes crave,
+            researchers wanted to see how well the bugs adapted to a steady diet of extraterrestrial rock.</description>
+    </item>
+    
+    <item>
+      <title>How dogs help kids learn to read</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/4</link>
+      <guid isPermaLink="false">4</guid>
+      <enclosure url=""/>
+      <media:content url="https://media.mnn.com/assets/images/2018/02/shutterstock_692883502.jpg.653x0_q80_crop-smart.jpg">
+
+      </media:content>
+      <category>entertainment</category>
+      <pubDate>2019-05-26</pubDate>
+      <description>Don&#39;t get me wrong. I really do love reading with my kids. In fact, it&#39;s one of my favorite things to do
+            with my kids. But it&#39;s just so very hard to listen to my youngest learn how to read, without jumping in
+            to read it for her. She can read the word &#34;the&#34; seven times in one book and then struggle to
+            sound it out the next time she sees it. She can sound out a word like &#34;harbor&#34; and then get
+            stumped at the word &#34;a&#34;. (I&#39;m not kidding!) And as much as I will myself to remain silent, I
+            can&#39;t help but tense up at the insane contradictions that come with learning how to read.</description>
+    </item>
+    
+    <item>
+      <title>6 surprising ways mindfulness meditation can improve your brain</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/5</link>
+      <guid isPermaLink="false">5</guid>
+      <enclosure url=""/>
+      <media:content url="https://media.mnn.com/assets/images/2015/11/man-walks-through-wheat-field-touches.jpg.653x0_q80_crop-smart.jpg">
+
+      </media:content>
+      <category>economy</category>
+      <pubDate>2019-06-20</pubDate>
+      <description>This kind of research is now possible due to the increasing availability of different types of brain
+            scans. It&#39;s now feasible for researchers to do brain scans before and after mindfulness meditation
+            sessions. And from those scans they can see exactly how and in what regions a subject&#39;s brain can
+            change. If they see similar change patterns in a variety of test subjects (older, younger, male, female)
+            researchers then can find a link between those changes and the practice of mindfulness.</description>
+    </item>
+    
+    <item>
+      <title>Kansas City Is First Major City In America To Offer Free Public Transportation. Is That A Good Thing?</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/6</link>
+      <guid isPermaLink="false">6</guid>
+      <enclosure url=""/>
+      <media:content url="https://cleantechnica.com/files/2019/12/Free-Bus-TransitCenter.jpg">
+
+      </media:content>
+      <category>economy</category>
+      <pubDate>2019-05-09</pubDate>
+      <description>One of the benefits supporters of the plan foresee is helping low income residents get to and from work.
+            Councilman Eric Bunch says, “When we’re talking about improving people’s lives who are our most
+            vulnerable citizens, I don’t think there’s any question that we need to find that money. That’s not a
+            ton of money and it’s money that we as a city, if we want to prioritize public transportation, it’s
+            something that we can find.”</description>
+    </item>
+    
+    <item>
+      <title>Urban Farms Are Off The Hook — And Off The Shelf (CleanTechnica Interview)</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/7</link>
+      <guid isPermaLink="false">7</guid>
+      <enclosure url=""/>
+      <media:content url="https://cleantechnica.com/files/2019/12/urban-farms-Farmshelf.jpg">
+
+      </media:content>
+      <category>economy</category>
+      <pubDate>2019-07-09</pubDate>
+      <description>The urban farms of the future are already here, in the form of the now familiar field of hydroponics. So
+                does this mean that the urban agriculture revolution is just a matter of scaling up and breaking down
+                the technology into a user-friendly system?  Maybe…or maybe not. A recent visit to the clean tech
+                incubator New Lab in Brooklyn underscored that technology is just part of a broader issue, namely, how
+                to introduce agricultural operations at scale into densely packed urban areas.</description>
+    </item>
+    
+    <item>
+      <title>Hawaii&#39;s Most Populated Island Bans Most Single-Use Plastic Products</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/8</link>
+      <guid isPermaLink="false">8</guid>
+      <enclosure url=""/>
+      <media:content url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FmWjfUDn8Bqg%2Fmaxresdefault.jpg">
+
+      </media:content>
+      <category>economy</category>
+      <pubDate>2019-06-20</pubDate>
+      <description>The Honolulu City Council this week voted 7-2 to pass Bill 40, which bans businesses and restaurants in
+            Honolulu County from serving food and beverages with plastic straws and utensils and containers made of
+            polystyrene foam. The legislation will take effect in phases, with polystyrene foam being banned first in
+            2021 and disposable plastic being banned in 2022.</description>
+    </item>
+    
+    <item>
+      <title>Electric Scooters Are Coming to New York, but You Can’t Rent One in Manhattan</title>
+      <link>http://tridample.eu.pythonanywhere.com/theothernews/article/9</link>
+      <guid isPermaLink="false">9</guid>
+      <enclosure url=""/>
+      <media:content url="https://static01.nyt.com/images/2019/06/19/nyregion/18SCOOTER/merlin_155366805_37edbc4c-7de1-4133-8735-ee630f0740f8-articleLarge.jpg">
+
+      </media:content>
+      <category>technology</category>
+      <pubDate>2019-05-02</pubDate>
+      <description>“Our state leaders appear ready to enshrine e-bikes and
+            e-scooters into state law and answer
+            the call to bring more transportation alternatives to New Yorkers,” said Paul Steely White, the
+            director of safety policy at Bird.</description>
+    </item>
+    
+  </channel>
+</rss>

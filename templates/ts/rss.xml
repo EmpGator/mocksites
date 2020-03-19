@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:iltalehti="https://www.iltalehti.fi/rss" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
   <channel>
-    <atom:link href="http://127.0.0.1:8000/ts/rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="http://tridample.eu.pythonanywhere.com/ts/rss" rel="self" type="application/rss+xml"/>
     <title></title>
-    <link>http://127.0.0.1:8000/ts</link>
+    <link>http://tridample.eu.pythonanywhere.com/ts</link>
     <description>None</description>
     <language>fi</language>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -11,7 +11,7 @@
 
     <item>
       <title>Poliisilla työntäyteinen juhannus Turun seudulla</title>
-      <link>http://127.0.0.1:8000/ts/article/0</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/0</link>
       <guid isPermaLink="false">0</guid>
       <enclosure url="https://www.ts.fi/static/content/pic_5_4619575_k3425658_651.jpg"/>
       <media:content url="https://www.ts.fi/static/content/pic_5_4619575_k3425658_651.jpg">
@@ -24,7 +24,7 @@
 
     <item>
       <title>Kahvi aktivoi elimistön &#34;hyvän&#34; ruskean rasvan</title>
-      <link>http://127.0.0.1:8000/ts/article/1</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/1</link>
       <guid isPermaLink="false">1</guid>
       <enclosure url="https://www.ts.fi/static/content/pic_5_4621518_k4351371_651.jpg"/>
       <media:content url="https://www.ts.fi/static/content/pic_5_4621518_k4351371_651.jpg">
@@ -37,7 +37,7 @@
 
     <item>
       <title>Tanskalainen SP Group osti laitilalaisen Coreplastin</title>
-      <link>http://127.0.0.1:8000/ts/article/2</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/2</link>
       <guid isPermaLink="false">2</guid>
       <enclosure url="https://www.ts.fi/static/content/pic_5_4621532_k329682_651.jpg"/>
       <media:content url="https://www.ts.fi/static/content/pic_5_4621532_k329682_651.jpg">
@@ -50,7 +50,7 @@
 
     <item>
       <title>Korkeasaaren eläintarhaan muutti margai – pikkukissa kiipeää kuin orava</title>
-      <link>http://127.0.0.1:8000/ts/article/3</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/3</link>
       <guid isPermaLink="false">3</guid>
       <enclosure url="https://www.ts.fi/static/content/pic_5_4621635_k4351554_651.jpg"/>
       <media:content url="https://www.ts.fi/static/content/pic_5_4621635_k4351554_651.jpg">
@@ -63,7 +63,7 @@
 
     <item>
       <title>Italialaisesta Sassolista parlamentin uusi puhemies – äänestys meni toiselle kierrokselle</title>
-      <link>http://127.0.0.1:8000/ts/article/4</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/4</link>
       <guid isPermaLink="false">4</guid>
       <enclosure url=""/>
       <media:content url="">
@@ -78,7 +78,7 @@
 
     <item>
       <title>Zimbabwessa on pula kaikesta – nyt loppuivat passit ja rekisterikilvet</title>
-      <link>http://127.0.0.1:8000/ts/article/5</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/5</link>
       <guid isPermaLink="false">5</guid>
       <enclosure url="https://www.ts.fi/static/content/pic_5_4629726_k4375606_651.jpg"/>
       <media:content url="https://www.ts.fi/static/content/pic_5_4629726_k4375606_651.jpg">
@@ -94,7 +94,7 @@
 
     <item>
       <title>Suoratoistopalvelut ja elokuvien vuokraaminen netistä yleistyvät – valtaosa eurooppalaisista kokee tuhlaavansa niihin jo liikaa</title>
-      <link>http://127.0.0.1:8000/ts/article/6</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/6</link>
       <guid isPermaLink="false">6</guid>
       <enclosure url="https://www.ts.fi/static/content/pic_5_4629635_k3787843_651.jpg"/>
       <media:content url="https://www.ts.fi/static/content/pic_5_4629635_k3787843_651.jpg">
@@ -107,7 +107,7 @@
 
     <item>
       <title>Contract signed: The third Royal Caribbean Icon ship is built at Meyer in Turku</title>
-      <link>http://127.0.0.1:8000/ts/article/7</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/7</link>
       <guid isPermaLink="false">7</guid>
       <enclosure url="https://www.ts.fi/static/content/pic_5_4628710_k4372500_651.jpg"/>
       <media:content url="https://www.ts.fi/static/content/pic_5_4628710_k4372500_651.jpg">
@@ -120,7 +120,7 @@
 
     <item>
       <title>Turun seutu hyvin edustettu nuorten EM-joukkueessa</title>
-      <link>http://127.0.0.1:8000/ts/article/8</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/8</link>
       <guid isPermaLink="false">8</guid>
       <enclosure url="https://www.ts.fi/static/content/pic_5_4628372_k4331475_651.jpg"/>
       <media:content url="https://www.ts.fi/static/content/pic_5_4628372_k4331475_651.jpg">
@@ -133,7 +133,7 @@
 
     <item>
       <title>Italialaisesta Sassolista parlamentin uusi puhemies – äänestys meni toiselle kierrokselle</title>
-      <link>http://127.0.0.1:8000/ts/article/9</link>
+      <link>http://tridample.eu.pythonanywhere.com/ts/article/9</link>
       <guid isPermaLink="false">9</guid>
       <enclosure url="https://www.ts.fi/static/content/pic_5_4629718_k4375574_651.jpg"/>
       <media:content url="https://www.ts.fi/static/content/pic_5_4629718_k4375574_651.jpg">
