@@ -5,8 +5,8 @@ from wtforms.validators import DataRequired
 import requests
 app = Flask(__name__)
 app.secret_key = b'dsaadsads'
-finnplus_domain = 'http://127.0.0.1:5000'
-mockapp_domain = 'http://127.0.0.1:8000'
+finnplus_domain = 'https://erolkazanjyu.pythonanywhere.com'
+mockapp_domain = 'http://tridample.eu.pythonanywhere.com'
 
 
 class LoginForm(FlaskForm):
@@ -129,6 +129,7 @@ def logout(site=None):
 
 @app.route('/')
 def index():
+    return make_response('404', 404)
     _, data = get_info(url=request.referrer, domain=request.referrer)
     return render_template('index.html', data=data)
 
@@ -164,15 +165,22 @@ def setcookiesite(site=None, jwt=None):
 
 @app.route('/<site>/')
 def front(site='mock'):
-
     if site == 'favicon.ico':
         return redirect(url_for('static', filename='favicon.ico'))
+    if site not in ['news', 'theothernews', 'waldonews']:
+        return make_response('404', 404)
     _, data = get_info(request.url)
+    try:
+        data['message'].replace('tokens', 'articles')
+    except:
+        pass
     return render_template(f'{site}/index.html', data=data)
 
 
 @app.route('/<site>/article/<id>')
 def news(site='mock', id=0):
+    if site not in ['news', 'theothernews', 'waldonews']:
+        return make_response('404', 404)
     print('Checking if content is can be paid')
     domain = f'{mockapp_domain}/{site}'
     art_data = {
@@ -190,11 +198,18 @@ def news(site='mock', id=0):
     if not data.get('access') and data.get('can_pay'):
         pay = True
 
+    try:
+        data['message'].replace('tokens', 'articles')
+    except:
+        print(data.get('message'))
+
     return render_template(f'{site}/article_{id}.html', paywall=show, data=data, pay=pay)
 
 
 @app.route('/<site>/rss')
 def generate_rss(site='mock'):
+    if site not in ['news', 'theothernews', 'waldonews']:
+        return make_response('404', 404)
     from jinja2 import TemplateNotFound
     try:
         template = render_template(f'{site}/rss.xml')

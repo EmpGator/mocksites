@@ -1,3 +1,17 @@
+@media only screen and (max-width: 600px) {
+    .headerText {
+        visibility: hidden;
+        width: 0px;
+    }
+
+    #payMsg {
+        white-space: nowrap;
+        position: absolute;
+        right: 10px;
+        margin-left: 10px;
+    }
+}
+
 body {
     margin-top: 100px;
 }

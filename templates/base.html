@@ -46,13 +46,19 @@
                 <p><a href="{{ finnplus_domain }}" class="headerFinnplus"><img src="{{ url_for('static', filename='finnplus.svg')}}"></a></p>
                 {% if data %}
                     {% if pay %}
-                        <p id="paid" class="headerText">You will only be charged once you read past half of the article</p>
+                        <p id="paid" class="headerText">
+                            {% if data.method != 'Monthly Subscription' %}
+                            You will only be charged once you read past half of the article
+                            {% else %}
+                            &#10004 paid
+                            {% endif %}
+                        </p>
                     {% elif paywall and paywall.show and not pay %}
                         <p class="headerText">Article already paid</p>
                     {% else %}
                         <p class="headerText">Cant pay article</p>
                     {% endif %}
-                    <p id="payMsg">{{ data.message}}</p>
+                    <p id="payMsg">{{ data.message }}</p>
                 {% endif %}
             </nav>
             {% if pay %}
