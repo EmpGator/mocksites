@@ -1,0 +1,48 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Gov. DeWine: My face mask order went ‘too far’</h1>
+        <h2>“People were not going to accept the government telling them what to do.”</h2>
+        <figure class="art">
+<div class="fig-graphic">
+<picture>
+<source media="(min-width: 1921px)" srcset="https://static.politico.com/dims4/default/de28661/2147483647/resize/2000x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe5%2F1b%2F89b58f004427855edfc996bfd015%2F20200316-mike-dewine-ap-773.jpg"/>
+<source media="(min-width: 1681px)" srcset="https://static.politico.com/dims4/default/697d96a/2147483647/resize/1920x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe5%2F1b%2F89b58f004427855edfc996bfd015%2F20200316-mike-dewine-ap-773.jpg"/>
+<source media="(min-width: 1012px)" srcset="https://static.politico.com/dims4/default/395bfeb/2147483647/resize/1160x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe5%2F1b%2F89b58f004427855edfc996bfd015%2F20200316-mike-dewine-ap-773.jpg"/>
+<source media="(min-width: 667px)" srcset="https://static.politico.com/dims4/default/6095e35/2147483647/resize/971x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe5%2F1b%2F89b58f004427855edfc996bfd015%2F20200316-mike-dewine-ap-773.jpg"/>
+<source media="(min-width: 485px)" srcset="https://static.politico.com/dims4/default/bab2801/2147483647/resize/646x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe5%2F1b%2F89b58f004427855edfc996bfd015%2F20200316-mike-dewine-ap-773.jpg"/>
+<source media="(max-width: 484px)" srcset="https://static.politico.com/dims4/default/6df7f8a/2147483647/resize/463x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe5%2F1b%2F89b58f004427855edfc996bfd015%2F20200316-mike-dewine-ap-773.jpg"/>
+<img alt="Mike DeWine" src="https://static.politico.com/dims4/default/ca375fe/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe5%2F1b%2F89b58f004427855edfc996bfd015%2F20200316-mike-dewine-ap-773.jpg" title="Mike DeWine"/></picture>
+</div>
+</figure>
+        <p class="story-text__paragraph">Ohio Gov. Mike DeWine said Sunday that his order requiring state residents to wear face masks went “too far.” </p>
+        <p class="story-text__paragraph">DeWine announced April 27 that face masks must be worn in stores — but after some Ohioans found the order “offensive,” he reversed himself the next day.</p>
+        <p class="story-text__paragraph">“It became clear to me that that was just a bridge too far. People were not going to accept the government telling them what to do,” he said on ABC’s “This Week.” </p>
+        {% if paywall.show %}
+        
+            <p class="story-text__paragraph">DeWine said getting hung up on the mandatory masks “just wasn’t going to work,” though he highly recommends wearing them. Employees will still wear face masks, and DeWine urged customers to protect “the folks who are stocking shelves in grocery stores.” </p>
+        
+            <p class="story-text__paragraph">On Monday, the state’s manufacturing and construction businesses will reopen, joined by consumer and retail stores on May 11. </p>
+        
+            <p class="story-text__paragraph">DeWine’s about-face on face masks drew some sharp criticism that it would endanger the state’s workers.</p>
+        
+            <p class="story-text__paragraph">“The answer isn’t to make people risk their health by going to work without adequate protections,” Dayton Mayor Nan Whaley tweeted Thursday. “No matter where you live or what you look like, we can all agree that no one should have to choose between paying bills and staying healthy.”</p>
+        
+            <p class="story-text__paragraph">Ohio — which has seen more than 19,000 coronavirus cases, more than 1,000 deaths and roughly 1 million residents filing for unemployment — joins several other states in starting to reopen sectors of its economy after seeing a brief downward curve in new infections and deaths and protests urging state and local governments to ease lockdown restrictions. Six states are set to loosen restrictions on Monday; 17 did on Friday.</p>
+        
+            <p class="story-text__paragraph">“This Week” co-host Martha Raddatz asked DeWine why the country is seeing a partisan divide in how Americans respond to the pandemic: ABC News found that Democrats are more concerned with contracting the virus, and Republicans are twice as likely to eat at a restaurant, work-out at a gym and get a haircut. </p>
+        
+            <p class="story-text__paragraph">“Generally, Republicans are less inclined to have the government tell them what to do. And that’s generally how I am,” DeWine said. </p>
+        
+            <p class="story-text__paragraph">His state is “in a phase where, yeah we’ve got a few orders out there, but we’re starting really pretty aggressively to phase business back in.” Now, he said, it’s a balancing act.</p>
+        
+            <p class="story-text__paragraph">“We’re going to watch numbers every single day.”</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

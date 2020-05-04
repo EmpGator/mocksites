@@ -1,0 +1,25 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Nicolas Cage to play Joe Exotic in Tiger King miniseries</h1>
+        <h2>The Oscar winner will play the notorious zoo owner known from the hit Netflix docuseries</h2>
+        <p><a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/film/nicolascage">Nicolas Cage</a> is set to take on the role of Joe Exotic in a new miniseries based on the imprisoned zoo-owner known as Tiger King.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>According to <a class="u-underline" data-link-name="in body link" href="https://variety.com/2020/tv/news/joe-exotic-nicolas-cage-series-tiger-king-1234574979/">Variety</a>, the Oscar winner will be the lead in a project from American Vandal showrunner Dan Lagana along with Paul Young. It will be based on a Texas Monthly <a class="u-underline" data-link-name="in body link" href="https://www.texasmonthly.com/articles/joe-exotic-a-dark-journey-into-the-world-of-a-man-gone-wild/">article</a> titled Joe Exotic: A Dark Journey Into the World of a Man Gone Wild, by Leif Reigstad.</p>
+        {% if paywall.show %}
+        
+            <p>It will be made by CBS studios along with Imagine Entertainment and soon be shopped around to various networks and streaming platforms.</p>
+        
+            <p>The miniseries marks the second scripted drama to be based on Exotic following on from an announcement last year that the podcast <a class="u-underline" data-link-name="in body link" href="https://wondery.com/shows/joe-exotic/">Joe Exotic: Tiger King</a> would be adapted for television. Saturday Night Live’s Kate McKinnon is attached to play Carole Baskin, Exotic’s rival.</p>
+        
+            <p>The Netflix docseries <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/tv-and-radio/2020/mar/20/tiger-king-joe-exotic-netflix-series">Tiger King: Murder, Mayhem and Madness</a> has found phenomenal success since its release in March, attracting more than 64 million viewers. The story follows an eccentric big cat keeper and the criminal underworld which surrounds him. Exotic is currently serving a 22-year prison sentence. When asked which actor he’d like to play him, he <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/film/2020/apr/02/tiger-king-joe-exotic-suggests-brad-pitt-david-spade-to-play-him">suggested</a> Brad Pitt.</p>
+        
+            <p>The show will be Cage’s first TV project. After winning the best actor Oscar for his role in alcoholism drama Leaving Las Vegas in 1996, Cage has starred in films including Con Air, National Treasure and Snowden. His upcoming projects include Pig, where he will play a mushroom forager, and Wally’s Wonderland, which sees him as a janitor fighting demonic animatronic mascots.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Michigan’s Whitmer downplays state protests, defends stay-at-home order</h1>
+        <h2>“When you think about the fact that this is a state of almost 10 million people, the vast majority" are doing the right thing, she said.</h2>
+        <figure class="art">
+<div class="fig-graphic">
+<picture>
+<source media="(min-width: 1921px)" srcset="https://static.politico.com/dims4/default/530dc3a/2147483647/resize/2000x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F75%2F18%2Fe826ead54b86b83bab6b47e8f0e9%2F20200503-whitmer-ap-773.jpg"/>
+<source media="(min-width: 1681px)" srcset="https://static.politico.com/dims4/default/c9d1113/2147483647/resize/1920x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F75%2F18%2Fe826ead54b86b83bab6b47e8f0e9%2F20200503-whitmer-ap-773.jpg"/>
+<source media="(min-width: 1012px)" srcset="https://static.politico.com/dims4/default/8ea6f9b/2147483647/resize/1160x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F75%2F18%2Fe826ead54b86b83bab6b47e8f0e9%2F20200503-whitmer-ap-773.jpg"/>
+<source media="(min-width: 667px)" srcset="https://static.politico.com/dims4/default/7db759d/2147483647/resize/971x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F75%2F18%2Fe826ead54b86b83bab6b47e8f0e9%2F20200503-whitmer-ap-773.jpg"/>
+<source media="(min-width: 485px)" srcset="https://static.politico.com/dims4/default/e362df9/2147483647/resize/646x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F75%2F18%2Fe826ead54b86b83bab6b47e8f0e9%2F20200503-whitmer-ap-773.jpg"/>
+<source media="(max-width: 484px)" srcset="https://static.politico.com/dims4/default/2b64dad/2147483647/resize/463x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F75%2F18%2Fe826ead54b86b83bab6b47e8f0e9%2F20200503-whitmer-ap-773.jpg"/>
+<img alt="Gretchen Whitmer" src="https://static.politico.com/dims4/default/312f187/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F75%2F18%2Fe826ead54b86b83bab6b47e8f0e9%2F20200503-whitmer-ap-773.jpg" title="Gretchen Whitmer"/></picture>
+</div>
+</figure>
+        <p class="story-text__paragraph">Michigan Gov. Gretchen Whitmer on Sunday downplayed the anti-quarantine protests in her state, praising the vast majority of her state’s residents as “doing the right thing” by staying at home.</p>
+        <p class="story-text__paragraph">The Democratic governor repeatedly promised on CNN's "State of the Union" to continue to heed experts and epidemiologists’ advice to guide her state’s response. </p>
+        {% if paywall.show %}
+        
+            <p class="story-text__paragraph">A “small group of people” came out to storm the state Capitol on Thursday, Whitmer said, some armed and equipped with swastikas, nooses and/or Confederate flags.</p>
+        
+            <p class="story-text__paragraph">“When you think about the fact that this is a state of almost 10 million people, the vast majority" are doing the right thing, she continued. That’s why, the governor said, the curve in the spread of the coronavirus in Michigan has continued to flatten. </p>
+        
+            <p class="story-text__paragraph">“We’ve saved lives in the process,” she added. “We have to keep listening to the epidemiologists and experts and not listen to the partisan rhetoric, or these political rallies or tweets, for that matter. We have to keep doing the right thing.”</p>
+        
+            <p class="story-text__paragraph">The protests this week were the second time in about two weeks conservative state demonstrators stormed the Capitol, many of them defying social distancing measures.</p>
+        
+            <p class="story-text__paragraph">While Whitmer disavowed the activists, dubbing the demonstration as depicting "some of the worst racism and awful parts of our history in this country,” she again pressed it’s “not representative of who we are in Michigan.” </p>
+        
+            <p class="story-text__paragraph">“Whether you agree with me or not, I'm working to protect your life if you live in the state of Michigan,” Whitmer said, defending her stay-at-home order that extends through May 15. “We're going to listen to facts and science because we've got to get this right.”</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

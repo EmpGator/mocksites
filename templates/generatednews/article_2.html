@@ -1,0 +1,37 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>French hospital discovers Covid-19 case from December</h1>
+        <h2>Man found to have had virus a month before government confirmed first cases</h2>
+        <p>A French hospital that retested old samples from pneumonia patients has discovered that it treated a man with the coronavirus as early as 27 December, nearly a month before the French government confirmed its first cases.</p>
+        <p>Dr Yves Cohen, head of resuscitation at the Avicenne and Jean Verdier hospitals in the northern suburbs of <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/world/paris">Paris</a>, told BFM TV that scientists had retested samples from 24 patients treated in December and January who tested negative for flu.</p>
+        <p>“Of the 24, we had one who was positive for Covid-19 on 27 December,” he told the news channel on Sunday.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>The samples had all initially been collected to detect flu using PCR tests, the same genetic screening process that can also be used to detect the presence of the coronavirus. Each sample was retested several times to ensure that there were no errors, he added. </p>
+        {% if paywall.show %}
+        
+            <p>In France, <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/world/2020/apr/28/france-and-spain-announcement-lockdowns-ease">almost 25,000 people have died</a> with the virus since 1 March. The country confirmed its <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/science/2020/jan/24/french-cases-show-coronavirus-has-reached-europe">first three Covid-19 cases on 24 January</a>, including two patients in Paris and another in the south-western city of Bordeaux.</p>
+        
+            <p>Knowing who was the first is critical to understanding how the virus spread but Cohen said it was too early to know whether the patient was France’s “patient zero”. </p>
+        
+            <p>He said the patient had survived and that a first investigation to trace the first contamination had been carried out.</p>
+        
+            <p>“He was sick for 15 days and infected his two children, but not his wife, who works in a supermarket,” he said.</p>
+        
+            <p>“He was amazed. He didn’t understand how he had been infected. We put the puzzle together and he had not made any trips. The only contact that he had was with his wife.”</p>
+        
+            <figure class="element element-embed" data-alt="Callout callout-coronavirus-testing">
+<iframe class="fenced" srcdoc='&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;div data-callout-tagname="callout-coronavirus-testing"&gt; &lt;h2&gt;Callout&lt;/h2&gt; &lt;p&gt;callout-coronavirus-testing&lt;/p&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;'></iframe>
+</figure>
+        
+            <p>The man’s wife worked alongside a sushi stand, close to colleagues of Chinese origin, Cohen said. It was not clear whether those colleagues had travelled to China, and the local health authority should investigate, he added.</p>
+        
+            <p>“We’re wondering whether she was asymptomatic,” he said. “He may be the ‘patient zero’, but perhaps there are others in other regions. All the negative PCRs for pneumonia must be tested again. The virus was probably circulating.” </p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

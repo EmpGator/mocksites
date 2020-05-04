@@ -1,0 +1,33 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>HP's Omen gaming PCs get Intel's latest chips and a fresh design</h1>
+        <h2>You can also expect better cooling and more</h2>
+        <img alt="HP Omen 30L gaming desktop PC" class="stretch-img" src="https://o.aolcdn.com/images/dims?thumbnail=960%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-05%2Fedde3fe0-8bd2-11ea-b3fe-3bd3b92ab1d0&amp;client=amp-blogside-v2&amp;signature=12038c1d77fb0e2570eb7be00b427f7856e1d5d7"/>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        {% if paywall.show %}
+        
+            <p>Gaming PCs <a href="https://www.engadget.com/2019-08-19-alienware-aurora-desktop-oled-gaming-monitor.html">from major vendors</a> tend to get little respect from enthusiasts for a number of reasons, including lackluster designs that focus on cost-cutting and flashy-but-proprietary parts over functionality and raw speed. HP is betting it can change your mind with its redesigned Omen gaming desktops, though. The new Omen 25L and 30L (above) revolve around new cases that might not be as ostentatious as some <a href="https://www.engadget.com/2016-08-16-hp-omen-2016-revamp.html">past HP rigs</a>, but promise better performance and more of the customization you’d expect in a 2020-era system.</p>
+        
+            <p>Some of the improvements come down to cooling. All systems have much taller rubber feet to improve air intake, while the graphics card is higher in the case to improve its thermal efficiency. You also have choices of Cooler Master’s air and liquid cooling, and the 30L gets a 120mm front fan alongside an “enhanced thermal compartment.” HP credits the updated chassis with performance improvements between 8 and 26 percent in synthetic benchmarks, which is no mean feat when many of the components are similar.</p>
+        
+            <p>There are some component upgrades, of course. You can now equip the Omen series with <a href="https://www.engadget.com/intel-10th-gen-s-series-desktop-cpu-10900k-130000913.html">10th-gen Intel Core processors</a>, including the flagship Core i9-10900K, while AMD’s third-gen Ryzen chips also available, including the 12-core Ryzen 9 3900 (no 16-core CPU, alas). The graphics are what you’d expect with up to a GeForce RTX 2080 Ti, although HP has teamed up with HyperX for memory, WD for M.2 solid-state drives and Cooler Master for up to a 750W power supply.</p>
+        
+            <p>Gamers intending to show off their setups will have up to six-zone RGB customization on models with a glass side door. And if you prefer to maintain a PC yourself, a combination of “industry-standard” upgrades, tool-free component access and a replaceable bottom air filter should help.</p>
+        
+            <p>The new desktops will be available online from May 5th, with the Omen 25L staring at $900 with a metal side door. Spring for the larger, cooler 30L and it’ll cost $1,200. HP has a matching monitor, too. The 27-inch Omen 27i uses a 1440p, 165Hz nano IPS panel that promises a blend of high color accuracy (98 percent of the DCI-P3 space) and fast, G-Sync-compatible refresh rates. It’s available today for $500 through Best Buy.</p>
+        
+            <img alt="HP Omen 27i gaming monitor" credit="HP" crediturl="" data-ops="" src="https://o.aolcdn.com/images/dims?image_uri=https%3A%2F%2Fmedia-mbst-pub-ue1.s3.amazonaws.com%2Fcreatr-uploaded-images%2F2020-05%2Fef5eaf40-8bdb-11ea-8fff-e0c13300191e&amp;thumbnail=640%2C&amp;client=49kdj93ncb8s938hkdo&amp;signature=bb5fd66331bc9288c84f5efde8eb98effc7226cc"> <div class="photo-credit">HP</div> </img>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

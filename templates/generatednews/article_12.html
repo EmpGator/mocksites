@@ -1,0 +1,39 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>What gay men can teach us about surviving the coronavirus</h1>
+        <h2>Frequent HIV testing is a fact of life for gay people. And even without a cure, we have found ways to lower risk and ease anxiety
+
+Coronavirus – live US updates
+Live global updates
+See all our coronavirus coverage</h2>
+        <p><span class="drop-cap"><span class="drop-cap__inner">T</span></span>o be gay is to get used to blood tests. If you are positive, you do them to monitor your HIV status. If you are negative and on PrEP, a daily medication that helps prevent HIV, you do them to ensure it’s working. If you are negative and not on PrEP, you do them to maintain your sanity. Every gay person has their own rhythm to testing, defined by their relationship to HIV, their sexual practices and their neuroses. No matter your status, waiting for test results is never easy. You count the minutes until you hear via text, in person, over the phone, in an app: your body is OK for now.</p>
+        <p>It won’t end until there is a cure. What we have right now is management. Since around 1980, when the first cases were identified in the US, 700,000 people have died of Aids. In my lifetime, it went from an epidemic with no cure to one for which we have the tools to at least approximate herd immunity. People still die. There are no certainties. And the blood sacrifice we give at the clinic every few months reminds us of this.</p>
+        <p>We also remember not to blindly trust experts. Before writing this, I rewatched the Aids activism documentary How to Survive a Plague by David France, Woody Richman and Tyler Walk (full disclosure: Jordan Richman, my collaborator, is Woody Richman’s cousin). It’s inspiring because a group of activists rejected the incompetence and ignorance of politicians and played a decisive role in forcing them to find treatment. Act Up, the HIV/Aids activist group, was not always right, but neither were the experts. There was no time to wait for gay representation in the CDC, the FDA, Congress or White House. They used the tools of self-education and critical engagement to ensure they understood the issues and were able to call bullshit on their credentialed betters when necessary.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>We spoke to David France about his recollections from that moment: “There were 15 dreadful years of unmitigated death – 15 years! – before treatments finally became available to make an HIV infection survivable. I spent those years in brutal terror, flat-out convinced I would be one of the dead. I have always thought that it was fear that saved my life. But 15 years after that, when I returned to the troves of archival videotape to make How to Survive a Plague, I was surprised to see how much joy there was among us. Some of the humor was dark, naturally, but all of it was affirming and forward-focused. Someone once said to me, ‘We had so much fun when everybody was dying,’ which sounds awful, but what she meant was not that we didn’t grieve or weep; she meant that we didn’t give up on the vision of a life we so fiercely defended. I think now that the power to imagine, put to the test by a plague, is the strongest tool we can deploy.”</p>
+        {% if paywall.show %}
+        
+            <p>The movie was released in 2012, and I went to see it at the IFC Center in New York. What struck me then was that this was still necessary. I remember returning home after college, and feeling like I had gone too long without STD testing. I made an appointment with my GP but got bumped to a physician’s assistant in his office. When I asked for screening, she replied incredulously: “Why do you want these tests? You think you have all the STDs?!” I remember my monotone and annoyed response: “I’m a gay man. I have multiple sexual partners. Men are oftentimes asymptomatic. I’m just here to get my periodic screening.” Sometimes you have to be the waiting room pamphlet you want to see in the world.</p>
+        
+            <p>Just because someone is a doctor doesn’t mean they’re not an idiot. I don’t mean that to demean healthcare workers, only to point out they are humans, too. So let’s keep our wits about us. Let’s evaluate people based on actions, not positions. Let’s not forget that sometimes we do know more than experts. If we don’t, they will never be able to refine and update their opinions. They will not see what they don’t see.</p>
+        
+            <p>Seeing a newsflash that passengers from a quarantined cruise ship were refusing to be tested for the coronavirus, I reflexively cringed. It was so clear to me, someone who has nervously fidgeted in waiting rooms more times that I can count, that they were making a stupid choice. In gay parlance, to not “know your status” is to transform uncertainty into risk. Early detection and treatment is what would keep you healthy in the event you are seroconverted, and it is what keeps you secure in the knowledge you will not endanger the people you love. When I pointed that out to a straight friend, they were confused. “I dunno. I get it. Maybe better not to know.” They were dead-ass fucking wrong.</p>
+        
+            <p>Similarly, when talk of immunity passports popped up in Germany, the UK, Brazil, I noticed a sharp division between the analogies straight and gay friends used. Straight friends saw segregating people based on immunity as something with dark potential. Was it fascist? Nazi even? Gay friends had a different response: this was Truvada. This was the thing that could make the invisible visible.</p>
+        
+            <p>With a critical mass of people positive and negative on Truvada, we can relax. Positive people more easily achieve undetectability – tests cannot find the HIV virus in their blood – and thus can’t pass the disease, while negative people essentially cannot contract it, even if a partner has not achieved undetectability. Immunity passports with a rapid testing regime might provide the possibility that we can organize our societies as if we had achieved herd immunity, allowing those who are unable to contract the coronavirus the possibility of relaxing and those who have not yet contracted it to take proactive measures to avoid the virus.</p>
+        
+            <p>The politics of disclosure are important to this. Straight people simply aren’t used to constantly disclosing very private health information to new friends, and sometimes strangers. Of course, this can be avoided if you are celibate or in a long-term monogamous relationship, but honestly, who wants that? It’s not especially pleasant.</p>
+        
+            <p>To be honest, though I’m negative, even I find it a bit awkward. Cum is a disease vector. Your responsibility to your community is to put ‘what’s your status’ into your saved phrases on Grindr.</p>
+        
+            <p>As we exit this crisis, these are the lessons everyone will have to learn. It will be important, for those schooled in the days when a new acquaintance asking about your medical health would be unthinkable, not to take offense. The question comes from care. In all likelihood, since treatment is far away and vaccines possibly further, a testing plus passport regimen will allow us to slowly escape lockdown. The only way out of our houses will be for everyone to get out of their comfort zones.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

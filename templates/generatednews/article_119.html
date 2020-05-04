@@ -1,0 +1,26 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>'Vader Immortal' comes to PlayStation VR this summer</h1>
+        <h2>You won't need an Oculus headset to wield a lightsaber.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        {% if paywall.show %}
+        
+            <img alt="Lightsaber duel in 'Vader Immortal' for PSVR" class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-05%2F66154680-8e11-11ea-bbbb-7fe833c19365&amp;client=amp-blogside-v2&amp;signature=72d17b6bc2f8ce4cf4daafbea92ff3dd95977268"/>
+        
+            <p>You won’t need to don an Oculus headset to play <a href="https://www.engadget.com/2019-05-22-vader-immortal-review-oculus-quest-vr.html"><em>Vader Immortal</em></a> in the near future. ILMxLAB has <a href="https://blog.us.playstation.com/2020/05/04/vader-immortal-a-star-wars-vr-series-is-coming-to-ps-vr-this-summer/" target="_blank">revealed</a> that the episodic <em>Star Wars</em> virtual reality game will be available for PlayStation VR sometime this summer. There isn’t much news as to what (if anything) has changed on a technical level for the title, but you at least won’t have to buy it piece by piece. All three episodes and Lightsaber Dojos will be purchasable together, the studio said.</p>
+        
+            <p>The immediate appeal of <em>Vader Immortal</em> is fairly obvious: it’s an immersive <em>Star Wars</em> experience that has you wielding a lightsaber, jumping into hyperspace and otherwise living out your childhood dreams. We also enjoyed the well-written storyline, though. While this is arguably a technical showcase for VR, it’s also a solid game in its own right.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

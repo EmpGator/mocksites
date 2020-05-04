@@ -1,0 +1,45 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Michael Jordan insists 'Republicans buy sneakers too' quote was a joke</h1>
+        <h2>Comment has followed superstar throughout his life
+Jordan addresses issue during ESPN’s The Last Dance</h2>
+        <p>Michael Jordan has discussed the quote that has come to define what many see as his willingness to put profit over principles.</p>
+        <p>During a 1990 Senate race in his home state of North Carolina, Jordan refused to endorse Democrat Harvey Gantt, an African American who was running against the incumbent Republican Jesse Helms, a notorious racist. Jordan, who at the time had already won the first of his five <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/sport/nba">NBA</a> MVP awards, explained away his refusal to take a stance by saying “Republicans buy sneakers, too”.</p>
+        <p>In an episode of <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/sport/2020/apr/19/michael-jordan-documentary-espn-the-last-dance-nba">ESPN documentary The Last Dance</a> broadcast on Sunday, Jordan said he understood why he could be seen as selfish but the comment was a joke.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>“I don’t think that statement needs to be corrected because I said it in jest on a bus with Horace Grant and Scottie Pippen,” Jordan said. “It was thrown off the cuff. My mother asked to do a PSA for Harvey Gantt, and I said, ‘Look, Mom, I’m not speaking out of pocket about someone that I don’t know. But I will send a contribution to support him.’ Which is what I did.</p>
+        {% if paywall.show %}
+        
+            <p>“I do commend Muhammad Ali for standing up for what he believed in. But I never thought of myself as an activist. I thought of myself as a basketball player. I wasn’t a politician when I was playing my sport. I was focused on my craft. Was that selfish? Probably. But that was my energy. That’s where my energy was.”</p>
+        
+            <figure class="element element-video fig--has-shares fig--narrow-caption fig--no-caption" data-canonical-url="https://www.youtube.com/watch?v=N9Z9JtNcCWY" data-component="video-inbody-embed">
+<div class="u-responsive-aligner" style>
+<div class="embed-video-wrapper u-responsive-ratio" style>
+<iframe allowfullscreen="" frameborder="0" height="259" src="https://www.youtube-nocookie.com/embed/N9Z9JtNcCWY?wmode=opaque&amp;feature=oembed" width="460"></iframe>
+</div>
+</div>
+
+</figure>
+        
+            <p>Jordan’s stance is often seen as a stark contrast to the greatest player of the current era, LeBron James. <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/sport/2019/oct/16/lebron-james-china-hong-kong-comments-nba">James has spoken out on issues</a> such as gun violence and has attacked the presidency of Donald Trump.</p>
+        
+            <p>Barack Obama was also interviewed for the documentary and said that he had been disappointed with Jordan’s comments at the time.</p>
+        
+            <p>“I’ll be honest, when it was reported that Michael said, ‘Republicans buy sneakers, too’ – for somebody who was at that time preparing for a career in civil rights law and knowing what Jesse Helms stood for, you would’ve wanted to see Michael push harder on that,” Obama said. “On the other hand, he was still trying to figure out, ‘How am I managing this image that has been created around me, and how do I live up to it?’”</p>
+        
+            <p>Jordan said that it was up to his fans whether to follow his lead. “The way I go about my life is I set examples,” he said. “If it inspires you? Great, I will continue to do that. If it doesn’t? Then maybe I’m not the person you should be following.”</p>
+        
+            <p>Jordan has spoken out on social issues in recent years, while still largely staying away from controversial topics. In 2018, he said he supported James after Trump <a class="u-underline" data-link-name="in body link" href="https://www.usatoday.com/story/sports/nba/2018/08/04/michael-jordan-donald-trump-lebron-james/907081002/">attacked the then Cleveland Cavaliers star on Twitter</a>. He also backed NFL players who kneeled during the national anthem to protest against racial injustice in the United States.</p>
+        
+            <p>“Those who exercise the right to peacefully express themselves should not be demonized or ostracized,” Jordan said in September 2017. “At a time of increasing divisiveness and hate in this country, we should be looking for ways to work together and support each other and not create more division.”</p>
+        
+            <p>Jordan is widely acknowledged as the greatest basketball player of all time. He won six NBA titles with the Chicago Bulls and was a 14-time All Star. </p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

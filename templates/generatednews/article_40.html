@@ -1,0 +1,37 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>World Rugby guidelines could leave Six Nations and Lions behind closed doors</h1>
+        <h2>Games to be played without fans until Covid vaccine available
+Document casts doubt on completion of Premiership season</h2>
+        <p>Elite rugby matches are likely to be played behind closed doors until an effective coronavirus vaccine is freely available, according to guidelines released by <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/sport/world-rugby">World Rugby</a>.</p>
+        <p>The document, compiled by World Rugby’s leading medical experts, raises the possibility of the autumn Tests, next year’s Six Nations and even the British &amp; Irish Lions tour of South Africa being played in empty stadiums or in front of radically reduced attendances.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>The guidelines also advise that no competitive matches should even take place until governments allow gatherings of 250 people, casting major doubt on the completion of the 2019-20 Premiership season.</p>
+        {% if paywall.show %}
+        
+            <p>On Sunday, the prime minister, Boris Johnson, is expected to announce a gradual easing of the lockdown but it is highly likely that only small gatherings will be allowed. Indeed, it has been suggested that gatherings could be limited to 10 people until next year, which, according to World Rugby’s guidelines, could mean no competitive matches at all until 2021. If they are permitted, it is suggested they take place without large scale crowds, until a vaccine is readily available, which could take up to 18 months. “Large traditional crowds are unlikely in the absence of an effective and freely available vaccine for Covid-19,” reads the document, compiled by Eanna Falvey, Prav Mathema, Mary Horgan and Martin Rafferty.</p>
+        
+            <p>After he was re-elected as World Rugby’s chairman, Bill Beaumont explained how a bumper set of autumn fixtures was likely with the July tours certain to be cancelled and potentially rescheduled for October. Playing all matches behind closed doors would come as a financial hammer blow to the Rugby Football Union and the rest of the home nations, however. The RFU can generate around £10m from Twickenham tests and the forecast £50m losses over the next 18 months are based on the assumption that England’s four November matches go ahead as planned.</p>
+        
+            <p>Premiership Rugby, meanwhile, has been working towards a best-case scenario of restarting in early July but the guidelines – designed to provide a framework for clubs and unions to be used alongside the advice of respective governments – warn against competitive matches until social distancing measures have been significantly relaxed. “We have outlined a graded return to match-play plan which runs parallel to reduction in [restrictions],” the guidelines continue. “When social distancing has been reduced to allow close contact and public gatherings of up to 250 people, match play is possible, but spectators will not be permitted to attend.”</p>
+        
+            <figure class="element element-embed" data-alt="The Breakdown: sign up and get our weekly rugby union email.">
+<iframe class="iframed--overflow-hidden email-sub__iframe js-email-sub__iframe js-email-sub__iframe--article" data-form-description="Get our weekly rugby union email" data-form-success-desc="Thanks for signing up" data-form-title="Sign up for The Breakdown" frameborder="0" height="52px" scrolling="no" seamless="" src="https://www.theguardian.com/email/form/plaintone/4138"></iframe>
+<figcaption class="caption caption--img">
+The Breakdown: sign up and get our weekly rugby union email.
+<br/>
+</figcaption>
+</figure>
+        
+            <p>Before competitive matches return however, World Rugby details a graduation process of clubs and unions returning to full contact training. When gatherings of 10 people are allowed, World Rugby advises that individual and a small group training would be allowed “in a staggered manner according to a country’s healthcare system and testing capacity”. Premiership clubs have advised players to prepare for the first stage of training from 1 June but World Rugby advises against handshakes and hugging, while a distance of 1.5 metres should be kept between players and face masks should be worn when possible.</p>
+        
+            <p>When gatherings of up to 50 people are allowed, full squad training would be permitted but daily screening would be necessary and World Rugby warns “if a player or staff becomes an infected person each other player and staff member would be close contacts and will require testing and quarantine”.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

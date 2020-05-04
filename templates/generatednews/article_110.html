@@ -1,0 +1,28 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Microsoft shifts the focus on Windows 10X to single-screen devices</h1>
+        <h2>The OS variant was originally meant to power dual-screen computers.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        {% if paywall.show %}
+        
+            <img alt="Microsoft Surface Neo" class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-05%2Ffe4dc1d0-8e2e-11ea-bfdf-96f360b43ccd&amp;client=amp-blogside-v2&amp;signature=51cc11489163460fa1c2f428b9b5fe8782fe41e2"/>
+        
+            <p>Dual-screen computers are coming, but maybe not as soon as Microsoft first thought. The company originally planned to launch Windows 10X alongside new hardware -- the <a href="https://www.engadget.com/2019-10-02-microsoft-surface-event-recap.html">Surface Neo</a> -- this holiday season. However, <a href="https://www.engadget.com/microsoft-windows-10-x-surface-neo-delay-111011236.html">rumors from last month</a> suggested that the forked version of the OS -- which was being designed specifically for phones, tablets and laptops with two screens -- had been delayed until 2021, since dual-screen devices will unlikely be ready to ship by the fall. A <a href="https://blogs.windows.com/windowsexperience/2020/05/04/accelerating-innovation-in-windows-10-to-meet-customers-where-they-are/" target="_blank">blog post</a> from Microsoft’s chief product officer indicates that the company is hoping to bring 10X to single-screen devices in the meantime.</p>
+        
+            <p>“With Windows 10X, we designed for flexibility, and that flexibility has enabled us to pivot our focus toward single-screen Windows 10X devices that leverage the power of the cloud to help our customers work, learn and play in new ways,” says Panos Panay in the post. “These single-screen devices will be the first expression of Windows 10X that we deliver to our customers, and we will continue to look for the right moment, in conjunction with our OEM partners, to bring dual-screen devices to market.”</p>
+        
+            <p>It’s unclear what the benefit of Windows 10X could be for single-screen devices, given that the OS is mainly designed for two screens: 10X will ostensibly make it easier for dual-screen users to organize and interact with windows across two screens, while also making some under-the-hood changes that help mobile devices better manage their power consumption. That said, Windows 10X may come out in 2020 after all, just not in the form Microsoft had originally envisioned.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

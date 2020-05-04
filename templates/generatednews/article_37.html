@@ -1,0 +1,37 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>I thought my writing too shameful, too feminine, until I read Karl Ove Knausgård</h1>
+        <h2>The emotional power of his six-part epic My Struggle gave me permission to write to my strengths</h2>
+        <p><span class="drop-cap"><span class="drop-cap__inner">I</span></span> first came across <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/books/karl-ove-knausgard">Karl Ove Knausgård</a> when he was profiled for the cover story of a 2015 Observer New Review. I was sitting in Ireland in the kitchen of an ex-boyfriend one morning. He scanned the headline, “<a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/books/2015/mar/01/karl-ove-knausgaard-interview-shame-dancing-in-the-dark">Writing is a way of getting rid of shame</a>”, and tossed it to me across the breakfast table, saying: “Looks like something for you.”</p>
+        <p>I had at that time begun to write essays, which I hoped were literary in style but which felt cripplingly, humiliatingly feminine in their subject matter – unlovely accounts of abortion and sexual jealousy, and the abjection of being a woman who desires men. I was struggling towards something, an avoidance of villains and heroes, victors and losers, and a rejection of the idea that female pain was pretty or somehow inherently virtuous. I had the feeling that there was something there worth striving toward, but the embarrassment and, yes, the shame, was holding me back.</p>
+        <p>So I was interested at once in what this person, whose image appeared so archetypally forbidding and masculine, was doing with self-excoriation, what shame could mean to a writer like this. It was difficult for me to truly accept that men felt shame of the sort that I did, although I knew rationally that they must. It was a part of my perception, impossible to shake fully, that men were the real, actual humans and the rest of us existed in relation to them. It was the same way I felt about people who lived in big cities, or were unusually good-looking: that their lives must be more coherent and interesting than my own.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>I read book one of Knausgård’s six-part, 3,600-page autobiographical novel, My Struggle:<a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/books/2012/apr/25/death-in-family-karl-ove-knausgaard-review"> A Death in the Family</a>, and was completely consumed by it ( I wrote out the first paragraph, which describes the mechanisms of death, by hand in my diary to better enjoy it, thinking that I had never loved an opening as much as this one: “For the heart, life is simple: it beats for as long as it can. Then it stops.”). But it was later, when I came to read the second volume, <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/books/2013/apr/12/man-in-love-knausgaard-review">A Man in Love</a>, that things really fell into place and would change the way I thought about writing, about emotion and about men and women for ever.</p>
+        {% if paywall.show %}
+        
+            <p>A Man in Love recounts events that were referred to in A Death in the Family – Knausgård leaves his first wife, Tonje, falls in love with fellow writer Linda, moves to Stockholm and has three children with her. The details were dispatched briefly in book one, but here are presented as something else entirely, a remarkably total picture of the minute-by-minute emotional vagaries of falling in love (and, painfully, the inevitable contraction that follows, the coldness and irritability of the everyday beginning to infiltrate).</p>
+        
+            <p>I was living in Greece when I read A Man in Love, alone and in heartbreak, reflecting on the affairs of the last few years that had left me so totally ravaged. The intensity with which I loved people seemed pathological, physically unsustainable, and I didn’t understand how the world kept going as normal if, all over it, there were people feeling the way that I did all the time. As well as suffering my grief, I suffered too with the knowledge of how unspeakably foolish that grief was; how silly, frivolous and, above all, womanly. How perfectly pathetic it was to foster these obsessions and allow myself to be hurt by them.</p>
+        
+            <p>There is a remarkable passage in A Man in Love where, at a writer’s course, he fosters an intense attraction to Linda, his future wife. After getting drunk and convincing himself his feelings were reciprocated, he is rebuffed – he’s a nice enough guy, she says, but she’s actually interested in his friend. He goes then to his room and methodically cuts his face with a shard of glass until he is completely marked and ghastly. He wakes the following morning in a still-drunk storm of shame. He must go outside and be with the others, there is no choice, and they all turn to look at him. Some cry, including Linda.</p>
+        
+            <p>“Someone came over and placed a hand on my shoulder.</p>
+        
+            <p>“‘It’ll be alright,’ I said. ‘I was just very drunk yesterday. I’m sorry.’</p>
+        
+            <p>“Complete silence. I showed myself as I was, and there was silence.”</p>
+        
+            <p>I read all this sitting on my balcony in Athens with my hand to my mouth and appalled tears streaming down my face. Whether this episode – or anything in Knausgård’s books – actually took place mattered to me not at all, so much as his ability to get inside the essential truth of things. I wasn’t just reading an account, perceiving the experiences of another person, but actually living inside them. What he had done was not to merely observe but to render a life with such precision that I could feel emotions that were not my own as I read it.</p>
+        
+            <p>All my life, events have seemed flexible and unknowable, whereas feelings seemed to me real; they had the dramatic and concrete force that events lacked. I began my own novel directly after reading A Man in Love, and took in almost nothing but Knausgård while I wrote it. The grandiosity of his project, its completism, provided me with much-needed permission to go into the emotional minutiae I find most interesting and yet have feared all my writing life is trivial, unintellectual and altogether too feminine. It turned out I needed this great chronicler of masculinity to set me free.</p>
+        
+            <p><span class="bullet">•</span> Megan Nolan is an Irish writer based in London. Her debut novel, Acts of Desperation, will be published by Jonathan Cape next year</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

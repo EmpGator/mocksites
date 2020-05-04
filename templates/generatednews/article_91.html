@@ -1,0 +1,45 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Texas to loosen restrictions on malls, movie theaters in staggered reopening</h1>
+        <h2>Gov. Greg Abbott will let a range of businesses start reopening but not salons, barber shops or gyms.</h2>
+        <figure class="art">
+<div class="fig-graphic">
+<picture>
+<source media="(min-width: 1921px)" srcset="https://static.politico.com/dims4/default/007995e/2147483647/resize/2000x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2Fb3%2Fd5b310ef4346ab196d6653cc27c0%2F20200427-abbott-reopen-texas-ap-773.jpg"/>
+<source media="(min-width: 1681px)" srcset="https://static.politico.com/dims4/default/e6832b7/2147483647/resize/1920x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2Fb3%2Fd5b310ef4346ab196d6653cc27c0%2F20200427-abbott-reopen-texas-ap-773.jpg"/>
+<source media="(min-width: 1012px)" srcset="https://static.politico.com/dims4/default/2705967/2147483647/resize/1160x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2Fb3%2Fd5b310ef4346ab196d6653cc27c0%2F20200427-abbott-reopen-texas-ap-773.jpg"/>
+<source media="(min-width: 667px)" srcset="https://static.politico.com/dims4/default/0ba7c11/2147483647/resize/971x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2Fb3%2Fd5b310ef4346ab196d6653cc27c0%2F20200427-abbott-reopen-texas-ap-773.jpg"/>
+<source media="(min-width: 485px)" srcset="https://static.politico.com/dims4/default/c529e73/2147483647/resize/646x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2Fb3%2Fd5b310ef4346ab196d6653cc27c0%2F20200427-abbott-reopen-texas-ap-773.jpg"/>
+<source media="(max-width: 484px)" srcset="https://static.politico.com/dims4/default/b3a3686/2147483647/resize/463x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2Fb3%2Fd5b310ef4346ab196d6653cc27c0%2F20200427-abbott-reopen-texas-ap-773.jpg"/>
+<img alt="Greg Abbott" src="https://static.politico.com/dims4/default/e3d644f/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2Fb3%2Fd5b310ef4346ab196d6653cc27c0%2F20200427-abbott-reopen-texas-ap-773.jpg" title="Greg Abbott"/></picture>
+</div>
+</figure>
+        <p class="story-text__paragraph">AUSTIN, Texas — Republican Gov. Greg Abbott announced Monday he will let his statewide stay-at-home order expire later this week, giving the green light to businesses to begin reopening in phases while the state racks up new cases of the coronavirus. </p>
+        <p class="story-text__paragraph">Abbott said restaurants, retail stores, malls, movie theaters, libraries and museums could largely reopen across the state this Friday, so long as they limit the number of visitors to 25 percent of their capacity for at least two weeks as the state monitors the spread of Covid-19. He said that if counties don’t see a resurgence of cases, businesses could increase customer capacity to 50 percent around May 18. Business in counties with 5 or fewer cases could start operating with increased capacity this Friday. </p>
+        {% if paywall.show %}
+        
+            <p class="story-text__paragraph">"The more we do to protect our vulnerable senior populations, the faster we can open up businesses in Texas," Abbott said at press conference in Austin.</p>
+        
+            <p class="story-text__paragraph">The state has recorded more than 25,000 cases and nearly 700 deaths, though the slow pace of testing has obscured the case count. As Texas increases the pace of testing — Abbott said he plans to bring testing capacity to 25,000 a day — Covid cases are continuing to grow in Texas with some of the largest case increases recorded over the weekend. </p>
+        
+            <p class="story-text__paragraph">Doctors and dentists will be permitted to mostly resume treating patients and Abbott further loosened restrictions on elective surgeries, as long as hospitals set aside beds for Covid patients. </p>
+        
+            <p class="story-text__paragraph">Abbott said hair salons, barber shops, gyms and other businesses that involve high person-to-person contact must stay closed for now — a contrast to other Southern states like Georgia, where Republican Gov. Brian Kemp allowed such businesses to resume operations last week only to feel blowback from President Donald Trump for moving too quickly. </p>
+        
+            <p class="story-text__paragraph">Even as case counts continue to mount in Texas, <a href="https://www.politico.com/news/2020/04/24/greg-abbott-texas-coronavirus-207519" target="_blank">Abbott was feeling pressure</a> from far-right agitators and from a deepening economic downturn to figure out a way to end shutdown orders while keeping the virus contained.</p>
+        
+            <p class="story-text__paragraph">During Monday’s announcement, he pointed to a second wave of cases in some countries including Singapore as a reason for moving slowly, but said that stay-at-home orders kept case counts and the death toll low in Texas. </p>
+        
+            <p class="story-text__paragraph">“We’re not just going to open up and hope for the best,” he said today. "Opening Texas must occur in phases."</p>
+        
+            <p class="story-text__paragraph">Abbott also said the state was starting to build a team of contact tracers, with plans to eventually hire around 4,000 people to track the virus' spread.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

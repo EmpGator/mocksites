@@ -1,0 +1,46 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Ousting vaccine chief ‘is going to set us back,’ former FDA head says</h1>
+        <h2>Scott Gottlieb says Rick Bright’s departure is likely to be counterproductive.</h2>
+        <figure class="art">
+<div class="fig-graphic">
+<picture>
+<source media="(min-width: 1921px)" srcset="https://static.politico.com/dims4/default/c5edce0/2147483647/resize/2000x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe7%2F18%2Feba41e714af7a44fe8dff455bef0%2F200226-scott-gottlieb-getty-773.jpg"/>
+<source media="(min-width: 1681px)" srcset="https://static.politico.com/dims4/default/c43c2c5/2147483647/resize/1920x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe7%2F18%2Feba41e714af7a44fe8dff455bef0%2F200226-scott-gottlieb-getty-773.jpg"/>
+<source media="(min-width: 1012px)" srcset="https://static.politico.com/dims4/default/7a408f0/2147483647/resize/1160x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe7%2F18%2Feba41e714af7a44fe8dff455bef0%2F200226-scott-gottlieb-getty-773.jpg"/>
+<source media="(min-width: 667px)" srcset="https://static.politico.com/dims4/default/770b6f3/2147483647/resize/971x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe7%2F18%2Feba41e714af7a44fe8dff455bef0%2F200226-scott-gottlieb-getty-773.jpg"/>
+<source media="(min-width: 485px)" srcset="https://static.politico.com/dims4/default/924343c/2147483647/resize/646x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe7%2F18%2Feba41e714af7a44fe8dff455bef0%2F200226-scott-gottlieb-getty-773.jpg"/>
+<source media="(max-width: 484px)" srcset="https://static.politico.com/dims4/default/c06dc37/2147483647/resize/463x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe7%2F18%2Feba41e714af7a44fe8dff455bef0%2F200226-scott-gottlieb-getty-773.jpg"/>
+<img alt="Scott Gottlieb" src="https://static.politico.com/dims4/default/a2d36cd/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fe7%2F18%2Feba41e714af7a44fe8dff455bef0%2F200226-scott-gottlieb-getty-773.jpg" title="Scott Gottlieb"/></picture>
+</div>
+</figure>
+        <p class="story-text__paragraph">Former Food and Drug Administration commissioner Scott Gottlieb said the ouster of a top vaccine expert at the Department of Health and Human Services would likely set back efforts to quickly roll out a vaccine for the coronavirus.</p>
+        <p class="story-text__paragraph">Asked in an interview on CBS' "Face the Nation" whether forcing out Rick Bright as director of the Biomedical Advanced Research and Development Authority would have an impact, Gottlieb responded, "It's hard to say it doesn't."</p>
+        <p class="story-text__paragraph">"I think changing leadership in that position right now certainly is going to set us back," Gottlieb said.</p>
+        {% if paywall.show %}
+        
+            <p class="story-text__paragraph">"It's hard to argue that that's not going to have some impact on the continuity and also make businesses, companies that need to collaborate with BARDA, a little bit more reluctant now to embrace BARDA now that there's a cloud hanging over it and some uncertainty about the leadership," he said.</p>
+        
+            <p class="story-text__paragraph">Gottlieb, who led FDA for two years during the Trump administration, called Bright "very effective" in the job and said they worked together on an Ebola vaccine and on smallpox treatments.</p>
+        
+            <p class="story-text__paragraph">"He was a vaccine expert, so I was sorry to see him go," Gottlieb said.</p>
+        
+            <p class="story-text__paragraph">Bright was <a href="https://www.politico.com/news/2020/04/22/hhs-ousts-vaccine-expert-as-covid-19-threat-grows-201642" target="_blank">transferred last week</a> to a new role at the National Institutes of Health. He has argued he was pushed out of his role over his resistance to investing in the anti-malaria drug hydroxychloroquine, which President Donald Trump had treated as a treatment for coronavirus without scientific evidence. Bright's lawyers said he plans to file a whistleblower complaint with the HHS inspector general.</p>
+        
+            <p class="story-text__paragraph">"I don't think doctors should be using it outside of protocols at this point, given the fact that we've had now accruing evidence demonstrating really no benefit and some indication that it could be causing harm," Gottlieb said of hydroxychloroquine. "I think it's still reasonable to conduct clinical studies with it to see if it could be effective as a treatment. But we've done a lot of clinical studies to date and ... we haven't turned over a card that's really shown that the drug's effective."</p>
+        
+            <p class="story-text__paragraph">Gottlieb was also asked whether Georgia and other states that are moving to lift lockdowns and other restrictions risk the virus flaring back up.</p>
+        
+            <p class="story-text__paragraph">The former FDA commissioner said Georgia is "not out of the woods" as the state is still experiencing new cases.</p>
+        
+            <p class="story-text__paragraph">"Georgia’s certainly jumping the gun, I think, here ... getting started too early, relative to where they are in their epidemic," Gottlieb said.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

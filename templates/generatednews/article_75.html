@@ -1,0 +1,27 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Are you planning to mark a special occasion during lockdown?</h1>
+        <h2>If you are preparing for a big life event in the next fortnight, our photographer would like to capture the moment – from a safe distance</h2>
+        <p>Lockdown has wreaked havoc on our social lives. Birthdays, weddings, anniversaries, funerals and christenings all feel a little smaller now, with most being relayed on video calls through screens. </p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>Coronavirus has separated us physically, but people are coming up with creative ways of ensuring that they can get together when it matters most. People are <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/world/2020/apr/21/pub-crawls-and-drive-by-revelry-how-uk-is-celebrating-birthdays-in-lockdown">celebrating their birthdays virtually</a>, <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/lifeandstyle/2020/apr/25/weddings-zoom-new-york">marrying on Zoom</a>, hosting <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/news/2020/apr/28/isolation-disco-lego-glastonbury-gravestone-cleaning">isolation discos</a> and one ingenious soul has even <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/news/2020/apr/28/isolation-disco-lego-glastonbury-gravestone-cleaning">recreated Glastonbury festival in his back garden using Lego</a>. We would like to photograph how you’re experiencing these events, while social distancing.</p>
+        {% if paywall.show %}
+        
+            <p>If you are planning a special occasion in the next fortnight in the UK, we would like to hear from you. One of our photographers, <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/profile/gideonmendel">Gideon Mendel</a>, would like to be there – if possible, in person at a safe distance – to capture the moment.</p>
+        
+            <p>If you have big plans, let us know in the form below. Your responses are secure as the form is encrypted and only the Guardian has access to your contributions. Our photographer may be in contact, so please do leave contact details.</p>
+        
+            <figure class="element element-embed" data-alt="x">
+<iframe class="fenced" srcdoc='&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;script type="text/javascript" src="https://guardiannewsandmedia.formstack.com/forms/js.php/special_occasions_in_lockdown"&gt;&lt;/script&gt;&lt;noscript&gt;&lt;a href="https://guardiannewsandmedia.formstack.com/forms/special_occasions_in_lockdown" title="Online Form"&gt;Online Form - special occasions in lockdown&lt;/a&gt;&lt;/noscript&gt;&lt;div style="text-align:right; font-size:x-small;"&gt;&lt;a href="http://www.formstack.com?utm_source=jsembed&amp;utm_medium=product&amp;utm_campaign=product+branding&amp;fa=h,3859047" title="Powered by Formstack"&gt;Powered by Formstack&lt;/a&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;'></iframe>
+</figure>
+        
+            <p><em><strong>If you’re having trouble using the form, <a class="u-underline" data-link-name="in body link" href="https://guardiannewsandmedia.formstack.com/forms/special_occasions_in_lockdown">click here</a>. Read terms of service <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/help/terms-of-service">here</a>.</strong></em></p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

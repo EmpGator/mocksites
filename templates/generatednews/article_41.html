@@ -1,0 +1,30 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Human rights groups in Haiti call for inquiry into football sexual abuse claims</h1>
+        <h2>Yves Jean-Bart denies allegations in Guardian story
+Women’s groups ‘worried about safety’ of alleged victims</h2>
+        <p>Human rights organisations in Haiti have called for a government investigation into <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/football/2020/apr/30/haiti-fa-president-accused-of-sexually-abusing-young-female-footballers">allegations that the president of the country’s football federation sexually abused young female footballers</a> at the national training centre.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>Yves Jean-Bart, known as “Dadou”, the president of the Fédération Haïtienne De Football (FHF), has been accused of coercing several players within the last five years at the Centre Technique National in Croix-des-Bouquets into having sex with him. Jean-Bart has denied the allegations, reported by the Guardian last week, and released a further statement in which he claimed they were part of a plan “to oust him from the presidency of the FHF” after he was elected for the sixth time in February.</p>
+        {% if paywall.show %}
+        
+            <p>The Solidarite Fanm Ayisyèn (Sofa) and Kay Fanm, women’s rights organisations in <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/world/haiti">Haiti</a>, have urged the Haitian Ministry of Justice to launch an immediate investigation.</p>
+        
+            <p>“Mr Jean-Bart has minimised the accusations of sexual abuse, like many others, when it is one of the scourges of our society,” Sabine Lamour from Sofa said. “His answers, his press releases and the video which is running on social networks where he interviews a very uncomfortable young girl while holding his hand on her shoulder deeply shocked us.”</p>
+        
+            <p>Yolette Andrée Jeanty from Kay Fanm said: “It is absolutely necessary to protect the girls and their anonymity. We are worried about their safety.”</p>
+        
+            <p>Another human rights organisation, the Office de la Protection du Citoyen, also released a statement demanding an inquiry into the allegations.</p>
+        
+            <p>Fifa said it has sent the information contained in the Guardian’s article to its independent ethics committee. “Concacaf [Fifa’s governing body in North and Central America] has also been contacted and will collaborate in the investigation,” it added. “If cases of sexual abuse have happened or are happening in Haitian football, we want this to stop urgently, we want the criminals to be arrested and victims to be appropriately protected and cared for by the relevant local agencies and organisations who have responsibility for children’s welfare.”</p>
+        
+            <p>Jean-Bart’s statement also said he had informed Fifa and Concacaf of the allegations and added: “The detractors of Mr Yves Jean-Bart try to mislead the whole society by basing their allegation on a subject likely to arouse passion and attract sympathy towards minors. These false accusations are as criminal as the practice of child sexual abuse. The design of the detractors aims to grab the FHF without going through the election process. Let them say it loud and clear!”</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

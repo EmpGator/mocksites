@@ -1,0 +1,31 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Apple and Google tell health departments their privacy requirements for coronavirus tracking</h1>
+        <h2>The exposure notification API is due to roll out this month.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        <img alt="Sample screenshots of Apple and Google's upcoming exposure notification system." class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-05%2F91bcd990-8e1d-11ea-8ffb-b55ca33d674a&amp;client=amp-blogside-v2&amp;signature=59eb8430532570e22acea4f1592c340f6b7f0618"/>
+        {% if paywall.show %}
+        
+            <p>Apple and Google have stipulated how public health authorities around the world can use their upcoming coronavirus tracking system in an effort to preserve user privacy. </p>
+        
+            <p>Representatives from the two companies announced today that, in addition to standard reviews on Apple and Google’s app stores, public health authorities will have to sign legal addendums to gain access to the new API agreeing to several principles. Those include: that the apps are only used for the coronavirus pandemic — as opposed to, say, targeted advertising — and should minimize the amount of data they collect. They must require user consent at multiple stages and they cannot ask permission to use a smartphone’s location services. Lastly, the API will be granted to one app per country or region, depending on the government’s approach.</p>
+        
+            <p>The <a href="https://www.engadget.com/apple-google-contact-tracing-explainer-170056298.html">system</a>, which Apple and Google are calling exposure notification, involves anonymous Bluetooth keys exchanged between phones to track potential contact with the coronavirus causing COVID-19. The companies are collaborating on an interoperable API which should be released this month. But the two tech giants won’t be the ones building the actual apps -- that falls to national or regional public health agencies. Apple and Google can therefore build privacy into their API regardless of what varying political regimes may want to do once this functionality rolls out globally.</p>
+        
+            <img alt="Google exposure notification" credit="Apple / Google" crediturl="" data-ops="" src="https://o.aolcdn.com/images/dims?image_uri=https%3A%2F%2Fmedia-mbst-pub-ue1.s3.amazonaws.com%2Fcreatr-uploaded-images%2F2020-05%2Fd478a1a0-8e1e-11ea-9fc3-5f5d45be6745&amp;thumbnail=640%2C&amp;client=49kdj93ncb8s938hkdo&amp;signature=fbbf8923899572b10f512e18c98f8161a2da4fb0"> <div class="photo-credit">Apple / Google</div> </img>
+        
+            <p>Last week, the two companies <a href="https://www.engadget.com/apple-google-covid-19-api-dev-seed-170043718.html">seeded</a> the API to developers in preparation for a full rollout. In the months to come, exposure notification functionality may be built into operating systems, allowing them to be sent out without the use of separate app. And once the pandemic is over, Google and Apple have said they’ll disable the system.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Tesla has applied for a license to become a UK energy provider</h1>
+        <h2>The company may bring its PowerPack battery technology to Britain.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        <img alt="wind turbines green energy" class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-05%2Fdd6b3190-8e02-11ea-bced-8dc8fca606f8&amp;client=amp-blogside-v2&amp;signature=87af1e502662de2d8fdad219d91127a0dcbab19d"/>
+        {% if paywall.show %}
+        
+            <p>Tesla has applied for a licence to become an energy provider in the UK, according to the <a href="https://www.telegraph.co.uk/business/2020/05/02/tesla-applies-uk-electricity-provider-licence/" target="_blank"><em>Telegraph</em></a>. That means it might bring its lithium-ion PowerPack battery technology to Britain, much as it did with its 100 megawatt Hornsdale <a href="https://www.engadget.com/2017-11-23-tesla-australia-powerpack-100-day-bet.html">PowerPack installation</a> in South Australia. It may also be a way for the company to introduce a platform called <a href="https://www.tesla.com/support/autobidder" target="_blank">Autobidder</a> that allows renewable power suppliers to aggregate and trade energy.</p>
+        
+            <p>The company hasn’t confirmed any plans for large scale PowerPacks in the UK, but the lithium-ion grid tech makes sense for the region. The UK generates most of its energy (40 percent) from renewables, including wind and solar. Battery tech can help smooth out gaps in generation during calm or cloudy days, reducing pollution and costs for consumers. Tesla already has multiple PowerPack installations in the UK, including in <a href="https://electrek.co/2018/03/15/tesla-powerpack-project-uk/" target="_blank">South Wales</a>, but nothing on the scale of its Australian operations.</p>
+        
+            <p>Tesla could also be planning to deploy a new platform called Autobidder in the nation. It uses Tesla’s machine-learning tech and cloud platform to optimize power utility assets, including battery packs, generating plants and distribution infrastructure. “Autobidder can be trusted to capture revenues immediately after project energization,” Tesla wrote on the <a href="https://www.tesla.com/support/autobidder" target="_blank">product page</a>. It already uses the tech at its Hornsdale battery installation, and said it has “added competition to drive down energy prices.”</p>
+        
+            <p>The company may also be interested in deploying vehicle-grid tech on a larger scale. It recently teamed with <a href="https://octopus.energy/tesla/tariff/#/" target="_blank">Octopus energy</a> in the UK to offer cheaper electricity tariffs to Telsa owners who also have solar panels, a Powerwall or both. “Your solar system, Powerwall and EV charging are connected to Tesla’s energy management platform,” the company <a href="https://octopus.energy/tesla-energy-plan-faq/" target="_blank">wrote in a FAQ</a>. “It is designed to improve the way you use your energy to power your lifestyle and allows any stored by your Powerwall to be exported back to the grid, to benefit both you and the community.”</p>
+        
+            <p>Tesla has yet to say what it plans to do in the UK with an energy license, if it gets one, and told Engadget that it isn’t “offering any comment at this time.” However, more information about Autobidder is available <a href="https://www.tesla.com/en_GB/support/autobidder" target="_blank">here</a>.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

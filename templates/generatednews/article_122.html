@@ -1,0 +1,31 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Star Wars Instant Pots start at $60 for May the 4th</h1>
+        <h2>Mark the occasion with a pressure cooker.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        <img alt="Star Wars themed Instant Pot pressure cookers" class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-05%2F5d999740-8e0c-11ea-beef-4d02d9f5ddcd&amp;client=amp-blogside-v2&amp;signature=f2486b2e518b94916f25e8979a02b6eb31b14967"/>
+        {% if paywall.show %}
+        
+            <p>May the 4th means a <a href="https://www.engadget.com/star-wars-the-rise-of-skywalker-may-4-disney-plus-134837214.html">wave of Star Wars debuts and promos</a>, and that even includes deals on kitchen tech. Williams Sonoma is discounting its <em>Star Wars</em> Instant Pots, with a 3-quart BB-8 model selling for as low as <a href="https://www.williams-sonoma.com/m/products/instant-pot-duo-star-wars-3-qt-pressure-cooker-bb-8/" target="_blank">$60</a>, the 6-quart Stormtrooper model going for <a href="https://www.williams-sonoma.com/m/products/instant-pot-duo-star-wars-6-qt-pressure-cooker-storm-trooper/" target="_blank">$80</a> and the 8-quart Chewbacca pot on sale for <a href="https://www.williams-sonoma.com/m/products/instant-pot-duo-star-wars-8-qt-pressure-cooker-chewbacca/" target="_blank">$100</a>. That’s $20 off in each case. You can also plug in the code SHIP4FREE to get free shipping on any order over $50 (in other words, any of these pots).</p>
+        
+            <p><a class="athena-button" href="https://www.williams-sonoma.com/m/products/instant-pot-duo-star-wars-3-qt-pressure-cooker-bb-8/" target="_blank">Buy 3-Qt BB-8 on Williams Sonoma - $60</a></p>
+        
+            <p><a class="athena-button" href="https://www.williams-sonoma.com/m/products/instant-pot-duo-star-wars-6-qt-pressure-cooker-storm-trooper/" target="_blank">Buy 6-Qt Stormtrooper on Williams Sonoma - $80</a></p>
+        
+            <p><a class="athena-button" href="https://www.williams-sonoma.com/m/products/instant-pot-duo-star-wars-8-qt-pressure-cooker-chewbacca/" target="_blank">Buy 8-Qt Chewbacca on Williams Sonoma - $100</a></p>
+        
+            <p>These Instant Pots aren’t functionally different than their standard counterparts, but you will find themed recipes (such as BB-8 Shrimp Pasta and Chewie’s Chili) on the packaging if you’re looking for culinary inspiration. Really, this is a way to flaunt your geek status through a highly flexible and convenient pressure cooker. And don’t worry if you’re new to the Instant Pot world — we have a <a href="https://www.engadget.com/2019-07-15-instant-pot-guide.html">beginner’s guide</a> that will help you get acquainted with the device before you prepare your first meal.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

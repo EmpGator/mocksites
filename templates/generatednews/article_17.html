@@ -1,0 +1,60 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>North Korean defectors say sorry after false Kim Jong-un speculation</h1>
+        <h2>Thae Yong-ho and Ji Seong-ho both said in South Korea that leader was gravely ill or dead</h2>
+        <p>A former senior North Korean diplomat has apologised after saying <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/world/kim-jong-un">Kim Jong-un</a> was probably so ill he could not stand, days before he emerged on state media smoking and walking briskly at an event attended by hundreds of officials.</p>
+        <p>Kim disappeared from state media for three weeks, an unusually long time, leading to concerns over the nuclear-armed state in the event of an unexpected succession.</p>
+        <p>High-profile defectors from the country speculated that Kim was suffering from a grave illness or could even be dead. North Korean media on Saturday broadcast video of Kim during a ribbon-cutting ceremony for the inauguration of a fertiliser plant.</p>
+        <figure class="element element-atom element-atom--media" data-atom-id="e37721e6-1ce8-412a-b38a-4df06d30eece" data-atom-type="media">
+<div class="u-responsive-ratio u-responsive-ratio--hd youtube-media-atom youtube-related-videos" data-channel-id="UCIRYBXDze5krPDzAEOxFGVA" data-media-atom-id="e37721e6-1ce8-412a-b38a-4df06d30eece" style>
+<div class="youtube-media-atom__iframe" data-asset-id="ThwHwQonl-Q" id="youtube-ThwHwQonl-Q" style></div>
+<div class="vjs-big-play-button youtube-media-atom__overlay" style>
+<div class="youtube-media-atom__play-button vjs-control-text" style>
+Play Video
+
+</div>
+<div class="youtube-media-atom__bottom-bar" style>
+<div class="youtube-media-atom__bottom-bar__duration" style>
+0:59
+</div>
+</div>
+</div>
+</div>
+<figcaption class="caption caption--video caption caption--img" itemprop="description">
+ Kim Jong-un makes reported reappearance after health speculation – video
+</figcaption>
+</figure>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>One of the defectors, Thae Yong-ho, former deputy ambassador to Britain and one of two defectors elected to the South Korean parliament last month, on Monday issued an apology for his claims.</p>
+        {% if paywall.show %}
+        
+            <p>“I am aware that one of the reasons why many of you voted for me as a lawmaker is with the expectations of an accurate analysis and projections on North Korean issues,” he said in a statement. “I feel the blame and heavy responsibility.“</p>
+        
+            <p>“Whatever the reasons, I apologise to everyone.“</p>
+        
+            <p>The other prominent defector elected to parliament for the opposition, Ji Seong-ho, had said in a media interview he was 99% certain that Kim had died after cardiovascular surgery and an official announcement would come as soon as Saturday.</p>
+        
+            <p>“I have pondered on myself for the past few days, and felt the weight of the position that I’m in,” Ji said in a statement. “As a public figure, I will behave carefully going forward.“</p>
+        
+            <p>Ji had told Reuters on Friday he had received information about Kim’s death from a source he could not disclose.</p>
+        
+            <p>South Korea’s ruling Democratic party criticised the pair for carelessness. One party member urged them to be excluded from the intelligence and defence committees, while another said the defectors contributed little to South Korean society.</p>
+        
+            <p>Ji’s party acknowledged he had made “rash, careless” remarks but criticised the ruling party for undermining the two and “instigating hatred” towards them.</p>
+        
+            <p>The blunders highlight the difficulty of getting reliable information on <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/world/north-korea">North Korea</a>. The secretive country has for decades kept tight control on information, and news on the health and whereabouts of its leader are shared with only a handful of most trusted aides.</p>
+        
+            <p>Thae wrote in his memoir that when former leader Kim Jong-il died in 2011, even the foreign minister did not know until ministry staff were called to watch a state media announcement.</p>
+        
+            <p>The <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/world/south-korea">South Korea</a> government, which gathers intelligence from various sources, had urged caution on speculation about Kim’s health and said it saw no sign anything serious had happened.</p>
+        
+            <p>Daily NK, a Seoul-based news outlet with sources inside North Korea, had reported in April that Kim was recovering from a cardiovascular procedure.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Amazon VP quits over company firing COVID-19 whistleblowers</h1>
+        <h2>He doesn't buy the official explanations.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        <img alt="TOPSHOT - Protesters stand on their cars and block traffic as they participate in a &quot;car caravan&quot; protest at the Amazon Spheres to demand the Seattle City Council tax the city's largest businesses in Seattle, Washington on May 1, 2020. - U.S. employees of Amazon, its supermarket subsidiary Whole Foods and supermarket delivery services were called to strike on May 1, taking advantage of May 1 to denounce employers accused of not sufficiently protecting them in the face of the pandemic. (Photo by Jason Redmond / AFP) (Photo by JASON REDMOND/AFP via Getty Images)" class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-images%2F2020-05%2Fc05ed800-8e15-11ea-9f7e-463776459532&amp;client=amp-blogside-v2&amp;signature=d5fc7f036f82fcdc0c64d3d153aff92ff0b2be7e"/>
+        {% if paywall.show %}
+        
+            <p>Amazon’s recent <a href="https://www.engadget.com/amazon-fires-two-more-critics-173050857.html">firings of labor critics</a> have prompted dissent among its upper ranks. AWS vice president Tim Bray has <a href="https://www.tbray.org/ongoing/When/202x/2020/04/29/Leaving-Amazon" target="_blank">quit the company</a> (via <a href="https://www.theverge.com/2020/5/4/21246284/amazon-vp-resign-whistleblower-firings-warehouse-workers" target="_blank"><em>The Verge</em></a>) over what he sees as an attempt to punish whistleblowers worried about inadequate <a href="https://www.engadget.com/amazon-workers-must-request-leave-034137183.html">COVID-19 protections</a> at warehouses, among other issues. While he believes that Amazon is pouring “massive efforts” into warehouse safety and that his former division treats people well, he also believes staff are telling the truth and that there’s a “vein of toxicity” that prompts the company to fire critics. He would have to approve actions he “despised” if he stayed in his role.</p>
+        
+            <p>Bray pointed to a history of threatened or actual firings that seemed to revolve around criticism. Multiple staffers said Amazon threatened to fire them over <a href="https://www.engadget.com/2020-01-02-amazon-employees-allegedly-threatened.html">climate change protests</a>, while those campaigning for better COVID-19 safety measures lost their jobs soon afterward.</p>
+        
+            <p>We’ve asked Amazon for comment. In the past, the company has insisted that climate change activists were violating policies on external communication, and that it fired COVID-19 protesters for violating social distancing rules. Bray didn’t buy those claims, however, noting that leaders could have set conditions for participating (or at least objected) instead of simply firing people outright. “It was clear to any reasonable observer that [the workers] were turfed for whistleblowing,” he wrote.</p>
+        
+            <p>The former executive stressed that he “escalated through the proper channels” using many of the arguments he’s making now, and that he won’t disclose what happened in those discussions.</p>
+        
+            <p>It’s too soon to say if this will prompt other high-profile departures, let alone any changes in Amazon’s operations. However, this clearly isn’t what the internet giant would hope for. It draws more attention to labor issues at a time when the world is already looking closely — as Bray put it, Amazon is invoking the “<a href="https://en.wikipedia.org/wiki/Streisand_effect" target="_blank">Streisand effect</a>.”</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

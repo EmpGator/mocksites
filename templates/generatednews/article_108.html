@@ -1,0 +1,31 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Intel buys transit app maker Moovit to advance its mobility ambitions</h1>
+        <h2>The deal brings Intel’s Mobileye closer to delivering services like robotaxis.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        <img alt="Moovit app" class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-05%2Fbd1b1120-8e35-11ea-bf7d-140d9c9a2f01&amp;client=amp-blogside-v2&amp;signature=6951051fd11b108ce1d37190f2c60ff999a1b80d"/>
+        {% if paywall.show %}
+        
+            <p>Today, Intel announced that it has acquired the transit app developer Moovit for nearly roughly $900 million, <a href="https://www.engadget.com/intel-close-to-buying-moovit-161315421.html">confirming rumors</a> that circulated over the weekend. Used by more than 800 million users and services in over 3,000 cities and 102 countries, Moovit combines info from public transit operators and its user community to provide real-time trip mapping and planning services. The deal should help Intel’s <a href="https://www.engadget.com/tag/mobileye/">Mobileye</a> provide new and improved mobility services, like robotaxis.</p>
+        
+            <p>“Moovit is a strong brand trusted by hundreds of millions of people globally. Together, with Mobileye’s extensive capabilities in mapping and self-driving technology, we will be able to accelerate our timeline to transform the future of mobility,” said Mobileye CEO Amnon Shashua.</p>
+        
+            <p>Intel <a href="https://www.engadget.com/2017-08-08-intel-acquisition-mobileye-complete.html">acquired Israel-based Mobileye</a> in 2017 for $15.3 billion, and today, Mobileye is used in 300 car models by 25 automakers. Its successes have included <a href="https://www.engadget.com/2018-10-30-volkswagen-mobileye-autonomous-ride-hailing.html">partnering with Volkswagen</a> to launch an autonomous EV ride-hailing service and partnering with <a href="https://www.engadget.com/2019-01-08-intel-mobileye-self-driving-public-transport-china.html">China’s public transit</a> in an effort to go autonomous.</p>
+        
+            <p>Mobileye will use Moovit’s transportation data to improve its predictive technologies based on consumer demand and traffic patterns. It will also tap into Moovit’s data on public transit operators and authorities.</p>
+        
+            <p>Moovit, which launched in 2012 in Israel, will remain an independent subsidiary and retain its own branding and partnerships, like the ones it has <a href="https://www.engadget.com/2019-10-30-moovit-waze-carpool.html">with Waze</a> and <a href="https://www.engadget.com/2016-05-04-moovit-uber-integration.html">Uber</a>. Intel hopes to “empower Moovit to dream bigger, reach higher,” Shashua wrote in <a href="https://newsroom.intel.com/editorials/mobileye-amnon-shashua-may-2020/#gs.5upbx1" target="_blank">a blog post</a>.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

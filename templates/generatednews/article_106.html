@@ -1,0 +1,40 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Trump team wanted 'nationwide' access to malaria drugs, ousted vaccine chief claims</h1>
+        <h2>Dr. Rick Bright says administration’s position would have offered little physician oversight for unproven Covid-19 treatments.</h2>
+        <figure class="art">
+<div class="fig-graphic">
+<picture>
+<source media="(min-width: 1921px)" srcset="https://static.politico.com/dims4/default/9e428de/2147483647/resize/2000x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F56%2F37%2F368515674b08960beb19032f6081%2F200423-trumpf-gty-773.jpg"/>
+<source media="(min-width: 1681px)" srcset="https://static.politico.com/dims4/default/1c5df60/2147483647/resize/1920x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F56%2F37%2F368515674b08960beb19032f6081%2F200423-trumpf-gty-773.jpg"/>
+<source media="(min-width: 1012px)" srcset="https://static.politico.com/dims4/default/bb39145/2147483647/resize/1160x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F56%2F37%2F368515674b08960beb19032f6081%2F200423-trumpf-gty-773.jpg"/>
+<source media="(min-width: 667px)" srcset="https://static.politico.com/dims4/default/3725578/2147483647/resize/971x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F56%2F37%2F368515674b08960beb19032f6081%2F200423-trumpf-gty-773.jpg"/>
+<source media="(min-width: 485px)" srcset="https://static.politico.com/dims4/default/d8e3dd2/2147483647/resize/646x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F56%2F37%2F368515674b08960beb19032f6081%2F200423-trumpf-gty-773.jpg"/>
+<source media="(max-width: 484px)" srcset="https://static.politico.com/dims4/default/0bebe06/2147483647/resize/463x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F56%2F37%2F368515674b08960beb19032f6081%2F200423-trumpf-gty-773.jpg"/>
+<img alt="Donald Trump" src="https://static.politico.com/dims4/default/28fbc3c/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F56%2F37%2F368515674b08960beb19032f6081%2F200423-trumpf-gty-773.jpg" title="Donald Trump"/></picture>
+</div>
+</figure>
+        <p class="story-text__paragraph">The Trump administration pushed for nationwide access to a malaria drug touted by President Donald Trump as a Covid-19 treatment “with limited physician oversight,” according to a person familiar with the allegations of Dr. Rick Bright, the HHS vaccine chief who was ousted from his position earlier this week.</p>
+        {% if paywall.show %}
+        
+            <p class="story-text__paragraph">Bright felt such a move was dangerous and responded by pushing for more clinical trials, the person said, but, under pressure from his superiors in the health department, eventually agreed to sign off on an <a href="https://www.politico.com/news/2020/03/29/fda-emergency-authorization-anti-malaria-drug-155095" target="_blank">emergency use authorization</a> that allowed the Trump administration to acquire tens of millions of doses of chloroquine and hydroxychloroquine and distribute the medicines to some patients hospitalized for Covid-19.</p>
+        
+            <p class="story-text__paragraph">Bright, who was <a href="https://www.politico.com/news/2020/04/22/hhs-ousts-vaccine-expert-as-covid-19-threat-grows-201642" target="_blank">pushed out</a> this week as head of the Biomedical Advanced Research and Development Authority, is now alleging that he was sidelined after pushing back against the administration's demands.</p>
+        
+            <p class="story-text__paragraph">The Department of Health and Human Services did not immediately respond to request for comment. <a href="https://www.politico.com/news/2020/03/27/trump-malaria-coronavirus-152498" target="_blank">POLITICO reported last month</a> that career health officials had concerns about how Trump’s fixation on malaria drugs was undermining the nation’s response to the Covid-19 outbreak and that the White House was pressuring career health officials to prioritize the drug despite scant evidence. The drug was also championed by Trump allies like Oracle founder Larry Ellison and an array of Fox News contributors.</p>
+        
+            <p class="story-text__paragraph">Bright’s lawyers on Thursday said that they would soon file a whistleblower complaint with the HHS inspector general and decried what they said were Trump administration efforts to undercut Bright’s credibility.</p>
+        
+            <p class="story-text__paragraph">“In our filing we will make clear that Dr. Bright was sidelined for one reason only — because he resisted efforts to provide unfettered access to potentially dangerous drugs, including chloroquine, a drug promoted by the Administration as a panacea, but which is untested and possibly deadly when used improperly,” Debra S. Katz and Lisa J. Banks said in a statement. “The facts and concerns raised by Dr. Bright are compelling and well-documented and soon they will be public.”</p>
+        
+            <p class="story-text__paragraph">Administration officials had discussed removing Bright from his post last year amid management complaints, according to interviews that POLITICO conducted in January, prior to the Covid-19 outbreak.<br/></p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

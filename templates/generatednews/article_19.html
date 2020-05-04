@@ -1,0 +1,43 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>UN response to Haiti cholera epidemic lambasted by its own rights monitors</h1>
+        <h2>13 top officials denounced ‘illusory’ promises to Haitian people
+Disease brought to Haiti by UN peacekeepers killed 10,000</h2>
+        <p>Thirteen UN rights monitors have unleashed blistering criticism of the <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/world/unitednations">United Nations</a> for its “deeply disappointing” failure to make amends for having brought cholera to Haiti, causing the deaths of at least 10,000 people.</p>
+        <p>In a letter to the UN secretary general, António Guterres, the independent monitors excoriate the world body for making “illusory” promises to the Haitian people. They note that having pledged $400m for a cholera clean-up mission, the UN has raised just $21m and spent “a pitiful” $3m.</p>
+        <p>“This is a deeply disappointing showing following the loss of 10,000 lives,” the letter states.</p>
+        <p>Scientific evidence has <a class="u-underline" data-link-name="in body link" href="https://reliefweb.int/sites/reliefweb.int/files/resources/N1627119.pdf">conclusively shown</a> that cholera was imported into the country by sick Nepalese UN peacekeepers who were relocated in 2010 to Haiti to help with a devastating earthquake. The UN failed to screen the Nepalese force for the disease, which could have been done before they deployed from Nepal for <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/world/2016/apr/14/haiti-cholera-epidemic-un-prevention">less than $2,000</a>.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>For six years the UN denied any involvement in the transmission of the cholera bacterium. In 2016 it issued a fudged apology, but has continued to resist accepting any legal responsibility or to pay compensation.</p>
+        {% if paywall.show %}
+        
+            <p>Philip Alston, the UN monitor on extreme poverty and human rights who is lead signatory of the letter, told the Guardian that the UN’s failings were put into clear relief by the coronavirus pandemic.</p>
+        
+            <p>“The world is rightly focused on the horrors of Covid-19 and losing thousands of people. But 10,000 people died in <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/world/haiti">Haiti</a> and there was no response,” he said.</p>
+        
+            <p>Alston, who prepared a <a class="u-underline" data-link-name="in body link" href="https://www.ohchr.org/en/NewsEvents/Pages/DisplayNews.aspx?NewsID=20758&amp;LangID=E">report</a> to the UN general assembly on Haiti’s cholera disaster in 2016, added: “What upsets me most is that the UN has still not acknowledged its responsibility for taking cholera to Haiti.”</p>
+        
+            <p>Cholera appears to have been halted in Haiti with the last case <a class="u-underline" data-link-name="in body link" href="https://news.un.org/en/story/2020/01/1056021">reported</a> in January 2019. Even then, the bulk of the public health work devoted to root out the illness was carried out by local health workers and aid groups and not by the UN.</p>
+        
+            <p>In December 2016, the then UN secretary general, Ban Ki-moon, made an <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/global-development/2016/dec/01/haiti-cholera-outbreak-stain-on-reputation-un-says">apology of sorts</a>, but it was carefully worded to avoid any legal accountability. He said: “We did not do enough with regard to the cholera outbreak and spread in Haiti.”</p>
+        
+            <p>Alston said: “There continues to be an explicit refusal to accept any formal responsibility, let alone legal responsibility.”</p>
+        
+            <p>The independent UN monitors who signed the letter include Leilani Farha, special rapporteur on adequate housing; Léo Heller, special rapporteur on water and sanitation; and five members of the working group of experts on people of African descent.</p>
+        
+            <p>The lack of any compensation for the cholera disaster has had serious consequences for thousands of people in the poverty-stricken country. Many of those who died in the epidemic were the main income earners of their families, and their deaths had catastrophic implications for those left behind.</p>
+        
+            <p>Alston told the Guardian that having studied the cholera disaster over many years he had concluded that the UN’s reprehensible conduct could only be understood by accepting that “an element of racism is involved here”.</p>
+        
+            <p>He said: “If this happened to a white community in a country with any standing globally the UN wouldn’t have done – and wouldn’t have been able to do – nothing. But this is Haiti, a country which has largely been written off.”</p>
+        
+            <p>In a <a class="u-underline" data-link-name="in body link" href="https://news.un.org/en/story/2020/04/1062962">statement</a>, a UN spokesman said: “Since taking office, the secretary-general has been strongly committed to supporting the people of Haiti and the fight against cholera. He reiterates the UN’s deep regrets for the loss of life and suffering caused by the cholera epidemic.”</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

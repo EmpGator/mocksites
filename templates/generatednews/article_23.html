@@ -1,0 +1,50 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Norwegian Air shareholders back £770m rescue plan</h1>
+        <h2>Carrier will unlock government aid after winning support for debt-for-equity swap 
+
+Coronavirus – latest updates
+See all our coronavirus coverage</h2>
+        <p>The embattled carrier Norwegian Air, one of the biggest airlines at <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/uk-news/gatwick-airport">Gatwick airport</a>, will proceed with its rescue plan and unlock government aid after winning support from shareholders, bondholders and aircraft lessors for a 10bn kroner (£770m) debt-for-equity swap.</p>
+        <p>After a weekend of frantic talks, the airline’s shareholders gathered at an emergency meeting in Oslo on Monday and <a class="u-underline" data-link-name="in body link" href="https://newsweb.oslobors.no/message/504483">voted 95% in favour of all proposals</a>, including a 400m kroner share issue – even though the plan effectively wipes them out.</p>
+        <p>The plan will hand majority ownership to the airline’s creditors – bondholders and lessors – and leave shareholders with 5.2% of the company but there was no alternative, Norwegian’s chief executive, Jacob Schram, said. Without the rescue plan, “it will be game over”, he had warned ahead of the shareholder meeting.</p>
+        <p>“This has been perhaps the most exciting financial thriller <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/world/norway">Norway</a> has ever seen,” he said after the meeting.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>The plan will unlock a further 2.7bn kroner in state aid to help steer the airline through the coronavirus crisis, on top of 300m kroner the airline has already received. Norway’s government made the package dependent on Norwegian making itself solvent again by wiping out its debt.</p>
+        {% if paywall.show %}
+        
+            <p>Norwegian should now be able to avoid bankruptcy – good news for Gatwick, where the carrier is the third-largest airline, after <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/business/2020/apr/30/british-airways-to-cut-gatwick-operation-and-lay-off-1130-pilots">British Airways made heavy cuts to its operation at the airport</a> last week and warned that it could pull out of Gatwick altogether.</p>
+        
+            <p>Also on Monday, the European Union’s competition watchdog approved French state aid worth €7bn (£6bn) for Air France. The Covid-19 pandemic has plunged the global aviation industry into its worst crisis, bringing air travel to a near-standstill.</p>
+        
+            <p>Airlines across Europe have <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/business/2020/mar/16/ryanair-cancels-80-per-cent-of-flights-and-does-not-rule-out-full-grounding-coronavirus">sought government help</a> as coronavirus lockdowns have forced them to ground their fleets. As it approved the French state guarantee and shareholder loan to Air France, the European Commission noted the importance of the carrier, with more than 300 planes, to the French economy and its role in repatriating stranded citizens and transporting medical supplies.</p>
+        
+            <p>Norwegian grounded 95% of its fleet in mid-March and had warned it could run out of cash by the middle of the month unless it pushed through its rescue plan.</p>
+        
+            <p>Norwegian’s founder and former chief executive Bjorn Kjos had been working behind the scenes to drum up support for the rescue plan among shareholders since last week, and <a class="u-underline" data-link-name="in body link" href="https://www.nrk.no/norge/aksjonaergruppe-snur-etter-e-post-fra-kjos_-vil_stemme-ja-til-norwegians-forslag-1.15003392">swayed the minds of a group of </a><a class="u-underline" data-link-name="in body link" href="https://www.nrk.no/norge/aksjonaergruppe-snur-etter-e-post-fra-kjos_-vil_stemme-ja-til-norwegians-forslag-1.15003392">investors led by Helge Stray</a>, local media reported.</p>
+        
+            <p>Bondholders had already backed the plan on Sunday, after rejecting it in a vote on Friday. The airline said it had secured written consent from the largest holders of the NAS07 bond after it improved some of the terms. It will hold another bondholder vote on 18 May, where the airline will have to formally secure 67% support.</p>
+        
+            <p>The lessors, who own Norwegian’s aircraft, had also signed up to the plan, the carrier said minutes before the shareholder meeting began. “With the significant contributions from lessors and bondholders, the company expects to convert more than 10bn kroner in debt to equity.”</p>
+        
+            <p>The share sale will start on Tuesday and is expected to be completed by 11 May.</p>
+        
+            <figure class="element element-embed" data-alt="Sign up to the daily Business Today email">
+<iframe class="iframed--overflow-hidden email-sub__iframe js-email-sub__iframe js-email-sub__iframe--article" data-form-description="Get the headlines and editors' picks every weekday morning." data-form-success-desc="Thanks for signing up" data-form-title="Sign up for Business Today" frameborder="0" height="52px" scrolling="no" seamless="" src="https://www.theguardian.com/email/form/plaintone/3887"></iframe>
+<figcaption class="caption caption--img">
+Sign up to the daily Business Today email or follow Guardian Business on Twitter at @BusinessDesk
+</figcaption>
+</figure>
+        
+            <p>In recent years <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/business/2020/may/02/coronavirus-may-allow-norwegian-airline-to-survive">Norwegian transformed itself</a> from a small local carrier into a pioneer of low-cost long-haul flights, for example to the US. It carries almost 6 million UK passengers each year from Gatwick, Edinburgh and Manchester airports to 30 destinations worldwide.</p>
+        
+            <p>Norwegian warned a week ago that virtually all of its 160 fleet would remain <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/business/2020/apr/27/norwegian-air-says-most-of-fleet-will-stay-grounded-until-2021-due-to-coronavirus">grounded until 2021</a>, with just seven flying at the moment, mainly transporting essential cargo on state-subsidised domestic flights in Norway. It has temporarily laid off more than 80% of its workforce.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

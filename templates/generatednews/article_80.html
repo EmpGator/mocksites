@@ -1,0 +1,45 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Trump contradicts top health officials with vaccine timeline, malaria drug claims</h1>
+        <h2>The president also returned to promoting a malaria drug that can cause dangerous side effects.</h2>
+        <p class="story-text__paragraph">President Donald Trump claimed on Sunday that a coronavirus vaccine would be ready by the end of 2020 and returned to touting an unproven treatment for the disease — on both fronts contradicting his own health officials as well as companies developing and testing potential vaccines.</p>
+        <p class="story-text__paragraph">“We think we'll have a vaccine by the end of this year and we're pushing very hard,” he said at a Fox News town hall at the Lincoln Memorial in Washington. “We're building supply lines, we even have the final vaccine.”</p>
+        <p class="story-text__paragraph">He added that several pharmaceutical companies are “close” to developing the vaccine, naming Johnson &amp; Johnson in particular.</p>
+        <p class="story-text__paragraph">All vaccines currently in development are still in the early phases of clinical trials, and Johnson &amp; Johnson has said the soonest its first batch will be available is in 2021. The company has not yet begun human trials, and doesn’t expect to do so until September of this year.</p>
+        <p class="story-text__paragraph">Pfizer and the German company BioNTech, however, say they have the potential to supply millions of doses by the end of 2020 if their vaccine candidate shows promising results in trials.</p>
+        <p class="story-text__paragraph">Vaccines often take several years to develop, and for some infectious diseases, including HIV and Ebola, they remain elusive.</p>
+        {% if paywall.show %}
+        
+            <p class="story-text__paragraph">Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Diseases, <a data-auth="NotApplicable" href="https://www.today.com/health/coronavirus-vaccine-january-doable-dr-anthony-fauci-says-t180358?cid=sm_npd_td_tw_ma" rel="noopener noreferrer" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;" target="_blank">recently said</a> it’s “within the realm of possibility” to have a vaccine widely available by January, but only if drug companies are willing to assume the risk of beginning to ramp up production of the vaccine before it is fully tested and approved.</p>
+        
+            <p class="story-text__paragraph">Dr. Deborah Birx, the White House coronavirus response coordinator, told Fox News on Sunday morning that "on paper it's possible" to have a vaccine available in January but "whether we can execute and execute around the globe" is still in question.</p>
+        
+            <p class="story-text__paragraph">Trump on Sunday evening said he wasn't concerned about which country develops a vaccine first. "I just want to get a vaccine that works. I really don't care. If it's another country, I'll take my hat off to them," he said.</p>
+        
+            <p class="story-text__paragraph">But if another country beats the U.S. to the finish line in developing a vaccine, <a data-auth="NotApplicable" href="https://www.politico.com/news/2020/05/03/coronavirus-vaccine-trump-world-brawl-230142" rel="noopener noreferrer" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;" target="_blank">many are worried</a> that Trump’s withdrawal from international cooperation efforts — including his recent move to strip funding from the World Health Organization — will limit America’s access to the cure.</p>
+        
+            <p class="story-text__paragraph">Trump acknowledged Sunday that his vaccine timeline may go beyond what his own experts have advised, but insisted on his optimistic timeline.</p>
+        
+            <p class="story-text__paragraph">“The doctors would say, well, you shouldn't say that. I'll say what I think,” he said. “I met with the heads of the big companies, these are great companies. I think we're going to have a vaccine much sooner than later.”</p>
+        
+            <p class="story-text__paragraph">Further complicating the vaccine push, the Trump administration’s agency in charge of vaccine development has seen <a data-auth="NotApplicable" href="https://www.politico.com/news/2020/04/29/fda-official-coronavirus-vaccine-220858" rel="noopener noreferrer" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;" target="_blank">turmoil in recent weeks</a>, with the ousted director claiming he was pushed out for raising concerns about the president’s embrace of unproven drugs.</p>
+        
+            <p class="story-text__paragraph">In his town hall on Sunday, Trump also returned to promoting those drugs for malaria <b>— </b>hydroxychloroquine and chloroquine <b>—</b> as a coronavirus treatment even though his <a data-auth="NotApplicable" href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-cautions-against-use-hydroxychloroquine-or-chloroquine-covid-19-outside-hospital-setting-or" rel="noopener noreferrer" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;" target="_blank">own administration</a> has warned it carries dangerous side effects. He went so far as to claim without evidence that his rivals are pushing negative findings about the medication to hurt him politically.</p>
+        
+            <p class="story-text__paragraph">“The Democrats — the radical left, whatever you want — would rather see people, I'm going to be very nice. I'm not going to say 'die.' I'm going to say, 'would rather see people not get well,' because they think I'm going to get credit if, you know, hydroxychloroquine works,” he said.</p>
+        
+            <p class="story-text__paragraph">The FDA has cautioned that hydroxychloroquine should not be used by patients with heart problems because it make them worse, and other studies have shown that the drug can react badly with diabetes medication.</p>
+        
+            <p class="story-text__paragraph">As more reports emerged about the drug's risks, Trump himself had <a data-auth="NotApplicable" href="https://www.politico.com/news/2020/04/20/trump-hydroxychloroquine-coronavirus-196191" rel="noopener noreferrer" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;" target="_blank">stopped promoting it</a> in recent press briefings and interviews. But at Sunday night's town hall, he blamed the new data on his political opponents.</p>
+        
+            <p class="story-text__paragraph">“They do the false reports,” he added. "People aren't dying from it. They don't want to see a good result. And that's very sad.”</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

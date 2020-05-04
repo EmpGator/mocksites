@@ -1,0 +1,35 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Rachel Roddy's recipe for courgette, cannellini bean and herb soup</h1>
+        <h2>Knowing how much salt to add, and when, is an under-rated skill. See how it transforms a simple spring soup</h2>
+        <p><span class="drop-cap"><span class="drop-cap__inner">W</span></span>ith its flared top, funnelled length, high heel and spur, Italy is unmistakably a thigh-high boot. It becomes a knee-high boot if you cut it in half, following a line from Rome on the Tyrrhenian coast, to Porto d’Ascoli on the Adriatic one, which is pretty much what the <a class="u-underline" data-link-name="in body link" href="https://www.lifeinitaly.com/historic-roads/salaria">Via Salaria</a> does, give or take the odd curve.</p>
+        <p>The original imprint of the road predates the foundation of Rome, and was the work of an ancient population of settlers and warriors called <em><a class="u-underline" data-link-name="in body link" href="https://en.wikipedia.org/wiki/Sabines">Sabini</a></em>. These early routes were created gradually, bit by bit, to move supplies between settlements – the most important of which was <em>sal,</em> salt, produced in salt pans on both coasts from both oceans. Under the Romans, these became the first consular routes and were named – purposefully – Via Salaria. Those marching along the Salt Road were often paid with the valuable substance they transported, which is where the Latin <em>salarium –</em> salary – comes from. Also, the idea of salt as worth and wisdom. Things done <em>cum grano salis,</em> with a grain of salt, are done discerningly, as opposed to foolishly because you have no salt in your head, or in your soup.</p>
+        <p>These last few, persistently rainy days of quarantine, I’ve made even more soup than usual, and also re-read much of Samin Nosrat’s book, <a class="u-underline" data-link-name="in body link" href="https://guardianbookshop.com/salt-fat-acid-heat-9781782112303.html">Salt, Fat, Acid, Heat</a>. Where would we be without salt? Adrift in a sea of blandness, is her answer, before she hopes: “If one lesson from this book stays with you, let it be this: salt has a greater impact on flavour than any other ingredient. Learn to use it well and your food will taste good.” I can’t help but think that Samin’s attitude to salt is a bit like that of the Sabini, knowing it is at the heart of everything and adding it in the same way they built their salt road – gradually, bit by bit. She recommends getting to know your salt, then adding it at all stages of cooking, because it is what coaxes out flavour.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>I use two sorts of salt, both from Sicily: <em>sale fino</em> – fine sea salt for seasoning – and <em>sale grosso</em>, tiny, hard-pebble-like sea salt for salting water, which I keep in jars near the cooker. The spoon in the sale grosso pot holds about 10g of it, which is what I add to every litre of water for boiling pasta and vegetables. For fine salt, I use my fingers: a thumb with one finger is 1g, with two fingers is 2g, with three fingers is 6g, and with four it’s 10g – obviously this is all personal and as vague as a home serving of gin. Most of the time I am adding 2g at time and tasting constantly, especially when I am making improvisational soups such as this week’s recipe.</p>
+        {% if paywall.show %}
+        
+            <p>Samin mentions how the chef <a class="u-underline" data-link-name="in body link" href="https://www.nytimes.com/2013/12/04/dining/judy-rodgers-chef-of-refined-simplicity-dies-at-57.html">Judy Rodgers</a> often told her chefs a dish needed seven grains of salt. I read lots of food writing and few things stick, but Judy’s seven grains and Samin’s salting – doing so every step of the way, like the Sabini – have adhered like sticky seeds to a woolly jumper; reminders of the need to taste and adjust salt discerningly.</p>
+        
+            <p>It is hard to judge for salt when food is scalding hot; sitting alters flavour, so leave it to sit before tasting and adjusting salt and pepper – if indeed it needs it.</p>
+        
+            <p>Prep <strong>10 min</strong><br/>Cook/rest <strong>1 hr 30 min</strong><br/>Serves<strong> 4</strong></p>
+        
+            <p><strong>6 tbsp olive oil<br/>1 onion,</strong> diced<br/><strong>1 celery stick</strong>, diced<br/><strong>A sprig of rosemary<br/>Salt<br/>1 medium potato</strong>, diced<br/><strong>400g courgettes<br/>1.5 litres water</strong><br/><strong>2 tins cannellini beans</strong><br/><strong>2 thick slices stale bread</strong><br/><strong>Dried oregano<br/>Olive oil</strong>, for frying</p>
+        
+            <p>Put the olive oil, onion, celery, rosemary and a pinch of salt in a large, heavy-based pan and set over a medium flame. Cook, stirring until the onion is starting to soften and turn translucent. Add the potato and another small pinch of salt, stir, then add the water. Bring to a boil, then reduce to a simmer.</p>
+        
+            <p>Meanwhile trim the courgettes, cut into four lengthways and then into quarter moons about 3mm thick. Drain and rinse the beans, then taste them to see how salty they are.</p>
+        
+            <p>Once the soup has been simmering for 10 minutes, add the courgettes and the beans, and continue simmering for another 20 minutes. Remove from the heat. Check salt and pepper, and set aside for at least an hour.</p>
+        
+            <p>When you are ready to eat, reheat the soup. Cut the bread into 2cm squares. In a separate pan, warm a little olive oil, add the bread, sprinkle with salt and dried oregano, and fry until golden. Serve alongside the soup.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

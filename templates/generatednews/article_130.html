@@ -1,0 +1,29 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Airbus to deploy 'game-changing' bomb-sniffing sensors at airports</h1>
+        <h2>It will use technology built from living biological cells.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        <img alt="Airbus Koniku bomb-sniffing sensors at airports" class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-05%2F4ee04f70-8de2-11ea-be6f-c8499d6464ab&amp;client=amp-blogside-v2&amp;signature=1e37755f3820c2e3e03aaea7508a277f72d29611"/>
+        {% if paywall.show %}
+        
+            <p>Airbus plans to test an “electronic nose” device that uses biological cells to mimic what bomb-sniffing dogs can do, reports the <a href="https://www.ft.com/content/f699050f-80cc-4efc-924d-82acc1572a08" target="_blank"><em>Financial Times</em></a>. The company will deploy jellyfish-shaped sensors, developed by Silicon Valley startup <a href="https://koniku.com/technology" target="_blank">Koniku</a>, in several airport screening tunnels later in 2020.</p>
+        
+            <p>The technology uses silicon processors bolstered by living cells. ”We have developed a technology that is able to detect smell — it’s breathing the air, and it’s essentially telling you what’s in the air,” Koniku founder Oshiorenoya Agabi told the <em>FT</em>. “What we do is we take biological cells, either Hek cells or astrocytes — brain cells — and we genetically modify them to have olfactory receptors.”</p>
+        
+            <p>In light of the COVID-19 pandemic, the companies are also looking into ways to detect biological hazards like contagious viruses. Koniku has touted security as well as medical applications, with sniffers that can detect signs of cancer — in much the same way dogs can detect prostate cancer with <a href="https://www.health.harvard.edu/blog/trained-dogs-can-sniff-prostate-cancer-201406302101" target="_blank">extreme accuracy</a>. “You wake up in the morning, you breathe on our device... and we are analyzing, in a longitudinal fashion, your state of health. That is one of our big visions,” Agabi said.</p>
+        
+            <p>Devices that can supposedly test travelers for traces of dangerous chemicals have met with very limited success, so it’s easy to be skeptical about any new tech. However, the fact that it’s being tested by Airbus is a good sign for Koniku, a relatively small company with just 20 employees. Airbus has been working with Koniku since 2017 and said they plan to create “a game-changing, end-to-end security solution.”</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

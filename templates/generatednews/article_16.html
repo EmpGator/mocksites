@@ -1,0 +1,47 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Venezuela: anti-Maduro battle isn't over as ex-US soldier says he launched raid</h1>
+        <h2>Jordan Goudreau, who was linked to plot to topple Maduro, said his troops are still in action as government said it foiled ‘invasion’</h2>
+        <p>A former US special forces soldier linked to a murky and apparently bungled attempt to topple Venezuela’s leader, <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/world/nicolas-maduro">Nicolás Maduro</a>, has insisted his troops are still in action after launching “a daring amphibious raid” into the country.</p>
+        <p>In a video released late on Sunday – hours after Maduro’s government claimed it had foiled a United States-backed sea “invasion” near Venezuela’s main international airport – Jordan Goudreau claimed the battle was not over.</p>
+        <p>“Our men are continuing to fight right now,” claimed the 43-year-old American citizen, who was last week linked to what was described as <a class="u-underline" data-link-name="in body link" href="https://apnews.com/79346b4e428676424c0e5669c80fc310">an audacious but half-baked plot</a> to invade Venezuela and remove its leader. “Our units have been activated in the south, west and east of Venezuela.”</p>
+        <p>The former US special forces medic, who served in Iraq and Afghanistan, offered no evidence for those claims and it was unclear where the video had been recorded. There were no reports of fighting in the capital, Caracas.</p>
+        <p>But earlier on Sunday Venezuela’s leaders claimed they had frustrated what they called a US-backed assault near the port city of La Guaira, 20 miles north of Caracas, killing eight alleged assailants.</p>
+        <p {% if not paywall.show %} class="paytext" {% endif %}>Venezuela’s interior minister, Néstor Reverol, claimed a platoon of “terrorist mercenaries” had tried to make landfall using speedboats but been repelled by security forces.</p>
+        {% if paywall.show %}
+        
+            <p>“Some were shot down and others detained,” <a class="u-underline" data-link-name="in body link" href="https://elpitazo.net/politica/nestor-reverol-anuncia-neutralizacion-de-supuestos-terroristas-en-la-guaira/">Reverol said</a> in a televised statement, accusing the group of plotting to assassinate the leaders of Venezuela’s “revolutionary government”.</p>
+        
+            <p>Reverol said “a meticulous land, sea and air search” was under way to capture any remaining invaders, vowing: “We will remain in permanent state of alert and resistance.”</p>
+        
+            <p>In <a class="u-underline" data-link-name="in body link" href="https://www.washingtonpost.com/world/the_americas/venezuela-maduro-armed-invasion-guaido-opposition/2020/05/03/efb2fa88-8d51-11ea-9322-a29e75effc93_story.html">a telephone interview</a> with the Washington Post on Sunday night, Goudreau claimed the operation had involved “60 troops”, including two former US special forces members, who had arrived in Venezuela by land and sea.</p>
+        
+            <p>Venezuela’s defense minister, who was last year <a class="u-underline" data-link-name="in body link" href="https://www.washingtonpost.com/world/the_americas/maduros-ex-spy-chief-lands-in-us-armed-with-allegations-against-venezuelan-government/2019/06/24/b20ad508-9477-11e9-956a-88c291ab5c38_story.html">accused of plotting against Maduro</a>, appeared on state television flanked by armoured vehicles and heavily armed troops clutching assault rifles and rocket-propelled grenade.</p>
+        
+            <p>“A group of mercenaries has attempted to trample our sacred soils and has received an emphatic response from our the weapons of our republic,” Vladimir Padrino López <a class="u-underline" data-link-name="in body link" href="http://www.correodelorinoco.gob.ve/fanb-rechaza-incursion-terrorista-frustrada-por-la-union-civico-militar-policial-del-pais/">said</a>, denouncing what he called a “crass” imperialist incursion. Padrino López said Maduro had ordered troops to scour the country’s Caribbean coastline for accomplices.</p>
+        
+            <p>The commotion comes almost a year to the day after <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/world/2019/may/03/venezuela-protests-news-latest-maduro-uprising-that-fizzled-">a botched attempt</a> to remove Hugo Chávez’s authoritarian successor from power.</p>
+        
+            <p>On 30 April 2019 opposition leader <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/world/juan-guaido">Juan Guaidó</a> – who dozens of countries, including the US and UK, recognize as Venezuela’s legitimate interim leader – sought to spark a pre-dawn military uprising dubbed “Operation Freedom”.</p>
+        
+            <p>But those efforts fizzled and Maduro remains in power, albeit facing massive challenges as a result of Venezuela’s continued social and economic meltdown and now, the Covid-19 crisis, which doctors fear could bring the country’s crippled health system to its knees.</p>
+        
+            <p>Sunday’s supposed invasion is the latest chapter in <a class="u-underline" data-link-name="in body link" href="https://apnews.com/79346b4e428676424c0e5669c80fc310">the bizarre and shady tale</a> of an apparently ongoing plot to overthrow Maduro that is being partly led by Goudreau, a sharpshooting, muscle-bound mixed martial arts enthusiast from Florida.</p>
+        
+            <p>In a lengthy report on Goudreau’s travails last week, the Associated Press claimed he had founded a private security company called Silvercorp USA in 2018 and last year decided to capitalize on Donald Trump’s obsession with overthrowing Maduro.</p>
+        
+            <p>The report said Goudreau subsequently came into contact with Clíver Alcalá, a retired Venezuelan army major general who has admitted to plotting against Maduro and handed himself over to US authorities in late March after being <a class="u-underline" data-link-name="in body link" href="https://www.theguardian.com/world/2020/mar/26/nicolas-maduro-us-indictment-venezuela-drug-trafficking-leaders">indicted in the US on drug trafficking charges</a>.</p>
+        
+            <p>Alcalá reportedly told Goudreau he had three camps of willing combatants waiting near Colombia’s border with <a class="u-underline" data-component="auto-linked-tag" data-link-name="auto-linked-tag" href="https://www.theguardian.com/world/venezuela">Venezuela</a> and the American offered to train them for “a rapid-strike operation” to take out Maduro.</p>
+        
+            <p>Goudreau reportedly boasted of high-level contacts in the Trump administration but the news agency said it had found no evidence of US support for his actions.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

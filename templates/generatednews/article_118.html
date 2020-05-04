@@ -1,0 +1,29 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Browser add-on verifies that sites actually honor their privacy policies</h1>
+        <h2>It gives users a secure signal when a website's code matches its privacy policy.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        <img alt="Young businesswoman in casual clothing" class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-images%2F2020-05%2Fde55c130-8e19-11ea-bfeb-cf6e3aca6190&amp;client=amp-blogside-v2&amp;signature=28febbf2808ac001e21abc4d6970704a491fbd9f"/>
+        {% if paywall.show %}
+        
+            <p>Just because a website presents a privacy policy, doesn’t mean its code is actually abiding by that policy. To make the internet a little more secure, researchers from Waterloo University in Ontario created a browser plug-in that verifies whether a website is processing data in a way that’s compliant with its privacy policy.</p>
+        
+            <p>The software-based system, <a href="https://uwaterloo.ca/stories/news/researchers-create-new-system-protect-users-online-data" target="_blank">dubbed Mitigator</a>, gives users a secure signal when they visit a website that’s complying with its own privacy policy. And if a website requires users to enter an email address, but the privacy policy does not mention that requirement, Mitigator will notify its users.</p>
+        
+            <p>“Users of Mitigator will know whether their data is being properly protected, managed and processed, while the companies will benefit in that their customers are happier and more confident that nothing untoward is being done with their data,” said Ian Goldberg, a Waterloo professor and co-author of <a href="https://cypherpunks.ca/~iang/pubs/mitigator-popets20.pdf" target="_blank">a paper on Mitigator</a>.</p>
+        
+            <p>In the past few years, we’ve seen companies like <a href="https://www.engadget.com/2019-11-06-apple-redesigned-privacy-policy-pages.html">Apple</a>, <a href="https://messengernews.fb.com/2019/11/05/privacy-and-safety-at-your-fingertips/" target="_blank">Facebook</a> and <a href="https://www.engadget.com/2018-05-11-google-privacy-policy-update.html">Google</a> attempt to simplify their privacy policies and make them more user-friendly. That’s at least partly due to Europe’s General Data Protection Regulation (<a href="https://www.engadget.com/tag/gdpr/">GDPR</a>) privacy laws, which require that companies provide “clear and transparent” notice about how they use data. Still, there’s clearly <a href="https://www.engadget.com/2019-02-22-chrome-app-extension-security-flaws.html">work to be done</a> in order to improve privacy policies and compliance, and Mitigator might be one way to find violations.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "generatednews/base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>SoundCloud will host live music shows on Twitch</h1>
+        <h2>Content will focus on everything from beat making to self-care.</h2>
+        <img class="absolute t-5 r-0" height="15" onclick="javascript:window.open('http://info.yahoo.com/privacy/us/yahoo/relevantads.html');" src="https://s.yimg.com/cv/apiv2/adbuilder/gemini.png" width="15">
+<div class="sponsored-links">
+<div></div>
+</div>
+</img>
+        {% if paywall.show %}
+        
+            <img alt="NEW YORK, NY - DECEMBER 13:  Lil Wop performs on stage as SoundCloud celebrates What's New, Now and Next in Music at The Good Room on December 13, 2017 in New York City.  (Photo by Slaven Vlasic/Getty Images for SoundCloud)" class="stretch-img hide@m-" src="https://o.aolcdn.com/images/dims?thumbnail=640%2C&amp;quality=80&amp;image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-images%2F2020-02%2Fb9b3e170-4de3-11ea-bfdf-7c1a7bfd5735&amp;client=amp-blogside-v2&amp;signature=d048e64e7b38f38e20961e3f07be46a555abeb31"/>
+        
+            <p>It’s probably safe to say most people haven’t been to a concert or a record store in the past month or so. And while streaming isn’t a completely fulfilling replacement for going to shows or spotting that rare LP, <a href="https://www.engadget.com/soundcloud-direct-support-button-172323763.html">SoundCloud</a> hopes to at least fill the void a bit with some live content on Twitch. Starting on May 6th, <a href="https://blog.soundcloud.com/2020/05/04/were-going-live-on-twitch-and-heres-our-lineup-updated-regularly/" target="_blank">the music platform will host four shows</a> that will help viewers to discover new music, connect with experts and experience live performances.</p>
+        
+            <p>In <em>Studio Sessions with Soulection</em>, the hip-hop collective’s founder, Joe Kay, will share his picks of SoundCloud’s hidden gems. <em>Fresh Pressed</em> will feature the best new tracks of the week, and provide insights into the songs from the artists themselves. <em>Cloud Bar</em> will present topics ranging from self-care to navigating the business of live music. Similar to <em>Fact Magazine</em>’s <a href="https://www.youtube.com/playlist?list=PLg5ScSqSDXsvXVvNqW42AjfOmPjIupYZH" target="_blank"><em>Against the Clock</em></a>, <em>Fast Track </em>will see beatmakers create a backing track, from start to finish, in the span of one hour. Producers will be able to download the track and use it in their own creations.</p>
+        
+            <p>It seems like these shows cater mostly to the hip-hop and <a href="https://www.engadget.com/2020-01-08-beatbox-cardboard-drum-machine-impressions.html">beat making</a> scenes, so they won’t be to everyone’s taste. Those genres have hordes of fans and creators, though, so SoundCloud’s Twitch programming could serve up some much-needed live music content while everyone continues to practice social distancing.</p>
+        
+        {% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}
+    </div>
+{% endblock %}
