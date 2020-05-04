@@ -1,0 +1,18 @@
+{% raw %}{% extends "generatednews/base.html" %}
+
+{% block content %}{% endraw %}
+    <div class="content">
+        <h1>{{ header }}</h1>
+        <h2>{{ subheader}}</h2>{% for p in always_visible_content %}
+        {{ p }}{% endfor %}
+        {% raw %}{% if paywall.show %}{% endraw %}
+        {% for p in rest_of_content %}
+            {{ p }}
+        {% endfor %}
+        {% raw %}{% elif paywall.pay %}
+            {% include "pay.html" %}
+        {% else %}
+            {% include "block.html" %}
+        {% endif %}{% endraw %}
+    </div>
+{% raw %}{% endblock %}{% endraw %}

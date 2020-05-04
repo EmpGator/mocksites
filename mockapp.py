@@ -1,12 +1,18 @@
+import os
+import sqlite3
+import requests
 from flask import Flask, session, render_template, redirect, url_for, request, make_response, flash, jsonify
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired
-import requests
+
+from article_parsers import GuardianParser, PoliticoParser, TheVergeParser, EngadgetParser, UsaTodayParser
+
 app = Flask(__name__)
 app.secret_key = b'dsaadsads'
 finnplus_domain = 'https://erolkazanjyu.pythonanywhere.com'
 mockapp_domain = 'http://tridample.eu.pythonanywhere.com'
+tablename = './mock.db'
 
 
 class LoginForm(FlaskForm):
@@ -179,7 +185,7 @@ def front(site='mock'):
 
 @app.route('/<site>/article/<id>')
 def news(site='mock', id=0):
-    if site not in ['news', 'theothernews', 'waldonews']:
+    if site not in ['news', 'theothernews', 'waldonews', 'generatednews']:
         return make_response('404', 404)
     print('Checking if content is can be paid')
     domain = f'{mockapp_domain}/{site}'
@@ -220,6 +226,75 @@ def generate_rss(site='mock'):
     resp.headers['Content-Type'] = 'application/xml'
     return resp
 
+
+@app.route('/check_urls', methods=['POST'])
+def check_urls():
+    data = request.get_json()
+    if data:
+        urls = data.get('urls')
+    else:
+        urls = request.data.get('urls', None)
+    if not urls:
+        return jsonify({})
+    res_data = {}
+
+    db_urls = get_urls()
+    max_id = max([i[0] for i in db_urls] or [0])
+    db_urls = {i[1]: i[2] for i in db_urls}
+    conn = sqlite3.connect(tablename)
+    c = conn.cursor()
+    print(len(urls))
+    for url in urls:
+        mock_url = db_urls.get(url, None)
+        if mock_url:
+            res_data[url] = mock_url
+        else:
+            og_url = url
+            url = mockapp_domain + f'/generatednews/article/{max_id + 1}'
+            success = False
+            output = os.path.join('templates','generatednews', f'article_{max_id + 1}.html')
+            try:
+                if 'guardian' in og_url.lower():
+                    gp = GuardianParser(og_url, output)
+                    success = gp.success
+                if 'politico' in og_url.lower():
+                    p = PoliticoParser(og_url, output)
+                    success = p.success
+                if 'theverge' in og_url.lower():
+                    t = TheVergeParser(og_url, output)
+                    success = t.success
+                if 'engadget' in og_url.lower():
+                    t = EngadgetParser(og_url, output)
+                    success = t.success
+                if 'usatoday' in og_url.lower():
+                    t = UsaTodayParser(og_url, output)
+                    success = t.success
+            except:
+                pass
+            if success:
+                max_id += 1
+                c.execute('INSERT INTO urls (original_url, url) VALUES (?, ?)', (og_url, url))
+                res_data[og_url] = url
+    conn.commit()
+    return jsonify(res_data)
+
+def get_urls():
+    conn = sqlite3.connect(tablename)
+    c = conn.cursor()
+    c.execute('SELECT * FROM urls')
+    return c.fetchall()
+
+def generate_table():
+    try:
+        conn = sqlite3.connect(tablename)
+        c = conn.cursor()
+        c.execute('''CREATE TABLE urls
+                 (id INTEGER PRIMARY KEY AUTOINCREMENT,
+                 original_url TEXT,
+                 url TEXT);''')
+        conn.commit()
+    except Exception as e:
+        print(e)
 
 def generate_feed(site, request_url):
     from bs4 import BeautifulSoup
@@ -266,5 +341,7 @@ def generate_feed(site, request_url):
         print('error: ', e)
 
 
+generate_table()
 if __name__ == '__main__':
+
     app.run(port=8000)
