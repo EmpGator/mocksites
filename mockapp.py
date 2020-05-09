@@ -236,53 +236,61 @@ def check_urls():
         urls = request.data.get('urls', None)
     if not urls:
         return jsonify({})
-    res_data = {}
+    res_data = {'existing': {}, 'not_existing': []}
 
     db_urls = get_urls()
-    max_id = max([i[0] for i in db_urls] or [0])
     db_urls = {i[1]: i[2] for i in db_urls}
-    conn = sqlite3.connect(tablename)
-    c = conn.cursor()
     print(len(urls))
     for url in urls:
         mock_url = db_urls.get(url, None)
         if mock_url:
-            res_data[url] = mock_url
+            # url in db means that generated article exists
+            # add url to res_data['existing'][url] = mock_url
+            res_data['existing'][url] = mock_url
         else:
-            og_url = url
-            url = mockapp_domain + f'/generatednews/article/{max_id + 1}'
-            success = False
-            output = os.path.join('templates','generatednews', f'article_{max_id + 1}.html')
-            try:
-                if 'guardian' in og_url.lower():
-                    gp = GuardianParser(og_url, output)
-                    success = gp.success
-                if 'politico' in og_url.lower():
-                    p = PoliticoParser(og_url, output)
-                    success = p.success
-                if 'theverge' in og_url.lower():
-                    t = TheVergeParser(og_url, output)
-                    success = t.success
-                if 'engadget' in og_url.lower():
-                    t = EngadgetParser(og_url, output)
-                    success = t.success
-                if 'usatoday' in og_url.lower():
-                    t = UsaTodayParser(og_url, output)
-                    success = t.success
-            except:
-                pass
-            if success:
-                max_id += 1
-                c.execute('INSERT INTO urls (original_url, url) VALUES (?, ?)', (og_url, url))
-                res_data[og_url] = url
-    conn.commit()
+            res_data['not_existing'].append(url)
     return jsonify(res_data)
+
+@app.route('/generate_article', methods=['POST'])
+def generate_article_from_data():
+    data = request.get_json()
+    resp = {}
+    conn = sqlite3.connect(tablename)
+    c = conn.cursor()
+    db_urls = get_urls()
+    max_id = max([i[0] for i in db_urls] or [0])
+    for item in data:
+        try:
+            url = item.get('url')
+            header = item.get('header')
+            subheader = item.get('subheader')
+            avc = item.get('avc')
+            roc = item.get('roc')
+            output = render_template('generatednews/basetemplate.html', header=header, subheader=subheader,
+                                     always_visible_content=avc, rest_of_content=roc)
+            output_path = f'./templates/generatednews/article_{max_id}.html'
+            output_url = f'{mockapp_domain}/generatednews/article_{max_id}.html'
+
+            with open(output_path, 'w', encoding='utf-8') as f:
+                print(output, file=f)
+            resp[url] = output_url
+            max_id += 1
+            c.execute('INSERT INTO urls (original_url, url) VALUES (?, ?)', (url, output_url))
+
+        except Exception as e:
+            print(e)
+
+    conn.commit()
+    conn.close()
+    return jsonify(resp)
 
 def get_urls():
     conn = sqlite3.connect(tablename)
     c = conn.cursor()
     c.execute('SELECT * FROM urls')
-    return c.fetchall()
+    urls = c.fetchall() or []
+    conn.close()
+    return urls
 
 def generate_table():
     try:
