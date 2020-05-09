@@ -269,7 +269,7 @@ def generate_article_from_data():
             output = render_template('generatednews/basetemplate.html', header=header, subheader=subheader,
                                      always_visible_content=avc, rest_of_content=roc)
             output_path = f'./templates/generatednews/article_{max_id}.html'
-            output_url = f'{mockapp_domain}/generatednews/article_{max_id}.html'
+            output_url = f'{mockapp_domain}/generatednews/article/{max_id}'
 
             with open(output_path, 'w', encoding='utf-8') as f:
                 print(output, file=f)
